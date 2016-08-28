@@ -15,8 +15,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import layout.BuildingsFragment;
 import layout.MapFragment;
+import layout.StartFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -28,10 +31,11 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //Set fragment visible on start
+        //Ustawia ftagment widoczny po odpaleniu aplikacji
+        //TODO: może powodować bugi, bo fragment nie jest widziany jako aktywny przez navigationdrawer
         Fragment fragment = null;
         Class fragmentClass = null;
-        fragmentClass = MapFragment.class;
+        fragmentClass = StartFragment.class;
         try {
             fragment = (Fragment) fragmentClass.newInstance();
         } catch (Exception e) {
@@ -41,6 +45,8 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frameLayoutForFragments, fragment).commit();
 
+        //Kontrolki do FAB
+        //TODO: Znajdź zastosowanie, albo wywal
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +56,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        //Kontrolki navigationdrawer
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -60,6 +67,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    //Handler do obsługi kliknięcia wstecz
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -70,6 +78,8 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    //Kontrolki menu opcji, raczej zbędne
+    //TODO: Znajdź zastosowanie, albo wywal
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -95,42 +105,50 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        //Wybory elementów w navigationdrawer
         Fragment fragment = null;
         Class fragmentClass = null;
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_start) {
+            fragmentClass = StartFragment.class;
+
+        } else if (id == R.id.nav_map) {
             fragmentClass = MapFragment.class;
 
-        } else if (id == R.id.nav_gallery) {
-            fragmentClass = MapFragment.class;
-
-        } else if (id == R.id.nav_slideshow) {
-            fragmentClass = MapFragment.class;
+        } else if (id == R.id.nav_buildings) {
+            fragmentClass = BuildingsFragment.class;
 
         } else if (id == R.id.nav_manage) {
             fragmentClass = MapFragment.class;
 
+            Toast.makeText(MainActivity.this, "Nie mam pomysłu co mogło by się tu znaleźć ", Toast.LENGTH_LONG).show();
+
         } else if (id == R.id.nav_share) {
             fragmentClass = MapFragment.class;
+
+            Toast.makeText(MainActivity.this, "Nie gotowe ", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_send) {
             fragmentClass = MapFragment.class;
 
+            Toast.makeText(MainActivity.this, "Kurwa nie zrobię wszystkiego sam ", Toast.LENGTH_LONG).show();
+
         }
 
-        //Checking for errors with handling fragments
+        //Obowiązkowe sprawdzenie błędów
         try {
             fragment = (Fragment) fragmentClass.newInstance();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        //Commit transaction
+        //Zamiana fragmentów
+        //TODO: Jeżeli w jakimś dziwnym zbiegu okoliczności nie zostanie wykonany żaden z if'ów, commit powoduje nullPointerException
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frameLayoutForFragments, fragment).commit();
 
+        //Zamyka drawer do lewej strony ekranu
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
