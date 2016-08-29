@@ -14,11 +14,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.ikurek.pwr.BuildingDetailsFragment;
+import com.ikurek.pwr.CustomExpandableListAdapter;
+import com.ikurek.pwr.ExpandableListDataPump;
 import com.ikurek.pwr.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 
 public class BuildingsFragment extends Fragment {
@@ -51,51 +60,21 @@ public class BuildingsFragment extends Fragment {
 
         //Jak jest final to działa
         //Jak nie to nie
-        final ListView listView = (ListView) view.findViewById(R.id.listViewBuildings);
-
-        //Array zawierający listę wszystkich budynków na PWr.
-        //TODO: Nie warto marnować zasobów, może by to statycznie zrobić w xml?
-        //TODO: Brakuje budynków
-        String[] budynki = new String[]{
-                "A-1",
-                "A-2",
-                "A-3",
-                "A-5",
-                "A-7",
-                "B-1",
-                "B-4",
-                "B-5",
-                "C-1",
-                "C-2",
-                "C-3",
-                "C-4",
-                "C-5",
-                "C-6"
-        };
+        final ExpandableListView expandableListView = (ExpandableListView) view.findViewById(R.id.expandableListViewBuildings);
+        LinkedHashMap<String, List<String>> expandableListDetail = ExpandableListDataPump.getData();
+        List<String> expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
+        final ExpandableListAdapter expandableListAdapter = new CustomExpandableListAdapter(getContext(), expandableListTitle, expandableListDetail);
+        expandableListView.setAdapter(expandableListAdapter);
 
 
-        //Przypisanie adaptera do listview
-        //Dodałem custom layout bo czcionka w rzędach była biała
-        listView.setAdapter(new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.list_view_buildings_row_layout, budynki));
-
-        //Obsługa kliknięć na element listview
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                //Pozycja na listView
-                int listViewItemPosition = position;
-
-                //Wartość w danym rzedzie
-                String listViewItemValue = (String) listView.getItemAtPosition(position);
-
-                //Toast do debugu
-                Toast.makeText(getActivity().getApplicationContext(), "Pozycja : " + listViewItemPosition + "  Zawiera : " + listViewItemValue, Toast.LENGTH_SHORT).show();
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
 
                 //Zamiana fragmentu na fragment z detailview
                 Fragment fragment = null;
                 Class fragmentClass = BuildingDetailsFragment.class;
+                String childValue = expandableListAdapter.getChild(groupPosition, childPosition).toString();
 
 
                 //Raczej nie powinien wystąpić tutaj błąd, ale czemu by nie
@@ -110,7 +89,7 @@ public class BuildingsFragment extends Fragment {
 
                 //Przekazanie argumentu do kolejnego fragmentu
                 Bundle args = new Bundle();
-                args.putString("BUILDING_NAME", listViewItemValue);
+                args.putString("BUILDING_NAME", childValue);
                 fragment.setArguments(args);
 
                 //Zamiana fragmentu na nowy
@@ -121,11 +100,13 @@ public class BuildingsFragment extends Fragment {
 
                 //Zamiana fragmentów
                 trans.commit();
-            }
 
+
+                return false;
+            }
         });
+
 
         return view;
     }
-
 }

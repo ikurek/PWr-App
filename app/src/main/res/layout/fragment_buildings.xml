@@ -11,10 +11,10 @@
         android:id="@+id/horizontalScrollView"
         android:layout_gravity="right|center_vertical" />
 
-    <ListView
+    <ExpandableListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listViewBuildings"
+        android:id="@+id/expandableListViewBuildings"
         android:layout_gravity="center" />
 
 </FrameLayout>
