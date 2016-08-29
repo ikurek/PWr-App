@@ -9,6 +9,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ikurek.pwr.GetDetailedBuildingInfo;
+
+import org.w3c.dom.Text;
+
 
 public class BuildingDetailsFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -37,15 +41,27 @@ public class BuildingDetailsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_building_details, container, false);
+        GetDetailedBuildingInfo buildingInfoCatcher = new GetDetailedBuildingInfo();
 
         Bundle bundleFromBuildingsFragment = getArguments();
+
+        //Wartości które później zostaną przekazane do textiew
         String buildingName = bundleFromBuildingsFragment.getString("BUILDING_NAME");
+        String buildingAdress = buildingInfoCatcher.getBuildingAdress(buildingName);
+        String buildingInfo = buildingInfoCatcher.getBuildingInfo(buildingName);
 
         //Toast do debugu
         Toast.makeText(getActivity().getApplicationContext(), "Przekazane z BuildingsFragment : " + buildingName, Toast.LENGTH_SHORT).show();
 
+        //Przekazanie wartości do textview
         TextView textViewBuildingName = (TextView) view.findViewById(R.id.textViewBuildingName);
         textViewBuildingName.setText(buildingName);
+
+        TextView textViewBuildingAdress = (TextView) view.findViewById(R.id.textViewBuildingAdress);
+        textViewBuildingAdress.setText(buildingAdress);
+
+        TextView textViewBuildingInfo = (TextView) view.findViewById(R.id.textViewBuildingInfo);
+        textViewBuildingInfo.setText(buildingInfo);
 
         return view;
     }

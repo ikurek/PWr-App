@@ -74,7 +74,7 @@ public class BuildingsFragment extends Fragment {
                 //Zamiana fragmentu na fragment z detailview
                 Fragment fragment = null;
                 Class fragmentClass = BuildingDetailsFragment.class;
-                String childValue = expandableListAdapter.getChild(groupPosition, childPosition).toString();
+                String buildingName = expandableListAdapter.getChild(groupPosition, childPosition).toString();
 
 
                 //Raczej nie powinien wystąpić tutaj błąd, ale czemu by nie
@@ -89,7 +89,7 @@ public class BuildingsFragment extends Fragment {
 
                 //Przekazanie argumentu do kolejnego fragmentu
                 Bundle args = new Bundle();
-                args.putString("BUILDING_NAME", childValue);
+                args.putString("BUILDING_NAME", buildingName);
                 fragment.setArguments(args);
 
                 //Zamiana fragmentu na nowy
