@@ -1,4 +1,4 @@
-package com.ikurek.pwr;
+package layout;
 
 
 import android.os.Bundle;
@@ -10,13 +10,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ikurek.pwr.GetDetailedBuildingInfo;
-
-import org.w3c.dom.Text;
+import com.ikurek.pwr.R;
 
 
 public class BuildingDetailsFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String BUILDING_NAME = null;
 
     public BuildingDetailsFragment() {

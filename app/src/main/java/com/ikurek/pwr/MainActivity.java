@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import layout.AppInfoFragment;
 import layout.BuildingsFragment;
 import layout.MapFragment;
 import layout.StartFragment;
@@ -124,12 +125,10 @@ public class MainActivity extends AppCompatActivity
 
             Toast.makeText(MainActivity.this, "Nie mam pomysłu co mogło by się tu znaleźć ", Toast.LENGTH_LONG).show();
 
-        } else if (id == R.id.nav_share) {
-            fragmentClass = MapFragment.class;
+        } else if (id == R.id.nav_info) {
+            fragmentClass = AppInfoFragment.class;
 
-            Toast.makeText(MainActivity.this, "Nie gotowe ", Toast.LENGTH_LONG).show();
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_bugreport) {
             fragmentClass = MapFragment.class;
 
             Toast.makeText(MainActivity.this, "Kurwa nie zrobię wszystkiego sam ", Toast.LENGTH_LONG).show();

@@ -20,16 +20,16 @@
             android:title="Narzędzia" />
     </group>
 
-    <item android:title="Komunikacja">
+    <item android:title="Kwestie Techniczne">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Udostępnij" />
+                android:id="@+id/nav_info"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="O Aplikacji" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Wyślij info o bugach" />
+                android:id="@+id/nav_bugreport"
+                android:icon="@drawable/ic_bug_report_black_24dp"
+                android:title="Poinformuj o błędzie" />
         </menu>
     </item>
 

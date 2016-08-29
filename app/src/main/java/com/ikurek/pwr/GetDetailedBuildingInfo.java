@@ -34,7 +34,7 @@ public class GetDetailedBuildingInfo {
 
         } else if (buildingName == "A-2") {
 
-            buildingInfo = "Info budynku A-2\n Test wielu lini\n W teori ten teks powinien mieć 3 wiersze";
+            buildingInfo = "Info budynku A-2\nTest wielu lini\nW teori ten teks powinien mieć 3 wiersze";
         }
 
         return buildingInfo;
