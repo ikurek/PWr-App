@@ -48,8 +48,6 @@ public class BuildingDetailsFragment extends Fragment {
         String buildingAdress = buildingInfoCatcher.getBuildingAdress(buildingName);
         String buildingInfo = buildingInfoCatcher.getBuildingInfo(buildingName);
 
-        //Toast do debugu
-        Toast.makeText(getActivity().getApplicationContext(), "Przekazane z BuildingsFragment : " + buildingName, Toast.LENGTH_SHORT).show();
 
         //Przekazanie wartości do textview
         TextView textViewBuildingName = (TextView) view.findViewById(R.id.textViewBuildingName);
