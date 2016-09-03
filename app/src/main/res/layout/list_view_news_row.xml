@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/listViewRow"
-    android:textColor="#000000"
-    android:textSize="20dp"
-    android:padding="10sp"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:singleLine="true"
-    android:gravity="center"
-    android:layout_height="fill_parent"/>
+    android:layout_height="wrap_content"
+    android:padding="6dp" >
+
+    <TextView
+        android:id="@+id/listViewNewsTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#D8000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/listViewNewsUrl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listViewNewsTitle"
+        android:ellipsize="marquee"
+        android:lines="3"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:textColor="#D8000000"
+        android:textSize="12sp" />
+
+</RelativeLayout>

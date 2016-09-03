@@ -15,24 +15,31 @@ import org.jsoup.select.Elements;
  */
 public class ParseWebSite {
 
-    public static ArrayList <String> parseWebSite() throws IOException {
+    //Tworzy array zawierający konstrukcje ParsedWebData
+    //Zwraca ten sam array, wypełniony danymi z Jsoup
+    public static ArrayList <ParsedWebData> parseWebSite() throws IOException {
 
+        //TODO: StrictMode jest niebezpieczne, to powinno być w AsyncTask!!!
+        //Omija blokady androida związane z dostępem do sieci w MainActivity
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-
         StrictMode.setThreadPolicy(policy);
 
-
+        //Lecimy z parsowaniem
         String url = "http://www.portal.pwr.wroc.pl/box_main_page_news,241.dhtml?limit=10";
         String baseURL = "http://www.portal.pwr.wroc.pl/";
         Document doc = Jsoup.connect(url).get();
         Elements links = doc.select(".title_1 > a");
 
-        ArrayList <String> listOfLinks = new ArrayList <String> ();
+        ArrayList <ParsedWebData> listOfLinks = new ArrayList <ParsedWebData> ();
 
 
         for (Element link : links) {
+            ParsedWebData data = new ParsedWebData();
 
-            listOfLinks.add(link.text());
+            data.title = link.text().trim();
+            //Wartość href to tylko ostatni częś linku, trzeba połączyć stringi
+            data.url = baseURL + link.attr("href");
+            listOfLinks.add(data);
 
         }
 

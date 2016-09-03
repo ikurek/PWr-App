@@ -5,7 +5,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,7 +19,7 @@ import android.widget.Toast;
 import layout.AppInfoFragment;
 import layout.BuildingsFragment;
 import layout.MapFragment;
-import layout.StartFragment;
+import layout.NewsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity
         //TODO: może powodować bugi, bo fragment nie jest widziany jako aktywny przez navigationdrawer
         Fragment fragment = null;
         Class fragmentClass = null;
-        fragmentClass = StartFragment.class;
+        fragmentClass = NewsFragment.class;
         try {
             fragment = (Fragment) fragmentClass.newInstance();
         } catch (Exception e) {
@@ -112,7 +111,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_start) {
-            fragmentClass = StartFragment.class;
+            fragmentClass = NewsFragment.class;
 
         } else if (id == R.id.nav_map) {
             fragmentClass = MapFragment.class;
