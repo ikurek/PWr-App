@@ -128,10 +128,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_info) {
             fragmentClass = AppInfoFragment.class;
 
+
+
         } else if (id == R.id.nav_bugreport) {
             fragmentClass = MapFragment.class;
-
-            Toast.makeText(MainActivity.this, "Kurwa nie zrobię wszystkiego sam ", Toast.LENGTH_LONG).show();
 
         }
 
