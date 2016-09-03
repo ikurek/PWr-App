@@ -22,11 +22,12 @@ public class ParseWebSite {
         StrictMode.setThreadPolicy(policy);
 
 
-        String url = "http://www.portal.pwr.wroc.pl/index,241.dhtml";
+        String url = "http://www.portal.pwr.wroc.pl/box_main_page_news,241.dhtml?limit=10";
+        String baseURL = "http://www.portal.pwr.wroc.pl/";
         Document doc = Jsoup.connect(url).get();
-        Elements links = doc.select("table.cwrapper .tbody .tr td.ccol2 div.cwrapper_padd div#box_main_page_news.cbox.grey div#dyn_main_news.cbox.padd2 div.nitem table.nitemt .tbody .tr td.nitemcell2 span.title_1");
+        Elements links = doc.select(".title_1 > a");
+
         ArrayList <String> listOfLinks = new ArrayList <String> ();
-        int counter = 0;
 
 
         for (Element link : links) {
