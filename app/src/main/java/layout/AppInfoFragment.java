@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import com.ikurek.pwr.R;
 
 
-
 public class AppInfoFragment extends Fragment {
 
     public AppInfoFragment() {

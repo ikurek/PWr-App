@@ -2,13 +2,12 @@ package com.ikurek.pwr;
 
 import android.os.StrictMode;
 
-import java.io.IOException;
-import java.util.ArrayList;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by Igor on 29.08.2016.
@@ -17,7 +16,7 @@ public class ParseWebSite {
 
     //Tworzy array zawierający konstrukcje ParsedWebData
     //Zwraca ten sam array, wypełniony danymi z Jsoup
-    public static ArrayList <ParsedWebData> parseWebSite() throws IOException {
+    public static ArrayList<ParsedWebData> parseWebSite() throws IOException {
 
         //TODO: StrictMode jest niebezpieczne, to powinno być w AsyncTask!!!
         //Omija blokady androida związane z dostępem do sieci w MainActivity
@@ -29,16 +28,16 @@ public class ParseWebSite {
         String baseURL = "http://www.portal.pwr.wroc.pl/";
         Document doc = Jsoup.connect(url).get();
         Elements links = doc.select(".title_1 > a");
+        Elements descriptions = doc.select(".nitemcell2 > div");
 
-        ArrayList <ParsedWebData> listOfLinks = new ArrayList <ParsedWebData> ();
+        ArrayList<ParsedWebData> listOfLinks = new ArrayList<ParsedWebData>();
 
 
-        for (Element link : links) {
+        for (int i = 0; i < links.size() && i < descriptions.size(); i++) {
             ParsedWebData data = new ParsedWebData();
-
-            data.title = link.text().trim();
-            //Wartość href to tylko ostatni częś linku, trzeba połączyć stringi
-            data.url = baseURL + link.attr("href");
+            data.title = links.get(i).text().trim();
+            data.url = baseURL + links.get(i).attr("href");
+            data.description = descriptions.get(i).text().trim();
             listOfLinks.add(data);
 
         }
@@ -47,4 +46,4 @@ public class ParseWebSite {
         return listOfLinks;
     }
 
-    }
+}

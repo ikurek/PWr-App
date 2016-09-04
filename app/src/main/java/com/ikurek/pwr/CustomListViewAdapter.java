@@ -18,13 +18,13 @@ public class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
     private ArrayList<ParsedWebData> dataSet;
 
 
-    public CustomListViewAdapter(Context context, int textViewResourceId, ArrayList <ParsedWebData> objects) {
+    public CustomListViewAdapter(Context context, int textViewResourceId, ArrayList<ParsedWebData> objects) {
         super(context, textViewResourceId, objects);
         this.dataSet = objects;
     }
 
 
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent) {
 
         View v = convertView;
 
@@ -39,16 +39,17 @@ public class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
         if (dataSet != null) {
 
 
-
             TextView title = (TextView) v.findViewById(R.id.listViewNewsTitle);
-            TextView url = (TextView) v.findViewById(R.id.listViewNewsUrl);
+            TextView description = (TextView) v.findViewById(R.id.listViewNewsDescription);
+            TextView source = (TextView) v.findViewById(R.id.listViewNewsSource);
 
 
-            if (title != null){
+            if (title != null) {
                 title.setText(data.getTitle());
             }
-            if (url != null){
-                url.setText(data.getUrl());
+            if (description != null) {
+                description.setText(data.getDescription());
+                source.setText("PWr");
             }
 
         }

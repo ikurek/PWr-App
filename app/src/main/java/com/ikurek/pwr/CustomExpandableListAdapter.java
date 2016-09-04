@@ -3,9 +3,7 @@ package com.ikurek.pwr;
 /**
  * Created by Igor on 29.08.2016.
  */
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
+
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
@@ -13,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
+
+import java.util.LinkedHashMap;
+import java.util.List;
 
 //Found online, copy pasted, works
 public class CustomExpandableListAdapter extends BaseExpandableListAdapter {

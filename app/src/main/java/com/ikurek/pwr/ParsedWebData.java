@@ -5,19 +5,21 @@ package com.ikurek.pwr;
  */
 
 //Klasa zawiera informacje przekazane przez parser
-    //Zrobiłem to , żeby łatwo można było przechwytywać całe zestawy danych ze strony
+//Zrobiłem to , żeby łatwo można było przechwytywać całe zestawy danych ze strony
 public class ParsedWebData {
 
     String title;
     String url;
+    String description;
 
-    public ParsedWebData(){
+    public ParsedWebData() {
 
     }
 
-    public ParsedWebData(String title, String url){
+    public ParsedWebData(String title, String url, String description) {
         this.title = title;
         this.url = url;
+        this.description = description;
     }
 
     public String getTitle() {
@@ -27,6 +29,10 @@ public class ParsedWebData {
 
     public String getUrl() {
         return url;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
 

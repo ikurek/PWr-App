@@ -61,7 +61,7 @@ public class GetDetailedBuildingInfo {
 
             buildingAdress = "Ul. Ignacego Łukasiewicza 1, Wrocław";
 
-        }  else if (buildingName == "B-4") {
+        } else if (buildingName == "B-4") {
 
             buildingAdress = "ul. Ignacego Łukasiewicza 3/5, Wrocław";
 
@@ -133,7 +133,7 @@ public class GetDetailedBuildingInfo {
 
             buildingAdress = "Ul. Rozbrat 7, Wrocław";
 
-        }else if (buildingName == "F-1") {
+        } else if (buildingName == "F-1") {
 
             buildingAdress = "Ul. Gdańska 7/9, Wrocław";
 
@@ -173,7 +173,7 @@ public class GetDetailedBuildingInfo {
 
             buildingAdress = "???";
 
-        }  else if (buildingName == "H-9") {
+        } else if (buildingName == "H-9") {
 
             buildingAdress = "???";
 
@@ -226,7 +226,7 @@ public class GetDetailedBuildingInfo {
         return buildingAdress;
     }
 
-    public String getBuildingInfo(String buildingName){
+    public String getBuildingInfo(String buildingName) {
         String buildingInfo = null;
 
         if (buildingName == "A-1") {

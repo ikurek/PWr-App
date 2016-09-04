@@ -1,13 +1,18 @@
 <resources>
     <string name="app_name">PWr</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Otwórz szufladę</string>
+    <string name="navigation_drawer_close">Zamknij szufladę</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ustawienia</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="AppInfo">Nazywam się Igor i jestem studentem W4 (hetero oczywiście). Aplikację tę tworzę w wolnym czasie, bo nie mam dziewczyny ani kolegów. Traktuję ją jako hobby i miejsce na różne programistyczne eksperymenty (stąd wieczne problemy z działaniem). Jako że nad projektem pracuję sam, chętnie przyjmę jaką kolwiek pomoc ze strony grafików/programistów javy/programistów webowych/ludzi robiących kawę. Jeżeli zaliczasz się do którejkolwiek z tych kategori, albo uważasz ze możesz mi się przydac w pracy skontaktuj się ze mną :-)</string>
+    <string name="AppInfo">Nazywam się Igor i jestem studentem W4. Aplikację tę tworzę w wolnym czasie, bo nie mam dziewczyny ani normalnych hobby. Jako że nad projektem pracuję sam, chętnie przyjmę jakąkolwiek pomoc ze strony grafików/programistów javy/programistów webowych/ludzi robiących kawę. Jeżeli chciałbyś mi pomóc, skontaktuj się ze mną.</string>
     <string name="GithubDescriptionAndLink">GitHub: https://github.com/ikurek/PWr-App</string>
+    <string name="GitHubLinkOnly">https://github.com/ikurek/PWr-App</string>
+    <string name="Hi">Cześć!</string>
+    <string name="WhatIUsed">Aplikacja wykorzystuje:</string>
+    <string name="WhatIUsedContent">Język programowania Java (niestety)\nParser Jsoup w wersji 1.9.2\nStronę główną PWr\nStworzoną przeze mnie bazę budynków\nChronione prawami autorskimi logo PWr\nWiedzę ludzi ze StackOverflow</string>
+    <string name="UsefullLinks">Przydatne linki:</string>
 </resources>

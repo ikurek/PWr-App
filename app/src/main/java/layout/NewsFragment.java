@@ -10,9 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.ikurek.pwr.CustomListViewAdapter;
 import com.ikurek.pwr.ParseWebSite;
@@ -44,15 +42,14 @@ public class NewsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_news, container, false);
+        View view = inflater.inflate(R.layout.fragment_news, container, false);
         final ListView listView = (ListView) view.findViewById(R.id.listViewNews);
         ParseWebSite parser = new ParseWebSite();
-        ArrayList <ParsedWebData> links = new ArrayList <ParsedWebData> ();
+        ArrayList<ParsedWebData> links = new ArrayList<ParsedWebData>();
 
         try {
             links = parser.parseWebSite();
-        } catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -60,11 +57,11 @@ public class NewsFragment extends Fragment {
         CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(getContext(), R.id.listViewNews, links);
         listView.setAdapter(customListViewAdapter);
 
-        final ArrayList <ParsedWebData> linksFinal = links;
+        final ArrayList<ParsedWebData> linksFinal = links;
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> a, View v, int position,  long id) {
+            public void onItemClick(AdapterView<?> a, View v, int position, long id) {
 
                 ParsedWebData singleData = linksFinal.get(position);
                 String url = singleData.getUrl();
