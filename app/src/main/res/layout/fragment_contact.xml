@@ -1,0 +1,86 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.ContactFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/BugReport"
+            android:id="@+id/TextViewBugReport"
+            android:layout_gravity="center_horizontal|top"
+            android:textIsSelectable="false"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Klik!"
+            android:id="@+id/SubmitViaGitHub"
+            android:layout_below="@+id/TextViewBugReport"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ReportBugViaGitHub"
+            android:id="@+id/TextViewReportBugViaGitHub"
+            android:layout_alignTop="@+id/SubmitViaGitHub"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/SubmitViaGitHub"
+            android:layout_toStartOf="@+id/SubmitViaEmailButton"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_alignRight="@+id/TextViewBugReport"
+            android:layout_alignEnd="@+id/TextViewBugReport" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Klik!"
+            android:id="@+id/SubmitViaEmailButton"
+            android:layout_below="@+id/SubmitViaGitHub"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_alignLeft="@+id/SubmitViaGitHub"
+            android:layout_alignStart="@+id/SubmitViaGitHub" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ReportBugViaEmail"
+            android:id="@+id/TextViewReportBugViaEmail"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignTop="@+id/SubmitViaEmailButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/SubmitViaEmailButton"
+            android:layout_toStartOf="@+id/SubmitViaEmailButton"
+            android:layout_alignRight="@+id/TextViewBugReport"
+            android:layout_alignEnd="@+id/TextViewBugReport"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+    </RelativeLayout>
+</FrameLayout>

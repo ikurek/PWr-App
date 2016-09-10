@@ -3,17 +3,18 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_start"
+            android:id="@+id/nav_news"
             android:icon="@drawable/ic_web_asset_black_24dp"
-            android:title="Start" />
-        <item
-            android:id="@+id/nav_map"
-            android:icon="@drawable/ic_map_black_24dp"
-            android:title="Mapa" />
+            android:title="Aktualności" />
         <item
             android:id="@+id/nav_buildings"
             android:icon="@drawable/ic_business_black_24dp"
             android:title="Budynki" />
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_map_black_24dp"
+            android:title="Mapa" />
+
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
@@ -23,13 +24,14 @@
     <item android:title="Kwestie Techniczne">
         <menu>
             <item
+                android:id="@+id/nav_bugreport"
+                android:icon="@drawable/ic_bug_report_black_24dp"
+                android:title="Kontakt/Zgłoszenie błędu" />
+            <item
                 android:id="@+id/nav_info"
                 android:icon="@drawable/ic_info_black_24dp"
                 android:title="O Aplikacji" />
-            <item
-                android:id="@+id/nav_bugreport"
-                android:icon="@drawable/ic_bug_report_black_24dp"
-                android:title="Poinformuj o błędzie" />
+
         </menu>
     </item>
 

@@ -16,13 +16,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 import layout.AppInfoFragment;
 import layout.BuildingsFragment;
+import layout.ContactFragment;
 import layout.MapFragment;
 import layout.NewsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +35,10 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
         //Ustawia ftagment widoczny po odpaleniu aplikacji
-        //TODO: może powodować bugi, bo fragment nie jest widziany jako aktywny przez navigationdrawer
+        //TODO: ekran ładowanie to nie był by zły pomysł
         Fragment fragment = null;
         Class fragmentClass = null;
         fragmentClass = NewsFragment.class;
@@ -55,6 +61,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.getMenu().getItem(0).setChecked(true);
     }
 
     //Handler do obsługi kliknięcia wstecz
@@ -100,7 +107,7 @@ public class MainActivity extends AppCompatActivity
         Class fragmentClass = null;
         int id = item.getItemId();
 
-        if (id == R.id.nav_start) {
+        if (id == R.id.nav_news) {
             fragmentClass = NewsFragment.class;
 
         } else if (id == R.id.nav_map) {
@@ -119,7 +126,7 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_bugreport) {
-            fragmentClass = MapFragment.class;
+            fragmentClass = ContactFragment.class;
 
         }
 

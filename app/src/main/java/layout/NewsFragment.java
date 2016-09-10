@@ -17,10 +17,14 @@ import com.ikurek.pwr.ParseWebSite;
 import com.ikurek.pwr.ParsedWebData;
 import com.ikurek.pwr.R;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 
 public class NewsFragment extends Fragment {
+
+    ArrayList <ParsedWebData> list = new ArrayList<ParsedWebData>();
+
 
     public NewsFragment() {
         // Required empty public constructor
@@ -36,6 +40,8 @@ public class NewsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
     }
 
     @Override
@@ -43,21 +49,25 @@ public class NewsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_news, container, false);
+
+
+
         final ListView listView = (ListView) view.findViewById(R.id.listViewNews);
         ParseWebSite parser = new ParseWebSite();
-        ArrayList<ParsedWebData> links = new ArrayList<ParsedWebData>();
 
-        try {
-            links = parser.parseWebSite();
-        } catch (Exception e) {
+        try{
+            list = parser.parseWebSite();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
 
-        CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(getContext(), R.id.listViewNews, links);
+
+
+        CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(getContext(), R.id.listViewNews, list);
         listView.setAdapter(customListViewAdapter);
 
-        final ArrayList<ParsedWebData> linksFinal = links;
+        final ArrayList<ParsedWebData> linksFinal = list;
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
