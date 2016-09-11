@@ -50,10 +50,13 @@ public class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
             }
             if (description != null) {
                 description.setText(data.getDescription());
-                source.setText("PWr");
             }
             if (date != null) {
                 date.setText(data.getDateString());
+                source.setText(data.getSource());
+            }
+            if (source != null) {
+                source.setText(data.getSource());
             }
 
         }

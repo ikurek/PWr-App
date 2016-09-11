@@ -13,6 +13,7 @@ public class ParsedWebData {
     String title;
     String url;
     String description;
+    String source;
     Date date;
     String dateString;
 
@@ -20,10 +21,11 @@ public class ParsedWebData {
 
     }
 
-    public ParsedWebData(String title, String url, String description, Date date, String dateString) {
+    public ParsedWebData(String title, String url, String description, String source, Date date, String dateString) {
         this.title = title;
         this.url = url;
         this.description = description;
+        this.source = source;
         this.date = date;
         this.dateString = dateString;
     }
@@ -44,6 +46,8 @@ public class ParsedWebData {
     public Date getDate() {return date;}
 
     public String getDateString() {return dateString;}
+
+    public String getSource() {return source;}
 
 
 }

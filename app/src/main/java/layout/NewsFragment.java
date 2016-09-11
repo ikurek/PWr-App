@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ikurek.pwr.AsyncXMLParser;
@@ -24,8 +25,6 @@ import java.util.ArrayList;
 public class NewsFragment extends Fragment {
 
     public static ArrayList <ParsedWebData> list = new ArrayList<ParsedWebData>();
-
-
 
     public NewsFragment() {
         // Required empty public constructor
@@ -43,8 +42,7 @@ public class NewsFragment extends Fragment {
         super.onCreate(savedInstanceState);
         //Start AsyncTask w momencie ładowania fragmentu
 
-        AsyncXMLParser parser = new AsyncXMLParser();
-        parser.execute();
+
 
 
     }
@@ -54,17 +52,18 @@ public class NewsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_news, container, false);
-
         ListView listView = (ListView) view.findViewById(R.id.listViewNews);
+        TextView textView = (TextView) view.findViewById(R.id.textViewLoading);
+        AsyncXMLParser parser = new AsyncXMLParser(this.getContext(), listView, textView);
+        parser.execute();
 
-        CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(getContext(), R.id.listViewNews, list);
-        listView.setAdapter(customListViewAdapter);
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
 
-                ParsedWebData singleData = list.get(position);
+                ParsedWebData singleData = NewsFragment.list.get(position);
                 String url = singleData.getUrl();
 
                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));

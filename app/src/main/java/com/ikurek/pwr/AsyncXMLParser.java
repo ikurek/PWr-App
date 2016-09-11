@@ -1,6 +1,14 @@
 package com.ikurek.pwr;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import org.jsoup.Jsoup;
 import org.xmlpull.v1.XmlPullParser;
@@ -9,11 +17,12 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.Locale;
 
@@ -22,116 +31,222 @@ import layout.NewsFragment;
 /**
  * Created by Igor on 10.09.2016.
  */
-public class AsyncXMLParser extends AsyncTask <Void, Integer, ArrayList<ParsedWebData>> {
+public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWebData>> {
 
 
+    Context context;
+    ListView listView;
+    TextView textView;
 
-        @Override
-        protected void onPreExecute() {
 
+    public AsyncXMLParser(Context context, ListView listView, TextView textView) {
+
+        this.context = context;
+        this.listView = listView;
+        this.textView = textView;
+    }
+
+
+    @Override
+    protected void onPreExecute() {
+
+    }
+
+    @Override
+    protected ArrayList<ParsedWebData> doInBackground(Void... params) {
+        ArrayList<ParsedWebData> list = new ArrayList<ParsedWebData>();
+        ParsedWebData data = new ParsedWebData();
+        String text = null;
+
+
+        //Parser dla strony głównej
+        try {
+
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            factory.setNamespaceAware(false);
+            XmlPullParser xpp = factory.newPullParser();
+
+            //Zbieranie danych z xml
+            InputStream inputmain = new URL("http://www.portal.pwr.wroc.pl/rss,241.xml").openStream();
+            xpp.setInput(inputmain, "UTF_8");
+
+            int eventTypeMain = xpp.getEventType();
+
+
+            while (eventTypeMain != XmlPullParser.END_DOCUMENT) {
+                String tagname = xpp.getName();
+
+                switch (eventTypeMain) {
+
+                    case XmlPullParser.START_TAG:
+                        if (tagname.equalsIgnoreCase("item")) {
+
+                            data = new ParsedWebData();
+                        }
+                        break;
+
+                    case XmlPullParser.TEXT:
+                        text = xpp.getText();
+                        break;
+
+                    case XmlPullParser.END_TAG:
+                        if (tagname.equalsIgnoreCase("item") && data.title.trim() != "Kanał RSS" && data.title.trim() != null && data.description.trim() != null && data.description.trim() != "Aktualności" && data.date != null) {
+                            data.source = "Cała Politechnika";
+                            list.add(data);
+                        } else if (tagname.equalsIgnoreCase("title")) {
+                            data.title = text.trim().replaceAll(" +", " ");;
+                        } else if (tagname.equalsIgnoreCase("link")) {
+                            data.url = text.trim();
+                        } else if (tagname.equalsIgnoreCase("description")) {
+                            text = Jsoup.parse(text).text();
+                            data.description = text.trim().replaceAll(" +", " ");;
+                        } else if (tagname.equalsIgnoreCase("pubDate")) {
+
+                            //Przycina niepotrzebne części daty
+                            text = text.substring(0, text.length() - 15);
+
+                            Date date = null;
+                            String newDateString = null;
+                            //Zamiana formatu daty na normalny
+                            final String NEW_FORMAT = "dd/MM/yyyy";
+                            final String OLD_FORMAT = "EEE, dd MMM yyyy";
+
+                            try {
+                                //Parsowanie daty z XML
+                                SimpleDateFormat sdf = new SimpleDateFormat(OLD_FORMAT, Locale.ENGLISH);
+                                Date d = sdf.parse(text);
+                                sdf.applyPattern(NEW_FORMAT);
+                                newDateString = sdf.format(d);
+                                date = d;
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
+
+                            //Dwie daty na wyjściu jedna w formacie dla użytkownika
+                            //Druga w formacie unixa do sortowania danych
+                            data.date = date;
+                            data.dateString = newDateString;
+                        }
+                        break;
+
+                    default:
+                        break;
+                }
+                eventTypeMain = xpp.next();
+            }
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-        @Override
-        protected ArrayList<ParsedWebData> doInBackground(Void... params) {
 
-            ArrayList<ParsedWebData> list = new ArrayList<ParsedWebData>();
+        //Parser dla stron wydziału
+        try {
 
-            try {
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+            factory.setNamespaceAware(false);
+            XmlPullParser xpp = factory.newPullParser();
+            InputStream inputlocal = new URL("http://www.weka.pwr.edu.pl/rss,41.xml").openStream();
+            xpp.setInput(inputlocal, "UTF_8");
 
-                XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-                factory.setNamespaceAware(false);
-                XmlPullParser xpp = factory.newPullParser();
+            int eventTypeLocal = xpp.getEventType();
 
-                //Zbieranie danych z xml
-                InputStream input = new URL("http://www.portal.pwr.wroc.pl/rss,241.xml").openStream();
-                xpp.setInput(input, "UTF_8");
+            while (eventTypeLocal != XmlPullParser.END_DOCUMENT) {
+                String tagname = xpp.getName();
 
-                int eventType = xpp.getEventType();
-                String text = null;
-                ParsedWebData data = new ParsedWebData();
+                switch (eventTypeLocal) {
 
-                while (eventType != XmlPullParser.END_DOCUMENT) {
-                    String tagname = xpp.getName();
+                    case XmlPullParser.START_TAG:
+                        if (tagname.equalsIgnoreCase("item")) {
 
-                    switch (eventType) {
+                            data = new ParsedWebData();
+                        }
+                        break;
 
-                        case XmlPullParser.START_TAG:
-                            if (tagname.equalsIgnoreCase("item")) {
+                    case XmlPullParser.TEXT:
+                        text = xpp.getText();
+                        break;
 
-                                data = new ParsedWebData();
+                    case XmlPullParser.END_TAG:
+                        if (tagname.equalsIgnoreCase("item") && data.title.trim() != "Kanał RSS" && data.title.trim() != null && data.description.trim() != null && data.description.trim() != "Aktualności") {
+
+                            data.source = "Wydział Elektroniki";
+                            list.add(data);
+
+
+                        } else if (tagname.equalsIgnoreCase("title")) {
+                            data.title = text.trim().replaceAll(" +", " ");;
+                        } else if (tagname.equalsIgnoreCase("link")) {
+                            data.url = text;
+                        } else if (tagname.equalsIgnoreCase("description")) {
+                            text = Jsoup.parse(text).text();
+                            data.description = text.trim().replaceAll(" +", " ");;
+                        } else if (tagname.equalsIgnoreCase("pubDate")) {
+
+                            //Przycina niepotrzebne części daty
+                            text = text.substring(0, text.length() - 15);
+
+                            if(text.startsWith("http")) text = "Mon, 01 Jan 1111";
+
+                            Date date = null;
+                            String newDateString = null;
+                            //Zamiana formatu daty na normalny
+                            final String NEW_FORMAT = "dd/MM/yyyy";
+                            final String OLD_FORMAT = "EEE, dd MMM yyyy";
+
+                            try {
+                                //Parsowanie daty z XML
+                                SimpleDateFormat sdf = new SimpleDateFormat(OLD_FORMAT, Locale.ENGLISH);
+                                Date d = sdf.parse(text);
+                                sdf.applyPattern(NEW_FORMAT);
+                                newDateString = sdf.format(d);
+                                date = d;
+                            } catch (Exception e) {
+                                e.printStackTrace();
                             }
-                            break;
-
-                        case XmlPullParser.TEXT:
-                            text = xpp.getText();
-                            break;
-
-                        case XmlPullParser.END_TAG:
-                            if (tagname.equalsIgnoreCase("item")) {
-                                // add employee object to list
-                                list.add(data);
-                            } else if (tagname.equalsIgnoreCase("title")) {
-                                data.title = text;
-                            } else if (tagname.equalsIgnoreCase("link")) {
-                                data.url = text;
-                            } else if (tagname.equalsIgnoreCase("description")) {
-                                text = Jsoup.parse(text).text();
-                                data.description = text;
-                            } else if (tagname.equalsIgnoreCase("pubDate")) {
-
-                                //Przycina niepotrzebne części daty
-                                text = text.substring(0, text.length() - 15);
-
-                                Date date = null;
-                                String newDateString = null;
-                                //Zamiana formatu daty na normalny
-                                final String NEW_FORMAT = "dd/MM/yyyy";
-                                final String OLD_FORMAT = "EEE, dd MMM yyyy";
-
-                                try
-                                {
-                                    //Parsowanie daty z XML
-                                    SimpleDateFormat sdf = new SimpleDateFormat(OLD_FORMAT, Locale.ENGLISH);
-                                    Date d = sdf.parse(text);
-                                    sdf.applyPattern(NEW_FORMAT);
-                                    newDateString = sdf.format(d);
-                                    date = d;
-                                }
-                                catch (Exception e)
-                                {
-                                    e.printStackTrace();
-                                }
 
 
-                                //Dwie daty na wyjściu jedna w formacie dla użytkownika
-                                //Druga w formacie unixa do sortowania danych
-                                data.date = date;
-                                data.dateString = newDateString;
-                            }
-                            break;
+                            //Dwie daty na wyjściu jedna w formacie dla użytkownika
+                            //Druga w formacie unixa do sortowania danych
+                            data.date = date;
+                            data.dateString = newDateString;
+                        }
+                        break;
 
-                        default:
-                            break;
-                    }
-                    eventType = xpp.next();
-
-
-
+                    default:
+                        break;
                 }
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
+                eventTypeLocal = xpp.next();
             }
 
-            NewsFragment.list = list;
 
-            return list;
-}
-
-        @Override
-        protected void onPostExecute(ArrayList <ParsedWebData> result) {
-
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+        return list;
+    }
+
+    @Override
+    protected void onPostExecute(ArrayList<ParsedWebData> result) {
+
+        Collections.sort(result, new Comparator<ParsedWebData>() {
+            @Override
+            public int compare(ParsedWebData o1, ParsedWebData o2) {
+                return o2.getDate().compareTo(o1.getDate());
+            }
+        });
+
+        CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(context, R.id.listViewNews, result);
+        listView.setAdapter(customListViewAdapter);
+        NewsFragment.list = result;
+        textView.setText("");
+
+
+    }
 
 }

@@ -18,4 +18,5 @@
     <string name="BugReport">Zgłoszenie błędu:</string>
     <string name="ReportBugViaGitHub">Zgłoś przez GitHub</string>
     <string name="ReportBugViaEmail">Zgłoś przez email</string>
+    <string name="Loading">Ładowanie...</string>
 </resources>

@@ -11,4 +11,12 @@
         android:layout_gravity="center"
         android:drawSelectorOnTop="false" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Loading"
+        android:id="@+id/textViewLoading"
+        android:layout_gravity="center" />
+
 </FrameLayout>
