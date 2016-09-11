@@ -1,5 +1,7 @@
 package com.ikurek.pwr;
 
+import java.util.Date;
+
 /**
  * Created by Igor on 03.09.2016.
  */
@@ -11,15 +13,19 @@ public class ParsedWebData {
     String title;
     String url;
     String description;
+    Date date;
+    String dateString;
 
     public ParsedWebData() {
 
     }
 
-    public ParsedWebData(String title, String url, String description) {
+    public ParsedWebData(String title, String url, String description, Date date, String dateString) {
         this.title = title;
         this.url = url;
         this.description = description;
+        this.date = date;
+        this.dateString = dateString;
     }
 
     public String getTitle() {
@@ -34,6 +40,10 @@ public class ParsedWebData {
     public String getDescription() {
         return description;
     }
+
+    public Date getDate() {return date;}
+
+    public String getDateString() {return dateString;}
 
 
 }

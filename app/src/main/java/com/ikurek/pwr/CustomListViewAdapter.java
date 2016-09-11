@@ -42,6 +42,7 @@ public class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
             TextView title = (TextView) v.findViewById(R.id.listViewNewsTitle);
             TextView description = (TextView) v.findViewById(R.id.listViewNewsDescription);
             TextView source = (TextView) v.findViewById(R.id.listViewNewsSource);
+            TextView date = (TextView) v.findViewById(R.id.listViewNewsDate);
 
 
             if (title != null) {
@@ -50,6 +51,9 @@ public class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
             if (description != null) {
                 description.setText(data.getDescription());
                 source.setText("PWr");
+            }
+            if (date != null) {
+                date.setText(data.getDateString());
             }
 
         }
