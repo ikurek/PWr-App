@@ -13,10 +13,12 @@
     <string name="GitHubLinkOnly">https://github.com/ikurek/PWr-App</string>
     <string name="Hi">Cześć!</string>
     <string name="WhatIUsed">Aplikacja wykorzystuje:</string>
-    <string name="WhatIUsedContent">Język programowania Java (niestety)\nParser Jsoup w wersji 1.9.2\nStronę główną PWr\nStworzoną przeze mnie bazę budynków\nChronione prawami autorskimi logo PWr\nWiedzę ludzi ze StackOverflow</string>
+    <string name="WhatIUsedContent">Język programowania Java (niestety)\nParser Jsoup w wersji 1.9.2\nStronę główną PWr\nStrony wydziałowe PWr\nBibliotekę Picasso 2.5.2\nStworzoną przeze mnie bazę budynków\nChronione prawami autorskimi logo PWr\nTheCatAPI generujące losowe koty\nWiedzę ludzi ze StackOverflow</string>
     <string name="UsefullLinks">Przydatne linki:</string>
     <string name="BugReport">Zgłoszenie błędu:</string>
     <string name="ReportBugViaGitHub">Zgłoś przez GitHub</string>
     <string name="ReportBugViaEmail">Zgłoś przez email</string>
     <string name="Loading">Ładowanie...</string>
+    <string name="MOAR">Więcej!!!</string>
+    <string name="CatImageDescription">Welcome to the internet!</string>
 </resources>

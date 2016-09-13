@@ -14,6 +14,9 @@ public class ParsedWebData {
     String url;
     String description;
     String source;
+
+    //date zawiera datę w formacie UNIXa
+    //dateString zawiera datę w użytkowym formacie jako string
     Date date;
     String dateString;
 

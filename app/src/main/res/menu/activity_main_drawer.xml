@@ -12,8 +12,8 @@
             android:title="Budynki" />
         <item
             android:id="@+id/nav_map"
-            android:icon="@drawable/ic_map_black_24dp"
-            android:title="Mapa" />
+            android:icon="@drawable/ic_cat_face"
+            android:title="Koty" />
 
         <item
             android:id="@+id/nav_manage"

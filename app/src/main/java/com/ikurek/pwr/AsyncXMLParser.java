@@ -31,6 +31,10 @@ import layout.NewsFragment;
 /**
  * Created by Igor on 10.09.2016.
  */
+
+//Ten AsycTask to jakiś żart
+    //Ale działa więc na razie zostanie
+    //TODO: POPRAW TO!!! CALE!!!!
 public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWebData>> {
 
 
@@ -39,6 +43,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
     TextView textView;
 
 
+    //Przekazywane z BuildingsFragment
     public AsyncXMLParser(Context context, ListView listView, TextView textView) {
 
         this.context = context;
@@ -52,6 +57,10 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
 
     }
 
+    //Tutaj sa funkcje parsujące strony PWr
+    //Straszny syf jest z datami, bo w RRS są w formacie UNIXa
+    //Zrobiłem konwerter na daty w standardzie normalnym
+    //Stąd te dziwne linijki w przetwarzaniu daty
     @Override
     protected ArrayList<ParsedWebData> doInBackground(Void... params) {
         ArrayList<ParsedWebData> list = new ArrayList<ParsedWebData>();
@@ -66,7 +75,6 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
             factory.setNamespaceAware(false);
             XmlPullParser xpp = factory.newPullParser();
 
-            //Zbieranie danych z xml
             InputStream inputmain = new URL("http://www.portal.pwr.wroc.pl/rss,241.xml").openStream();
             xpp.setInput(inputmain, "UTF_8");
 
@@ -233,6 +241,9 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
 
     @Override
     protected void onPostExecute(ArrayList<ParsedWebData> result) {
+
+        //Sortuje cały ten array po datach
+        //Wykorzystuje daty UNIXa czyli list.data nie list.dataString
 
         Collections.sort(result, new Comparator<ParsedWebData>() {
             @Override

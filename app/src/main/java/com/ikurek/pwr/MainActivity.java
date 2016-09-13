@@ -1,9 +1,7 @@
 package com.ikurek.pwr;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -14,15 +12,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 
 import layout.AppInfoFragment;
 import layout.BuildingsFragment;
 import layout.ContactFragment;
-import layout.MapFragment;
+import layout.CatFragment;
 import layout.NewsFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -119,13 +114,13 @@ public class MainActivity extends AppCompatActivity
             fragmentClass = NewsFragment.class;
 
         } else if (id == R.id.nav_map) {
-            fragmentClass = MapFragment.class;
+            fragmentClass = CatFragment.class;
 
         } else if (id == R.id.nav_buildings) {
             fragmentClass = BuildingsFragment.class;
 
         } else if (id == R.id.nav_manage) {
-            fragmentClass = MapFragment.class;
+            fragmentClass = CatFragment.class;
 
             Toast.makeText(MainActivity.this, "Nie mam pomysłu co mogło by się tu znaleźć ", Toast.LENGTH_LONG).show();
 
