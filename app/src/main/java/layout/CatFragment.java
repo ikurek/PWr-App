@@ -4,13 +4,13 @@ package layout;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
@@ -25,7 +25,7 @@ public class CatFragment extends Fragment {
     ImageView cats;
     Picasso picasso;
     Button moarcats;
-    TextView loading;
+    ProgressBar catDownloadProgress;
 
 
     public CatFragment() {
@@ -51,25 +51,50 @@ public class CatFragment extends Fragment {
 
         cats = (ImageView) view.findViewById(R.id.imageViewCats);
         moarcats = (Button) view.findViewById(R.id.buttonMoreCats);
-        loading = (TextView) view.findViewById(R.id.textViewLoadingCats);
-        picasso = Picasso.with(getContext());
+        catDownloadProgress = (ProgressBar) view.findViewById(R.id.progressBarCatDownload);
+        picasso = Picasso.with(this.getContext());
+
+        catDownloadProgress.setVisibility(View.VISIBLE);
 
         //Przy stworzeniu widoku zabiera jednego losowego kota
         //Dzięki theCatAPI
+        picasso.load("http://thecatapi.com/api/images/get?format=src&type=jpg").into(cats, new com.squareup.picasso.Callback() {
+            @Override
+            public void onSuccess() {
+                catDownloadProgress.setVisibility(View.GONE);
+            }
 
-        //Wyświetlanie kota na starcie
-        loading.setText(R.string.Loading);
-        picasso.load("http://thecatapi.com/api/images/get?format=src&type=jpg").into(cats);
-        loading.setText("");
+            @Override
+            public void onError() {
+                catDownloadProgress.setVisibility(View.GONE);
+                Log.e("Picasso", "Error with picasso image loading");
+            }
+        });
+
+
+
 
         moarcats.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
+                catDownloadProgress.setVisibility(View.VISIBLE);
+
                 //Wyświetlanie kolejnych kotów
                 picasso.invalidate("http://thecatapi.com/api/images/get?format=src&type=jpg");
-                loading.setText(R.string.Loading);
-                picasso.load("http://thecatapi.com/api/images/get?format=src&type=jpg").into(cats);
-                loading.setText("");
+
+                picasso.load("http://thecatapi.com/api/images/get?format=src&type=jpg").into(cats, new com.squareup.picasso.Callback() {
+                    @Override
+                    public void onSuccess() {
+                        catDownloadProgress.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onError() {
+                        catDownloadProgress.setVisibility(View.GONE);
+                        Log.e("Picasso", "Error with picasso image loading");
+                    }
+                });
+
             }
         });
 

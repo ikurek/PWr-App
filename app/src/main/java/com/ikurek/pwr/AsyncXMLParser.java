@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -40,20 +41,22 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
 
     Context context;
     ListView listView;
-    TextView textView;
+    ProgressBar progressBar;
 
 
     //Przekazywane z BuildingsFragment
-    public AsyncXMLParser(Context context, ListView listView, TextView textView) {
+    public AsyncXMLParser(Context context, ListView listView, ProgressBar progressBar) {
 
         this.context = context;
         this.listView = listView;
-        this.textView = textView;
+        this.progressBar = progressBar;
     }
 
 
     @Override
     protected void onPreExecute() {
+        progressBar.setVisibility(View.VISIBLE);
+
 
     }
 
@@ -255,7 +258,8 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
         CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(context, R.id.listViewNews, result);
         listView.setAdapter(customListViewAdapter);
         NewsFragment.list = result;
-        textView.setText("");
+
+        progressBar.setVisibility(View.GONE);
 
 
     }

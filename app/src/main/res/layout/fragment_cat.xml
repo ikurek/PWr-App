@@ -29,14 +29,14 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:contentDescription="@string/CatImageDescription"
-            android:contextClickable="false" />
+            android:contextClickable="false"
+            android:layout_margin="8dp" />
 
-        <TextView
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/Loading"
-            android:id="@+id/textViewLoadingCats"
+            android:id="@+id/progressBarCatDownload"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
 
