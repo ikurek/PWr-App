@@ -55,7 +55,7 @@ public class NewsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_news, container, false);
         listView = (ListView) view.findViewById(R.id.listViewNews);
-        progressBar = (ProgressBar) view.findViewById(R.id.progressBarNewsDownload); 
+        progressBar = (ProgressBar) view.findViewById(R.id.progressBarNewsDownload);
         parser = new AsyncXMLParser(this.getContext(), listView, progressBar);
         parser.execute();
 
