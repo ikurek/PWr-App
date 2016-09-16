@@ -2,8 +2,10 @@ package com.ikurek.pwr;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -42,6 +44,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
     Context context;
     ListView listView;
     ProgressBar progressBar;
+    SharedPreferences preferences;
 
 
     //Przekazywane z BuildingsFragment
@@ -56,6 +59,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
     @Override
     protected void onPreExecute() {
         progressBar.setVisibility(View.VISIBLE);
+        preferences = PreferenceManager.getDefaultSharedPreferences(context);
 
 
     }

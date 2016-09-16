@@ -6,7 +6,7 @@
 
     <string name="action_settings">Ustawienia</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Ogólne Stringi użytkowe -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="AppInfo">Nazywam się Igor i jestem studentem W4. Aplikację tę tworzę w wolnym czasie, bo nie mam dziewczyny ani normalnych hobby. Jako że nad projektem pracuję sam, chętnie przyjmę jakąkolwiek pomoc ze strony grafików/programistów javy/programistów webowych/ludzi robiących kawę. Jeżeli chciałbyś mi pomóc, skontaktuj się ze mną.</string>
     <string name="GithubDescriptionAndLink">GitHub: https://github.com/ikurek/PWr-App</string>
@@ -21,4 +21,51 @@
     <string name="Loading">Ładowanie...</string>
     <string name="MOAR">Więcej!!!</string>
     <string name="CatImageDescription">Welcome to the internet!</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Stringi ustawień -->
+
+    <!-- Stringi dla ustawień newsfeed'u -->
+    <string name="pref_header_newsfeed">Źródła aktualności</string>
+
+    <string name="pref_title_pwr_all">Strona Główna Politechniki</string>
+    <string name="pref_description_pwr_all">Pobieraj aktualności z głównej strony Politechniki Wrocławskiej</string>
+
+    <string name="pref_title_w1">Wydział W1</string>
+
+    <string name="pref_title_w2">Wydział W2</string>
+
+    <string name="pref_title_w3">Wydział W3</string>
+
+    <string name="pref_title_w4">Wydział W4</string>
+
+    <string name="pref_title_w5">Wydział W5</string>
+
+    <string name="pref_title_w6">Wydział W6</string>
+
+    <string name="pref_title_w7">Wydział W7</string>
+
+    <string name="pref_title_w8">Wydział W8</string>
+
+    <string name="pref_title_w9">Wydział W9</string>
+
+    <string name="pref_title_w10">Wydział W10</string>
+
+    <string name="pref_title_w11">Wydział W11</string>
+
+    <string name="pref_title_w12">Wydział W12</string>
+
+    <string name="pref_title_luz">Radio LUZ</string>
+
+
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Pozostałe</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
 </resources>

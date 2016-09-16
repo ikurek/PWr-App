@@ -1,5 +1,6 @@
 package com.ikurek.pwr;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -12,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import layout.AppInfoFragment;
 import layout.BuildingsFragment;
@@ -119,10 +119,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_buildings) {
             fragmentClass = BuildingsFragment.class;
 
-        } else if (id == R.id.nav_manage) {
-            fragmentClass = CatFragment.class;
+        } else if (id == R.id.nav_settings) {
+            Intent startSettings = new Intent(this, SettingsActivity.class);
+            startActivity(startSettings);
 
-            Toast.makeText(MainActivity.this, "Nie mam pomysłu co mogło by się tu znaleźć ", Toast.LENGTH_LONG).show();
+
 
         } else if (id == R.id.nav_info) {
             fragmentClass = AppInfoFragment.class;
@@ -142,8 +143,10 @@ public class MainActivity extends AppCompatActivity
 
         //Zamiana fragmentów
         //TODO: Jeżeli w jakimś dziwnym zbiegu okoliczności nie zostanie wykonany żaden z if'ów, commit powoduje nullPointerException
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frameLayoutForFragments, fragment).commit();
+        if (fragment != null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.frameLayoutForFragments, fragment).addToBackStack(null).commit();
+        }
 
         //Zamyka drawer do lewej strony ekranu
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
