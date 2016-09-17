@@ -1,5 +1,7 @@
 package com.ikurek.pwr;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -16,8 +18,8 @@ import android.view.MenuItem;
 
 import layout.AppInfoFragment;
 import layout.BuildingsFragment;
-import layout.ContactFragment;
 import layout.CatFragment;
+import layout.ContactFragment;
 import layout.NewsFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -31,12 +33,35 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Sprawdź czy dostępne jest połączenie internetowe
+        //Jeżeli nie, poinformuj użytkownika
+        boolean isConnected = InternetConnectionChecker.isNetworkAvailable(getApplicationContext());
+
+        if (!isConnected) {
+            AlertDialog alertDialogNoInternet = new AlertDialog.Builder(MainActivity.this).create();
+            alertDialogNoInternet.setTitle(getString(R.string.something_is_broken));
+            alertDialogNoInternet.setMessage(getString(R.string.alertDialog_noInternetConnection));
 
 
+            alertDialogNoInternet.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.offlineMode),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+
+            alertDialogNoInternet.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.exit),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            System.exit(0);
+                        }
+                    });
+            alertDialogNoInternet.show();
+        }
 
 
         //Ustawia ftagment widoczny po odpaleniu aplikacji
-        //TODO: ekran ładowanie to nie był by zły pomysł
         Fragment fragment = null;
         Class fragmentClass = null;
         fragmentClass = NewsFragment.class;
@@ -52,7 +77,6 @@ public class MainActivity extends AppCompatActivity
         fragmentTransaction.replace(R.id.frameLayoutForFragments, fragment);
 
         fragmentTransaction.commit();
-
 
 
         //Kontrolki navigationdrawer
@@ -78,8 +102,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    //Kontrolki menu opcji, raczej zbędne
-    //TODO: Znajdź zastosowanie, albo wywal
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -96,6 +119,10 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            Intent startSettings = new Intent(this, SettingsActivity.class);
+            startActivity(startSettings);
+
             return true;
         }
 
@@ -124,7 +151,6 @@ public class MainActivity extends AppCompatActivity
             startActivity(startSettings);
 
 
-
         } else if (id == R.id.nav_info) {
             fragmentClass = AppInfoFragment.class;
 
@@ -141,8 +167,8 @@ public class MainActivity extends AppCompatActivity
             e.printStackTrace();
         }
 
+
         //Zamiana fragmentów
-        //TODO: Jeżeli w jakimś dziwnym zbiegu okoliczności nie zostanie wykonany żaden z if'ów, commit powoduje nullPointerException
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.frameLayoutForFragments, fragment).addToBackStack(null).commit();

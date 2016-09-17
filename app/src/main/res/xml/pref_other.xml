@@ -4,7 +4,7 @@
     <SwitchPreference
         android:defaultValue="false"
         android:key="Parser_old"
-        android:title="@string/pref_title_use_old_parser"
-        android:summary="@string/pref_desc_use_old_parser"/>
+        android:summary="@string/pref_desc_use_old_parser"
+        android:title="@string/pref_title_use_old_parser" />
 
 </PreferenceScreen>

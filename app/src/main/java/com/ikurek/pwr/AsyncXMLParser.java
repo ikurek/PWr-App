@@ -1,17 +1,12 @@
 package com.ikurek.pwr;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import org.jsoup.Jsoup;
 import org.xmlpull.v1.XmlPullParser;
@@ -23,7 +18,6 @@ import java.io.InputStream;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
@@ -36,14 +30,15 @@ import layout.NewsFragment;
  */
 
 //Ten AsycTask to jakiś żart
-    //Ale działa więc na razie zostanie
-    //TODO: POPRAW TO!!! CALE!!!!
+//Ale działa więc na razie zostanie
+//TODO: POPRAW TO!!! CALE!!!!
 public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWebData>> {
 
 
     Context context;
     ListView listView;
     ProgressBar progressBar;
+    ArrayList<ParsedWebData> list = new ArrayList<>();
     SharedPreferences preferences;
 
 
@@ -55,35 +50,22 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
         this.progressBar = progressBar;
     }
 
+    //Funkcja zawiea parser zdejmujący dane z jednego linku xml
+    //Przekazuje do niej link i nazwę linku jako źródło
+    //Tym co jest zczytane z linku wypełnia ArrayList
+    public Void singleLinkParser(String link, String source) {
 
-    @Override
-    protected void onPreExecute() {
-        progressBar.setVisibility(View.VISIBLE);
-        preferences = PreferenceManager.getDefaultSharedPreferences(context);
-
-
-    }
-
-    //Tutaj sa funkcje parsujące strony PWr
-    //Straszny syf jest z datami, bo w RRS są w formacie UNIXa
-    //Zrobiłem konwerter na daty w standardzie normalnym
-    //Stąd te dziwne linijki w przetwarzaniu daty
-    @Override
-    protected ArrayList<ParsedWebData> doInBackground(Void... params) {
-        ArrayList<ParsedWebData> list = new ArrayList<ParsedWebData>();
         ParsedWebData data = new ParsedWebData();
         String text = null;
 
-
-        //Parser dla strony głównej
         try {
 
             XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
             factory.setNamespaceAware(false);
             XmlPullParser xpp = factory.newPullParser();
 
-            InputStream inputmain = new URL("http://www.portal.pwr.wroc.pl/rss,241.xml").openStream();
-            xpp.setInput(inputmain, "UTF_8");
+            InputStream input = new URL(link).openStream();
+            xpp.setInput(input, "UTF_8");
 
             int eventTypeMain = xpp.getEventType();
 
@@ -106,19 +88,35 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
 
                     case XmlPullParser.END_TAG:
                         if (tagname.equalsIgnoreCase("item") && data.title.trim() != "Kanał RSS" && data.title.trim() != null && data.description.trim() != null && data.description.trim() != "Aktualności" && data.date != null) {
-                            data.source = "Cała Politechnika";
+                            data.source = source;
                             list.add(data);
+
+                            //Zczytanie tytułu
                         } else if (tagname.equalsIgnoreCase("title")) {
-                            data.title = text.trim().replaceAll(" +", " ");;
+                            data.title = text.trim().replaceAll(" +", " ");
+
+                            //Zczytanie linku
                         } else if (tagname.equalsIgnoreCase("link")) {
                             data.url = text.trim();
+
+                            //Zczytanie opisu
                         } else if (tagname.equalsIgnoreCase("description")) {
                             text = Jsoup.parse(text).text();
-                            data.description = text.trim().replaceAll(" +", " ");;
+                            data.description = text.trim().replaceAll(" +", " ");
+
+                            //Zczytanie daty
                         } else if (tagname.equalsIgnoreCase("pubDate")) {
 
                             //Przycina niepotrzebne części daty
-                            text = text.substring(0, text.length() - 15);
+                            //Dla PWr osobno bo ma inny format...
+                            if (source == "PWr") {
+                                text = text.substring(0, text.length() - 14);
+                            } else {
+                                text = text.substring(0, text.length() - 15);
+                            }
+
+                            //Jakby przypadkiem wczytało link do daty (zdarza sie)
+                            if (text.startsWith("http")) text = "Mon, 01 Jan 1111";
 
                             Date date = null;
                             String newDateString = null;
@@ -126,8 +124,9 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
                             final String NEW_FORMAT = "dd/MM/yyyy";
                             final String OLD_FORMAT = "EEE, dd MMM yyyy";
 
+
+                            //Parsowane daty z XML
                             try {
-                                //Parsowanie daty z XML
                                 SimpleDateFormat sdf = new SimpleDateFormat(OLD_FORMAT, Locale.ENGLISH);
                                 Date d = sdf.parse(text);
                                 sdf.applyPattern(NEW_FORMAT);
@@ -136,6 +135,8 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
+
+                            if (text == "Mon, 01 Jan 1111") newDateString = "Brak daty";
 
 
                             //Dwie daty na wyjściu jedna w formacie dla użytkownika
@@ -157,90 +158,65 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
         }
 
 
-        //Parser dla stron wydziału
-        try {
-
-            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-            factory.setNamespaceAware(false);
-            XmlPullParser xpp = factory.newPullParser();
-            InputStream inputlocal = new URL("http://www.weka.pwr.edu.pl/rss,41.xml").openStream();
-            xpp.setInput(inputlocal, "UTF_8");
-
-            int eventTypeLocal = xpp.getEventType();
-
-            while (eventTypeLocal != XmlPullParser.END_DOCUMENT) {
-                String tagname = xpp.getName();
-
-                switch (eventTypeLocal) {
-
-                    case XmlPullParser.START_TAG:
-                        if (tagname.equalsIgnoreCase("item")) {
-
-                            data = new ParsedWebData();
-                        }
-                        break;
-
-                    case XmlPullParser.TEXT:
-                        text = xpp.getText();
-                        break;
-
-                    case XmlPullParser.END_TAG:
-                        if (tagname.equalsIgnoreCase("item") && data.title.trim() != "Kanał RSS" && data.title.trim() != null && data.description.trim() != null && data.description.trim() != "Aktualności") {
-
-                            data.source = "Wydział Elektroniki";
-                            list.add(data);
+        return null;
+    }
 
 
-                        } else if (tagname.equalsIgnoreCase("title")) {
-                            data.title = text.trim().replaceAll(" +", " ");;
-                        } else if (tagname.equalsIgnoreCase("link")) {
-                            data.url = text;
-                        } else if (tagname.equalsIgnoreCase("description")) {
-                            text = Jsoup.parse(text).text();
-                            data.description = text.trim().replaceAll(" +", " ");;
-                        } else if (tagname.equalsIgnoreCase("pubDate")) {
-
-                            //Przycina niepotrzebne części daty
-                            text = text.substring(0, text.length() - 15);
-
-                            if(text.startsWith("http")) text = "Mon, 01 Jan 1111";
-
-                            Date date = null;
-                            String newDateString = null;
-                            //Zamiana formatu daty na normalny
-                            final String NEW_FORMAT = "dd/MM/yyyy";
-                            final String OLD_FORMAT = "EEE, dd MMM yyyy";
-
-                            try {
-                                //Parsowanie daty z XML
-                                SimpleDateFormat sdf = new SimpleDateFormat(OLD_FORMAT, Locale.ENGLISH);
-                                Date d = sdf.parse(text);
-                                sdf.applyPattern(NEW_FORMAT);
-                                newDateString = sdf.format(d);
-                                date = d;
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
+    @Override
+    protected void onPreExecute() {
+        progressBar.setVisibility(View.VISIBLE);
+        preferences = PreferenceManager.getDefaultSharedPreferences(context);
 
 
-                            //Dwie daty na wyjściu jedna w formacie dla użytkownika
-                            //Druga w formacie unixa do sortowania danych
-                            data.date = date;
-                            data.dateString = newDateString;
-                        }
-                        break;
+    }
 
-                    default:
-                        break;
-                }
-                eventTypeLocal = xpp.next();
-            }
-
-
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+    //Tutaj sa funkcje parsujące strony PWr
+    //Straszny syf jest z datami, bo w RRS są w formacie UNIXa
+    //Zrobiłem konwerter na daty w standardzie normalnym
+    //Stąd te dziwne linijki w przetwarzaniu daty
+    @Override
+    protected ArrayList<ParsedWebData> doInBackground(Void... params) {
+        if (preferences.getBoolean("news_all", true)) {
+            singleLinkParser("http://pwr.edu.pl/rss/pl/24.xml", "PWr");
+        }
+        if (preferences.getBoolean("news_w1", true)) {
+            singleLinkParser("http://wa.pwr.edu.pl/rss,21.xml", "WA");
+        }
+        if (preferences.getBoolean("news_w2", true)) {
+            singleLinkParser("http://wbliw.pwr.edu.pl/rss,31.xml", "WBLIW");
+        }
+        if (preferences.getBoolean("news_w3", true)) {
+            singleLinkParser("http://wch.pwr.edu.pl/rss,11.xml", "WCH");
+        }
+        if (preferences.getBoolean("news_w4", true)) {
+            singleLinkParser("http://weka.pwr.edu.pl/rss,41.xml", "WEKA");
+        }
+        if (preferences.getBoolean("news_w5", true)) {
+            singleLinkParser("http://weny.pwr.edu.pl/rss,51.xml", "WENY");
+        }
+        if (preferences.getBoolean("news_w6", true)) {
+            singleLinkParser("http://wggg.pwr.edu.pl/rss,61.xml", "WGGG");
+        }
+        if (preferences.getBoolean("news_w7", true)) {
+            singleLinkParser("http://wis.pwr.edu.pl/rss,71.xml", "WIS");
+        }
+        if (preferences.getBoolean("news_w8", true)) {
+            singleLinkParser("http://wiz.pwr.edu.pl/rss,1.xml", "WIZ");
+        }
+        if (preferences.getBoolean("news_w9", true)) {
+            singleLinkParser("http://wme.pwr.edu.pl/rss,81.xml", "WME");
+        }
+        if (preferences.getBoolean("news_w10", true)) {
+            singleLinkParser("http://wm.pwr.edu.pl/rss,91.xml", "WM");
+        }
+        if (preferences.getBoolean("news_w11", true)) {
+            singleLinkParser("http://wppt.pwr.edu.pl/rss,101.xml", "WPPT");
+        }
+        if (preferences.getBoolean("news_w12", true)) {
+            singleLinkParser("http://wemif.pwr.edu.pl/rss,111.xml", "WEMiF");
+        }
+        if (preferences.getBoolean("news_w13", true)) {
+            singleLinkParser("http://wmat.pwr.edu.pl/rss,231.xml", "WMAT");
         }
 
         return list;

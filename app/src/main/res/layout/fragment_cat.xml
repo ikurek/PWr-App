@@ -10,35 +10,35 @@
         android:layout_gravity="center">
 
         <Button
+            android:id="@+id/buttonMoreCats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/MOAR"
-            android:id="@+id/buttonMoreCats"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:text="@string/MOAR" />
 
         <ImageView
+            android:id="@+id/imageViewCats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageViewCats"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_above="@+id/buttonMoreCats"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp"
             android:contentDescription="@string/CatImageDescription"
-            android:contextClickable="false"
-            android:layout_margin="8dp" />
+            android:contextClickable="false" />
 
         <ProgressBar
+            android:id="@+id/progressBarCatDownload"
             style="?android:attr/progressBarStyleLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/progressBarCatDownload"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
 
 
     </RelativeLayout>

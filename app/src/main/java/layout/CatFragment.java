@@ -11,8 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-
 
 import com.ikurek.pwr.R;
 import com.squareup.picasso.Picasso;
@@ -47,7 +45,7 @@ public class CatFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_cat, container, false);
+        View view = inflater.inflate(R.layout.fragment_cat, container, false);
 
         cats = (ImageView) view.findViewById(R.id.imageViewCats);
         moarcats = (Button) view.findViewById(R.id.buttonMoreCats);
@@ -72,11 +70,8 @@ public class CatFragment extends Fragment {
         });
 
 
-
-
         moarcats.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 catDownloadProgress.setVisibility(View.VISIBLE);
 
                 //Wyświetlanie kolejnych kotów

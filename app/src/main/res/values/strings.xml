@@ -21,7 +21,12 @@
     <string name="Loading">Ładowanie...</string>
     <string name="MOAR">Więcej!!!</string>
     <string name="CatImageDescription">Welcome to the internet!</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_settings">Ustawienia</string>
+    <string name="something_is_broken">Coś... Coś się popsuło...</string>
+    <string name="alertDialog_noInternetConnection">Wygląda na to, że nie masz połączenia z internetem... Niektóre funkcje aplikacji mogą nie działać.</string>
+    <string name="exit">Wyjdź</string>
+    <string name="offlineMode">Tryb offline</string>
+
 
     <!-- Stringi ustawień -->
 
@@ -29,40 +34,53 @@
     <string name="pref_header_newsfeed">Źródła aktualności</string>
 
     <string name="pref_title_pwr_all">Strona Główna Politechniki</string>
-    <string name="pref_description_pwr_all">Pobieraj aktualności z głównej strony Politechniki Wrocławskiej</string>
+    <string name="title_short_pwr">PWr</string>
 
-    <string name="pref_title_w1">Wydział W1</string>
 
-    <string name="pref_title_w2">Wydział W2</string>
+    <string name="pref_title_w1">Wydział Architektury</string>
+    <string name="title_short_w1">WA</string>
 
-    <string name="pref_title_w3">Wydział W3</string>
+    <string name="pref_title_w2">Wydział Budownictwa Lądowego i Wodnego</string>
+    <string name="title_short_w2">WBLiW</string>
 
-    <string name="pref_title_w4">Wydział W4</string>
+    <string name="pref_title_w3">Wydział Chemiczny</string>
+    <string name="title_short_w3">WCH</string>
 
-    <string name="pref_title_w5">Wydział W5</string>
+    <string name="pref_title_w4">Wydział Eletroniki</string>
+    <string name="title_short_w4">WEKA</string>
 
-    <string name="pref_title_w6">Wydział W6</string>
+    <string name="pref_title_w5">Wydział Elektryczny</string>
+    <string name="title_short_w5">WELY</string>
 
-    <string name="pref_title_w7">Wydział W7</string>
+    <string name="pref_title_w6">Wydział Geoinżynierii, Górnictwa i Geologii</string>
+    <string name="title_short_w6">WGGG</string>
 
-    <string name="pref_title_w8">Wydział W8</string>
+    <string name="pref_title_w7">Wydział Inzynierii Środowiska</string>
+    <string name="title_short_w7">WIS</string>
 
-    <string name="pref_title_w9">Wydział W9</string>
+    <string name="pref_title_w8">Wydział Informatyki i Zarządzania</string>
+    <string name="title_short_w8">WIZ</string>
 
-    <string name="pref_title_w10">Wydział W10</string>
+    <string name="pref_title_w9">Wydział Mechaniczno-Energetyczny</string>
+    <string name="title_short_w9">WME</string>
 
-    <string name="pref_title_w11">Wydział W11</string>
+    <string name="pref_title_w10">Wydział Mechaniczny</string>
+    <string name="title_short_w10">WM</string>
 
-    <string name="pref_title_w12">Wydział W12</string>
+    <string name="pref_title_w11">Wydział Podstawowych Problemów Techniki</string>
+    <string name="title_short_w11">WPPT</string>
 
-    <string name="pref_title_luz">Radio LUZ</string>
+    <string name="pref_title_w12">Wydział Elektroniki Mikrosystemów i Fotoniki</string>
+    <string name="title_short_w12">WEMiF</string>
 
+    <string name="pref_title_w13">Wydział Matematyki</string>
+    <string name="title_short_w13">WM</string>
 
 
     <!-- Example settings for Notifications -->
     <string name="pref_header_notifications">Pozostałe</string>
 
-    <string name="pref_title_use_old_parser">Użyj klasycznego parsera</string>
+    <string name="pref_title_use_old_parser">Zmiana parsera</string>
     <string name="pref_desc_use_old_parser">Zamiast używać nowej wersji parsera (XPP) użyj klasycznej (Jsoup). Zaznacz, jeżeli występuja problemy z kanałem aktualności.</string>
 
 </resources>

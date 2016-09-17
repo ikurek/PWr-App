@@ -10,12 +10,12 @@
         android:id="@+id/listViewNewsDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
         android:textColor="#D8000000"
-        android:textSize="12sp"
-        android:layout_margin="8dp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/listViewNewsSource"
@@ -24,38 +24,36 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
         android:textColor="#D8000000"
-        android:textSize="12sp"
-        android:layout_margin="8dp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/listViewNewsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#D8000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/listViewNewsDate"
+        android:layout_marginBottom="5dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="5dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/listViewNewsDate" />
+        android:textColor="#D8000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/listViewNewsDescription"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/listViewNewsTitle"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:ellipsize="marquee"
         android:lines="5"
         android:marqueeRepeatLimit="marquee_forever"
         android:textColor="#D8000000"
-        android:textSize="12sp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp" />
-
-
+        android:textSize="12sp" />
 
 
 </RelativeLayout>

@@ -46,11 +46,17 @@ public class ParsedWebData {
         return description;
     }
 
-    public Date getDate() {return date;}
+    public Date getDate() {
+        return date;
+    }
 
-    public String getDateString() {return dateString;}
+    public String getDateString() {
+        return dateString;
+    }
 
-    public String getSource() {return source;}
+    public String getSource() {
+        return source;
+    }
 
 
 }

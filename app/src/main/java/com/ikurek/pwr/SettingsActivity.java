@@ -3,10 +3,10 @@ package com.ikurek.pwr;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.preference.PreferenceFragment;
-import android.view.MenuItem;
 import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
+import android.view.MenuItem;
 
 import java.util.List;
 
@@ -98,4 +98,4 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     }
 
 
-    }
+}

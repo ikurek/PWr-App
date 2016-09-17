@@ -12,11 +12,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ikurek.pwr.AsyncXMLParser;
-import com.ikurek.pwr.CustomListViewAdapter;
 import com.ikurek.pwr.ParsedWebData;
 import com.ikurek.pwr.R;
 
@@ -25,7 +22,7 @@ import java.util.ArrayList;
 
 public class NewsFragment extends Fragment {
 
-    public static ArrayList <ParsedWebData> list = new ArrayList<ParsedWebData>();
+    public static ArrayList<ParsedWebData> list = new ArrayList<ParsedWebData>();
     ProgressBar progressBar;
     AsyncXMLParser parser;
     ListView listView;
@@ -60,7 +57,6 @@ public class NewsFragment extends Fragment {
         parser.execute();
 
 
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
@@ -74,8 +70,6 @@ public class NewsFragment extends Fragment {
 
             }
         });
-
-
 
 
         return view;

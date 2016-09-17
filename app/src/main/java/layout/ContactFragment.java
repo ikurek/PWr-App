@@ -38,10 +38,10 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view =  inflater.inflate(R.layout.fragment_contact, container, false);
+        final View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
         Button gitButton = (Button) view.findViewById(R.id.SubmitViaGitHub);
-        gitButton.setOnClickListener( new View.OnClickListener() {
+        gitButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -51,29 +51,27 @@ public class ContactFragment extends Fragment {
         });
 
         Button emailButton = (Button) view.findViewById(R.id.SubmitViaEmailButton);
-        emailButton.setOnClickListener( new View.OnClickListener() {
+        emailButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+                String address[] = {"igorkurek96@gmail.com"};
 
-                Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                emailIntent.setData(Uri.parse("mailto:"));
-                emailIntent.setType("text/plain");
-
-
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, "igorkurek96@gmail.com");
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "[BUG REPORT]");
-                emailIntent.putExtra(Intent.EXTRA_TEXT, "[BUG DESCRIPTION]\n\n\n[ADDITIONAL INFO]\n");
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "igorkurek96@gmail.com", null));
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, address);
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "[PWr APP] ");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "[BUG REPORT]\n\n\n\n[FEATURE REQUEST]\n\n\n\n");
 
                 try {
                     startActivity(Intent.createChooser(emailIntent, "Wysyłanie raportu..."));
                 } catch (android.content.ActivityNotFoundException ex) {
 
+                    Toast noEmailAppFound = Toast.makeText(getContext(), "Wygląda na to, że nie masz żadnej aplikacji do wysyłania wiadomości email :-(", Toast.LENGTH_LONG);
+                    noEmailAppFound.show();
+
                 }
             }
         });
-
-
 
 
         return view;
