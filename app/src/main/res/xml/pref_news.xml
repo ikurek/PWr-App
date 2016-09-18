@@ -1,72 +1,72 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="true"
         android:key="news_all"
         android:title="@string/pref_title_pwr_all" />
 
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w1"
         android:title="@string/pref_title_w1" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w2"
         android:title="@string/pref_title_w2" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w3"
         android:title="@string/pref_title_w3" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w4"
         android:title="@string/pref_title_w4" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w5"
         android:title="@string/pref_title_w5" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w6"
         android:title="@string/pref_title_w6" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w7"
         android:title="@string/pref_title_w7" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w8"
         android:title="@string/pref_title_w8" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w9"
         android:title="@string/pref_title_w9" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w10"
         android:title="@string/pref_title_w10" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w11"
         android:title="@string/pref_title_w11" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w12"
         android:title="@string/pref_title_w12" />
 
-    <SwitchPreference
+    <CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w13"
         android:title="@string/pref_title_w13" />

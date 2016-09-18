@@ -20,6 +20,16 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         setupActionBar();
     }
 
+    @Override
+    public void onBackPressed() {
+
+
+        NavUtils.navigateUpFromSameTask(this);
+
+
+    }
+
+
 
     private void setupActionBar() {
         ActionBar actionBar = getSupportActionBar();
@@ -35,6 +45,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         if (id == android.R.id.home) {
             if (!super.onMenuItemSelected(featureId, item)) {
                 NavUtils.navigateUpFromSameTask(this);
+
             }
             return true;
         }
@@ -65,6 +76,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
         }
 
+
         @Override
         public boolean onOptionsItemSelected(MenuItem item) {
             int id = item.getItemId();
@@ -74,6 +86,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             }
             return super.onOptionsItemSelected(item);
         }
+
+
     }
 
 
@@ -85,6 +99,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             setHasOptionsMenu(true);
 
         }
+
 
         @Override
         public boolean onOptionsItemSelected(MenuItem item) {

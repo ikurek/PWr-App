@@ -77,10 +77,11 @@
     <string name="title_short_w13">WM</string>
 
 
-    <!-- Example settings for Notifications -->
+    <!-- Stringi dla ustawień pozostałe -->
     <string name="pref_header_notifications">Pozostałe</string>
 
     <string name="pref_title_use_old_parser">Zmiana parsera</string>
     <string name="pref_desc_use_old_parser">Zamiast używać nowej wersji parsera (XPP) użyj klasycznej (Jsoup). Zaznacz, jeżeli występuja problemy z kanałem aktualności.</string>
+
 
 </resources>

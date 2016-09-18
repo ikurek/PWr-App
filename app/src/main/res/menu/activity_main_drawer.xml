@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/navbar_top"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_news"
             android:icon="@drawable/ic_web_asset_black_24dp"
@@ -19,20 +21,24 @@
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_settings_black_24dp"
             android:title="Ustawienia" />
+
     </group>
 
-    <item android:title="Kwestie Techniczne">
-        <menu>
-            <item
-                android:id="@+id/nav_bugreport"
-                android:icon="@drawable/ic_bug_report_black_24dp"
-                android:title="Kontakt/Zgłoszenie błędu" />
-            <item
-                android:id="@+id/nav_info"
-                android:icon="@drawable/ic_info_black_24dp"
-                android:title="O Aplikacji" />
+    <group
+        android:id="@+id/navbar_bottom"
+        android:checkableBehavior="single">
 
-        </menu>
-    </item>
+        <item
+            android:id="@+id/nav_bugreport"
+            android:icon="@drawable/ic_bug_report_black_24dp"
+            android:title="Kontakt/Zgłoszenie błędu" />
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="O Aplikacji" />
+
+
+    </group>
+
 
 </menu>

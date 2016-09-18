@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         //Sprawdź czy dostępne jest połączenie internetowe
         //Jeżeli nie, poinformuj użytkownika
         boolean isConnected = InternetConnectionChecker.isNetworkAvailable(getApplicationContext());
@@ -64,6 +65,8 @@ public class MainActivity extends AppCompatActivity
         //Ustawia ftagment widoczny po odpaleniu aplikacji
         Fragment fragment = null;
         Class fragmentClass = null;
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
         fragmentClass = NewsFragment.class;
         try {
             fragment = (Fragment) fragmentClass.newInstance();
@@ -86,7 +89,7 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
     }
@@ -117,7 +120,7 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        //Otwiera ekran ustawień
         if (id == R.id.action_settings) {
 
             Intent startSettings = new Intent(this, SettingsActivity.class);
@@ -126,15 +129,19 @@ public class MainActivity extends AppCompatActivity
             return true;
         }
 
+
         return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         //Wybory elementów w navigationdrawer
         Fragment fragment = null;
         Class fragmentClass = null;
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
         int id = item.getItemId();
 
         if (id == R.id.nav_news) {
@@ -153,10 +160,12 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_info) {
             fragmentClass = AppInfoFragment.class;
+            navigationView.setCheckedItem(R.id.nav_info);
 
 
         } else if (id == R.id.nav_bugreport) {
             fragmentClass = ContactFragment.class;
+            navigationView.setCheckedItem(R.id.nav_bugreport);
 
         }
 

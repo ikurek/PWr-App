@@ -29,9 +29,8 @@ import layout.NewsFragment;
  * Created by Igor on 10.09.2016.
  */
 
-//Ten AsycTask to jakiś żart
-//Ale działa więc na razie zostanie
-//TODO: POPRAW TO!!! CALE!!!!
+//Zawiera parser do stron PWr
+//Cała funkcja to AsyncTask żeby utrzymać zgodność ze standardem Androida
 public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWebData>> {
 
 
@@ -87,7 +86,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
                         break;
 
                     case XmlPullParser.END_TAG:
-                        if (tagname.equalsIgnoreCase("item") && data.title.trim() != "Kanał RSS" && data.title.trim() != null && data.description.trim() != null && data.description.trim() != "Aktualności" && data.date != null) {
+                        if (tagname.equalsIgnoreCase("item") && data.title != "Kanał RSS" && data.title.startsWith("The Freescale Cup 2014") != true && data.title != null && data.description != null && data.description != "Aktualności" && data.date != null) {
                             data.source = source;
                             list.add(data);
 
