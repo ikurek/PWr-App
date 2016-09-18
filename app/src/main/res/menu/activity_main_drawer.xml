@@ -12,8 +12,14 @@
             android:id="@+id/nav_buildings"
             android:icon="@drawable/ic_business_black_24dp"
             android:title="Budynki" />
+
         <item
-            android:id="@+id/nav_map"
+            android:id="@+id/nav_radio"
+            android:icon="@drawable/ic_radio_black_24dp"
+            android:title="Radio Luz" />
+
+        <item
+            android:id="@+id/nav_cats"
             android:icon="@drawable/ic_cat_face"
             android:title="Koty" />
 

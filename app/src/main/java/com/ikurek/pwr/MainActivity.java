@@ -21,6 +21,7 @@ import layout.BuildingsFragment;
 import layout.CatFragment;
 import layout.ContactFragment;
 import layout.NewsFragment;
+import layout.RadioFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -147,7 +148,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_news) {
             fragmentClass = NewsFragment.class;
 
-        } else if (id == R.id.nav_map) {
+        } else if (id == R.id.nav_cats) {
             fragmentClass = CatFragment.class;
 
         } else if (id == R.id.nav_buildings) {
@@ -156,6 +157,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_settings) {
             Intent startSettings = new Intent(this, SettingsActivity.class);
             startActivity(startSettings);
+
+        } else if (id == R.id.nav_radio) {
+            fragmentClass = RadioFragment.class;
+            navigationView.setCheckedItem(R.id.nav_radio);
 
 
         } else if (id == R.id.nav_info) {
