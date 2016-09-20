@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         applicationId "com.ikurek.pwr"
         minSdkVersion 16
         targetSdkVersion 24
-        versionCode 6
-        versionName "3.0.1"
+        versionCode 7
+        versionName "3.1.0"
 
 
     }
@@ -18,9 +18,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-    dexOptions {
-        incremental true
     }
 }
 dependencies {

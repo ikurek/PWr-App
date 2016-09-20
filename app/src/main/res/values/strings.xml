@@ -46,7 +46,7 @@
     <string name="pref_title_w3">Wydział Chemiczny</string>
     <string name="title_short_w3">WCH</string>
 
-    <string name="pref_title_w4">Wydział Eletroniki</string>
+    <string name="pref_title_w4">Wydział Elektroniki</string>
     <string name="title_short_w4">WEKA</string>
 
     <string name="pref_title_w5">Wydział Elektryczny</string>
@@ -55,7 +55,7 @@
     <string name="pref_title_w6">Wydział Geoinżynierii, Górnictwa i Geologii</string>
     <string name="title_short_w6">WGGG</string>
 
-    <string name="pref_title_w7">Wydział Inzynierii Środowiska</string>
+    <string name="pref_title_w7">Wydział Inżynierii Środowiska</string>
     <string name="title_short_w7">WIS</string>
 
     <string name="pref_title_w8">Wydział Informatyki i Zarządzania</string>
@@ -82,6 +82,7 @@
 
     <string name="pref_title_use_old_parser">Zmiana parsera</string>
     <string name="pref_desc_use_old_parser">Zamiast używać nowej wersji parsera (XPP) użyj klasycznej (Jsoup). Zaznacz, jeżeli występuja problemy z kanałem aktualności.</string>
-
+    <string name="pref_title_offline_mode_prompt">Wyłącz powiadomienie o trybie offline</string>
+    <string name="pref_desc_offline_mode_prompt">Po aktywowaniu aplikacja nie będzie monitorować połączenia z siecią</string>
 
 </resources>

@@ -3,7 +3,9 @@ package com.ikurek.pwr;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -32,36 +34,39 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         setSupportActionBar(toolbar);
 
 
         //Sprawdź czy dostępne jest połączenie internetowe
         //Jeżeli nie, poinformuj użytkownika
-        boolean isConnected = InternetConnectionChecker.isNetworkAvailable(getApplicationContext());
+        if(preferences.getBoolean("Offline_mode_prompt", false)) {
 
-        if (!isConnected) {
-            AlertDialog alertDialogNoInternet = new AlertDialog.Builder(MainActivity.this).create();
-            alertDialogNoInternet.setTitle(getString(R.string.something_is_broken));
-            alertDialogNoInternet.setMessage(getString(R.string.alertDialog_noInternetConnection));
+            boolean isConnected = InternetConnectionChecker.isNetworkAvailable(getApplicationContext());
+
+            if (!isConnected) {
+                AlertDialog alertDialogNoInternet = new AlertDialog.Builder(MainActivity.this).create();
+                alertDialogNoInternet.setTitle(getString(R.string.something_is_broken));
+                alertDialogNoInternet.setMessage(getString(R.string.alertDialog_noInternetConnection));
 
 
-            alertDialogNoInternet.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.offlineMode),
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
+                alertDialogNoInternet.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.offlineMode),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
 
-            alertDialogNoInternet.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.exit),
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                            System.exit(0);
-                        }
-                    });
-            alertDialogNoInternet.show();
+                alertDialogNoInternet.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.exit),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                System.exit(0);
+                            }
+                        });
+                alertDialogNoInternet.show();
+            }
         }
-
 
         //Ustawia ftagment widoczny po odpaleniu aplikacji
         Fragment fragment = null;
