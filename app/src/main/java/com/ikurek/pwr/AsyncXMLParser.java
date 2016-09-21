@@ -178,43 +178,43 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
         if (preferences.getBoolean("news_all", true)) {
             singleLinkParser("http://pwr.edu.pl/rss/pl/24.xml", "PWr");
         }
-        if (preferences.getBoolean("news_w1", true)) {
+        if (preferences.getBoolean("news_w1", false)) {
             singleLinkParser("http://wa.pwr.edu.pl/rss,21.xml", "WA");
         }
-        if (preferences.getBoolean("news_w2", true)) {
+        if (preferences.getBoolean("news_w2", false)) {
             singleLinkParser("http://wbliw.pwr.edu.pl/rss,31.xml", "WBLIW");
         }
-        if (preferences.getBoolean("news_w3", true)) {
+        if (preferences.getBoolean("news_w3", false)) {
             singleLinkParser("http://wch.pwr.edu.pl/rss,11.xml", "WCH");
         }
         if (preferences.getBoolean("news_w4", true)) {
             singleLinkParser("http://weka.pwr.edu.pl/rss,41.xml", "WEKA");
         }
-        if (preferences.getBoolean("news_w5", true)) {
+        if (preferences.getBoolean("news_w5", false)) {
             singleLinkParser("http://weny.pwr.edu.pl/rss,51.xml", "WENY");
         }
-        if (preferences.getBoolean("news_w6", true)) {
+        if (preferences.getBoolean("news_w6", false)) {
             singleLinkParser("http://wggg.pwr.edu.pl/rss,61.xml", "WGGG");
         }
-        if (preferences.getBoolean("news_w7", true)) {
+        if (preferences.getBoolean("news_w7", false)) {
             singleLinkParser("http://wis.pwr.edu.pl/rss,71.xml", "WIS");
         }
-        if (preferences.getBoolean("news_w8", true)) {
+        if (preferences.getBoolean("news_w8", false)) {
             singleLinkParser("http://wiz.pwr.edu.pl/rss,1.xml", "WIZ");
         }
-        if (preferences.getBoolean("news_w9", true)) {
+        if (preferences.getBoolean("news_w9", false)) {
             singleLinkParser("http://wme.pwr.edu.pl/rss,81.xml", "WME");
         }
-        if (preferences.getBoolean("news_w10", true)) {
+        if (preferences.getBoolean("news_w10", false)) {
             singleLinkParser("http://wm.pwr.edu.pl/rss,91.xml", "WM");
         }
-        if (preferences.getBoolean("news_w11", true)) {
+        if (preferences.getBoolean("news_w11", false)) {
             singleLinkParser("http://wppt.pwr.edu.pl/rss,101.xml", "WPPT");
         }
-        if (preferences.getBoolean("news_w12", true)) {
+        if (preferences.getBoolean("news_w12", false)) {
             singleLinkParser("http://wemif.pwr.edu.pl/rss,111.xml", "WEMiF");
         }
-        if (preferences.getBoolean("news_w13", true)) {
+        if (preferences.getBoolean("news_w13", false)) {
             singleLinkParser("http://wmat.pwr.edu.pl/rss,231.xml", "WMAT");
         }
 

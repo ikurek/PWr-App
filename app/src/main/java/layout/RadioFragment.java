@@ -51,9 +51,7 @@ public class RadioFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_radio, container, false);
 
-        final ImageButton playPauseRadio = (ImageButton) view.findViewById(R.id.imageButtonPlayRadio) ;
-
-
+        final ImageButton playPauseRadio = (ImageButton) view.findViewById(R.id.imageButtonPlayRadio);
 
 
         //Przycisk play
@@ -66,9 +64,7 @@ public class RadioFragment extends Fragment {
                     radioPlayer.stop();
                     audioManager.abandonAudioFocus(afChangeListener);
                     playPauseRadio.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                }
-
-                else {
+                } else {
 
                     playPauseRadio.setImageResource(R.drawable.ic_stop_black_24dp);
 
@@ -86,7 +82,6 @@ public class RadioFragment extends Fragment {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
 
 
                     radioPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -109,7 +104,7 @@ public class RadioFragment extends Fragment {
 
 
                 }
-                }
+            }
         });
 
 

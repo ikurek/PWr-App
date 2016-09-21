@@ -1,5 +1,23 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="news_layout"
+        android:summary="Zamień widok listy na karty"
+        android:title="Używaj widoku kart" />
+
+    <ListPreference
+        android:defaultValue="slide"
+        android:entries="@array/array_animations"
+        android:entryValues="@array/array_animations_values"
+        android:key="news_animation"
+        android:title="Wybierz animację aktualności" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="news_use_chrome"
+        android:summary="Zamiast otwierać linki w przeglądarce, otwieraj je bezpośrednio w aplikacji, dzięki technologii Chrome Custom Tabs"
+        android:title="Używaj technologii kart Chrome" />
 
     <SwitchPreference
         android:defaultValue="false"

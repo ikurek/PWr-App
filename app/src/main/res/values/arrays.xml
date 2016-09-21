@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="array_animations">
+
+        <item>Wlot od dołu</item>
+        <item>Zanikanie</item>
+        <item>Wślizg</item>
+        <item>Brak</item>
+
+    </string-array>
+
+    <string-array name="array_animations_values">
+
+        <item>btt</item>
+        <item>fade</item>
+        <item>slide</item>
+        <item>none</item>
+
+    </string-array>
+
+
+</resources>

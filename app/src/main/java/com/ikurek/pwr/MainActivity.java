@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity
 
         //Sprawdź czy dostępne jest połączenie internetowe
         //Jeżeli nie, poinformuj użytkownika
-        if(preferences.getBoolean("Offline_mode_prompt", false)) {
+        if (!preferences.getBoolean("Offline_mode_prompt", false)) {
 
             boolean isConnected = InternetConnectionChecker.isNetworkAvailable(getApplicationContext());
 

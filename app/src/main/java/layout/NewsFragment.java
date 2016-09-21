@@ -3,8 +3,12 @@ package layout;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +30,7 @@ public class NewsFragment extends Fragment {
     ProgressBar progressBar;
     AsyncXMLParser parser;
     ListView listView;
+    SharedPreferences preferences;
 
 
     public NewsFragment() {
@@ -49,8 +54,15 @@ public class NewsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        View view = null;
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_news, container, false);
+        if (preferences.getBoolean("news_layout", true)) {
+            view = inflater.inflate(R.layout.fragment_news_cards, container, false);
+        } else {
+            view = inflater.inflate(R.layout.fragment_news_list, container, false);
+        }
         listView = (ListView) view.findViewById(R.id.listViewNews);
         progressBar = (ProgressBar) view.findViewById(R.id.progressBarNewsDownload);
         parser = new AsyncXMLParser(this.getContext(), listView, progressBar);
@@ -64,8 +76,17 @@ public class NewsFragment extends Fragment {
                 ParsedWebData singleData = NewsFragment.list.get(position);
                 String url = singleData.getUrl();
 
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                startActivity(browserIntent);
+                if (preferences.getBoolean("news_use_chrome", true)) {
+
+                    CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+                    builder.setToolbarColor(Color.parseColor("#B22315"));
+                    CustomTabsIntent customTabsIntent = builder.build();
+                    customTabsIntent.launchUrl(getActivity(), Uri.parse(url));
+
+                } else {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(browserIntent);
+                }
 
 
             }

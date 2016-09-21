@@ -15,20 +15,20 @@
             android:id="@+id/imageViewLuzRadio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/luz_radio_logo_nobackground"
-            android:layout_margin="8dp" />
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/luz_radio_logo_nobackground" />
 
         <ImageButton
             android:id="@+id/imageButtonPlayRadio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_play_arrow_black_24dp"
-            android:layout_below="@+id/imageViewLuzRadio"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageViewLuzRadio"
+            android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp" />
+            android:src="@drawable/ic_play_arrow_black_24dp" />
 
     </RelativeLayout>
 </FrameLayout>
