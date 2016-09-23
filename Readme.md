@@ -12,12 +12,12 @@
 ###Ficzery:
 * Pobieranie aktualności ze strony Politechniki i stron wydziałowych
 * Baza danych budynków Politechniki z adresami i podstawowymi danymi, plus nawigacja
+* Player dla radia LUZ
 * Wyświetlanie losowych zdjęć kotów z internetu. Bo mogę.
 
 
 
 ###Planowane ficzery:
-* Player dla radia LUZ
 * Baza danych zawierająca podstawowe informacje o wydziałach
 * Cokolwiek mi jeszcze przyjdzie do głowy
 
@@ -38,7 +38,7 @@
 Ja jej nie zrobię, ale mogę udostępnić to co mam (bazy danych, parsery, niektóre metody) jakiemuś programiście Swifta/Objective-C
 
 ####Jak długo aplikacja będzie aktualizowana?
-Tak długo na ile starczy mi sił, zapału i antydepresantów
+Tak długo na ile starczy mi sił, zapału i antydepresantów.
 
 ####Jak można pomóc w projekcie?
-Jeżeli chciałbyś przyczynić się w jakimś stopniu do rozwoju projektu skontaktuj się ze mną pod adresem email igorkurek96@gmail.com. Każdy moze się przydać, niezaleznie od tego co potrafisz
+Jeżeli chciałbyś przyczynić się w jakimś stopniu do rozwoju projektu skontaktuj się ze mną pod adresem email igorkurek96@gmail.com. Każdy może się przydać, niezależnie od tego co potrafisz.
