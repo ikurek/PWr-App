@@ -1,7 +1,9 @@
 package layout;
 
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.ikurek.pwr.R;
+import com.ikurek.pwr.RadioService;
 
 import java.io.IOException;
 
@@ -26,6 +29,7 @@ public class RadioFragment extends Fragment {
     String url = "http://radioluz.pwr.wroc.pl:8000/luzhifi.mp3";
     Snackbar snackbar;
     AudioManager.OnAudioFocusChangeListener afChangeListener;
+    Intent playRadioInService;
 
 
     public RadioFragment() {
@@ -43,6 +47,7 @@ public class RadioFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
     }
 
     @Override
@@ -51,106 +56,29 @@ public class RadioFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_radio, container, false);
 
-        final ImageButton playPauseRadio = (ImageButton) view.findViewById(R.id.imageButtonPlayRadio);
+        ImageButton imageButtonPlay = (ImageButton) view.findViewById(R.id.imageButtonPlayRadio);
 
-
-        //Przycisk play
-        playPauseRadio.setOnClickListener(new View.OnClickListener() {
-
+        imageButtonPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-
-                if (radioPlayer != null && radioPlayer.isPlaying()) {
-
-                    radioPlayer.stop();
-                    audioManager.abandonAudioFocus(afChangeListener);
-                    playPauseRadio.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-                } else {
-
-                    playPauseRadio.setImageResource(R.drawable.ic_stop_black_24dp);
-
-                    radioPlayer = new MediaPlayer();
-                    snackbar = Snackbar.make(getView(), "Buforowanie treści...", Snackbar.LENGTH_INDEFINITE);
-
-                    try {
-                        radioPlayer.setDataSource(url);
-                    } catch (IllegalArgumentException e) {
-                        Toast.makeText(getContext(), "Błędny adres radia", Toast.LENGTH_LONG).show();
-                    } catch (SecurityException e) {
-                        Toast.makeText(getContext(), "Problemy z połączeniem", Toast.LENGTH_LONG).show();
-                    } catch (IllegalStateException e) {
-                        Toast.makeText(getContext(), "Nie udało się otworzyć streamu radia", Toast.LENGTH_LONG).show();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-
-                    radioPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-
-                        @Override
-                        public void onPrepared(MediaPlayer radioPlayer) {
-
-                            audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
-                            audioManager.requestAudioFocus(afChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
-
-
-                            radioPlayer.start();
-                            snackbar.dismiss();
-                        }
-                    });
-
-
-                    snackbar.show();
-                    radioPlayer.prepareAsync();
-
-
-                }
+                playRadioInService = new Intent(getActivity(), RadioService.class);
+                playRadioInService.setAction("play");
+                getActivity().startService(playRadioInService);
             }
         });
 
 
-        //Wycisz dźwięk przy telefonach, powiadomieniach itd
-        afChangeListener = new AudioManager.OnAudioFocusChangeListener() {
-            public void onAudioFocusChange(int focusChange) {
+        ImageButton imageButtonStop = (ImageButton) view.findViewById(R.id.imageButtonStopRadio);
 
+        imageButtonStop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-                switch (focusChange) {
-
-                    case AudioManager.AUDIOFOCUS_GAIN:
-
-                        Toast.makeText(getContext(), Integer.toString(volumeSetByUser), Toast.LENGTH_SHORT);
-                        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, volumeSetByUser, 0);
-
-                        break;
-
-                    case AudioManager.AUDIOFOCUS_LOSS:
-
-                        radioPlayer.stop();
-                        radioPlayer.release();
-                        playPauseRadio.setImageResource(R.drawable.ic_play_arrow_black_24dp);
-
-
-                        break;
-
-                    case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
-
-
-                        volumeSetByUser = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-                        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, 0);
-
-                        break;
-
-                    case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK:
-
-                        volumeSetByUser = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-                        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, 0);
-
-                        break;
-
-                    default:
-                        //
-                }
+                getActivity().stopService(playRadioInService);
             }
-        };
+        });
+
+
 
 
         return view;

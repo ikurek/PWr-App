@@ -82,7 +82,12 @@
 
     <string name="pref_title_use_old_parser">Zmiana parsera</string>
     <string name="pref_desc_use_old_parser">Zamiast używać nowej wersji parsera (XPP) użyj klasycznej (Jsoup). Zaznacz, jeżeli występuja problemy z kanałem aktualności.</string>
-    <string name="pref_title_offline_mode_prompt">Wyłącz powiadomienie o trybie offline</string>
+    <string name="pref_title_offline_mode_prompt">Wyłacz powiadomienie o braku sieci</string>
     <string name="pref_desc_offline_mode_prompt">Po aktywowaniu aplikacja nie będzie monitorować połączenia z siecią</string>
+    <string name="pref_title_use_ctt">Technologia kart Chrome</string>
+    <string name="pref_desc_use_ctt">Jeżeli zainstalowana jest przeglądarka Chrome, linki otwierane będa przy użyciu kart Chrome</string>
+    <string name="pref_title_animations">Animacje aktualności</string>
+    <string name="pref_title_news_layout">Widok kart</string>
+    <string name="pref_desc_news_layout">Używaj widoku kart na liście aktualności</string>
 
 </resources>

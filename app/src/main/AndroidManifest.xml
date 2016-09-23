@@ -29,6 +29,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ikurek.pwr.MainActivity" />
         </activity>
+
+        <service
+            android:name=".RadioService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
