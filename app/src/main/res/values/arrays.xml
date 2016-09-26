@@ -20,4 +20,629 @@
     </string-array>
 
 
+    <string-array name="A_1">
+
+        <item>27, Wybrzeże Wyspiańskiego, Wrocław</item>
+        <item>51.107271</item>
+        <item> 17.061933</item>
+
+    </string-array>
+
+    <string-array name="A_2">
+
+        <item>2, Ignacego Łukasiewicza, Wrocław</item>
+        <item>51.107229</item>
+        <item> 17.063792</item>
+
+    </string-array>
+
+    <string-array name="A_3">
+
+        <item>23, Mariana Smoluchowskiego, Wrocław</item>
+        <item>51.108104</item>
+        <item> 17.064041</item>
+
+    </string-array>
+
+    <string-array name="A_4">
+
+        <item>21, Mariana Smoluchowskiego, Wrocław</item>
+        <item>51.108408</item>
+        <item> 17.063015</item>
+
+    </string-array>
+
+    <string-array name="A_5">
+
+        <item>19, Mariana Smoluchowskiego, Wrocław</item>
+        <item>51.108750</item>
+        <item> 17.061999</item>
+
+    </string-array>
+
+    <string-array name="A_6">
+
+        <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
+        <item>51.108136</item>
+        <item> 17.061379</item>
+
+    </string-array>
+
+    <string-array name="A_7">
+
+        <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
+        <item>51.108003</item>
+        <item> 17.062207</item>
+
+    </string-array>
+
+    <string-array name="A_8">
+
+        <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
+        <item>51.108277</item>
+        <item> 17.062234</item>
+
+    </string-array>
+
+    <string-array name="A_9">
+
+        <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
+        <item>51.107765</item>
+        <item> 17.063583</item>
+
+    </string-array>
+
+    <string-array name="A_10">
+
+        <item>7, Cypriana Kamila Norwida, Wrocław</item>
+        <item>51.108577</item>
+        <item> 17.061573</item>
+
+    </string-array>
+
+    <string-array name="A_11">
+
+        <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
+        <item>51.107676</item>
+        <item> 17.063111</item>
+
+    </string-array>
+
+    <string-array name="B_1">
+
+        <item>25, Mariana Smoluchowskiego, Wrocław</item>
+        <item>51.107810</item>
+        <item> 17.064872</item>
+
+    </string-array>
+
+    <string-array name="B_2">
+
+        <item>25, Mariana Smoluchowskiego, Wrocław</item>
+        <item>51.107529</item>
+        <item>17.065180</item>
+
+    </string-array>
+
+    <string-array name="B_4">
+
+        <item>5, Ignacego Łukasiewicza, Wrocław</item>
+        <item>51.108150</item>
+        <item>17.064890</item>
+
+    </string-array>
+
+    <string-array name="B_5">
+
+        <item>7/9, Ignacego Łukasiewicza, Wrocław</item>
+        <item>51.108538</item>
+        <item>17.065111</item>
+
+    </string-array>
+
+    <string-array name="B_6">
+
+        <item>7/9, Ignacego Łukasiewicza, Wrocław</item>
+        <item>51.108506</item>
+        <item>17.066169</item>
+
+    </string-array>
+
+    <string-array name="B_7">
+
+        <item>7/9, Ignacego Łukasiewicza, Wrocław</item>
+        <item>51.108506</item>
+        <item>17.066169</item>
+
+    </string-array>
+
+    <string-array name="B_8">
+
+        <item>48, Mariana Smoluchowskiego, Wrocław</item>
+        <item>51.107792</item>
+        <item>17.065831</item>
+
+    </string-array>
+
+    <string-array name="B_9">
+
+        <item>7/9, Ignacego Łukasiewicza, Wrocław</item>
+        <item>51.108506</item>
+        <item>17.066169</item>
+
+    </string-array>
+
+    <string-array name="B_11">
+
+        <item>48a, Mariana Smoluchowskiego, Wrocław</item>
+        <item>51.107841</item>
+        <item>17.065637</item>
+
+    </string-array>
+
+    <string-array name="C_1">
+
+        <item>11/17, Zygmunta Janiszewskiego, Wrocław</item>
+        <item>51.109145</item>
+        <item>17.060381</item>
+
+    </string-array>
+
+    <string-array name="C_2">
+
+        <item>11/17, Zygmunta Janiszewskiego, Wrocław</item>
+        <item>51.109145</item>
+        <item>17.060381</item>
+
+    </string-array>
+
+    <string-array name="C_3">
+
+        <item>11/17, Zygmunta Janiszewskiego, Wrocław</item>
+        <item>51.108736</item>
+        <item>17.060283</item>
+
+    </string-array>
+
+    <string-array name="C_4">
+
+        <item>11/17, Zygmunta Janiszewskiego, Wrocław</item>
+        <item>51.108912</item>
+        <item>17.059727</item>
+
+    </string-array>
+
+    <string-array name="C_5">
+
+        <item>7/9, Zygmunta Janiszewskiego, Wrocław</item>
+        <item>51.109294</item>
+        <item>17.058739</item>
+
+    </string-array>
+
+    <string-array name="C_6">
+
+        <item>4/6, Cypriana Kamila Norwida, Wrocław</item>
+        <item>51.108360</item>
+        <item>17.060883</item>
+
+    </string-array>
+
+    <string-array name="C_7">
+
+        <item>11, plac Grunwaldzki, Wrocław</item>
+        <item>51.109094</item>
+        <item>17.058201</item>
+
+    </string-array>
+
+    <string-array name="C_8">
+
+        <item>22, Wybrzeże Wyspiańskiego, Wrocław</item>
+        <item>51.107978</item>
+        <item>17.058500</item>
+
+    </string-array>
+
+    <string-array name="C_11">
+
+        <item>14a, Zygmunta Janiszewskiego, Wrocław</item>
+        <item>51.109390</item>
+        <item>17.060959</item>
+
+    </string-array>
+
+    <string-array name="C_13">
+
+        <item>23_25, Wybrzeże Wyspiańskiego, Wrocław</item>
+        <item>51.107311</item>
+        <item>17.059314</item>
+
+    </string-array>
+
+    <string-array name="C_14">
+
+        <item>11, plac Grunwaldzki, Wrocław</item>
+        <item>51.108634</item>
+        <item>17.057862</item>
+
+    </string-array>
+
+    <string-array name="C_15">
+
+        <item>11a, Zygmunta Janiszewskiego, Wrocław</item>
+        <item>51.108731</item>
+        <item>17.059694</item>
+
+    </string-array>
+
+    <string-array name="C_16">
+
+        <item>7, Zygmunta Janiszewskiego, Wrocław</item>
+        <item>51.109590</item>
+        <item>17.059409</item>
+
+    </string-array>
+
+    <string-array name="C_18">
+
+        <item>10, Józefa Marii Hoene_Wrońskiego, Wrocław</item>
+        <item>51.108804</item>
+        <item>17.056667</item>
+
+    </string-array>
+
+    <string-array name="D_1">
+
+        <item>13, plac Grunwaldzki, Wrocław</item>
+        <item>51.109970</item>
+        <item>17.058174</item>
+
+    </string-array>
+
+    <string-array name="D_2">
+
+        <item>9, plac Grunwaldzki, Wrocław</item>
+        <item>51.110037</item>
+        <item>17.057453</item>
+
+    </string-array>
+
+    <string-array name="D_3">
+
+        <item>9a, plac Grunwaldzki, Wrocław</item>
+        <item>51.109772</item>
+        <item>17.057124</item>
+
+    </string-array>
+
+    <string-array name="D_20">
+
+        <item>8, Zygmunta Janiszewskiego, Wrocław</item>
+        <item>51.110391</item>
+        <item>17.059338</item>
+
+    </string-array>
+
+    <string-array name="D_21">
+
+        <item>11a, plac Grunwaldzki, Wrocław</item>
+        <item>51.109615</item>
+        <item>17.057937</item>
+
+    </string-array>
+
+    <string-array name="E_1">
+
+        <item>53/55, Bolesława Prusa, Wrocław</item>
+        <item>51.119103</item>
+        <item>17.054539</item>
+
+    </string-array>
+
+    <string-array name="E_3">
+
+        <item>4, Chemiczna, Wrocław</item>
+        <item>51.118496</item>
+        <item>17.054584</item>
+
+    </string-array>
+
+    <string-array name="E_5">
+
+        <item>7, Rozbrat, Wrocław</item>
+        <item>51.118578</item>
+        <item>17.053479</item>
+
+    </string-array>
+
+    <string-array name="F_1">
+
+        <item>7/9, Gdańska, Wrocław</item>
+        <item>51.116925</item>
+        <item>17.065535</item>
+
+    </string-array>
+
+    <string-array name="F_2">
+
+        <item>7/9, Gdańska, Wrocław</item>
+        <item>51.116901</item>
+        <item>17.066306</item>
+
+    </string-array>
+
+    <string-array name="F_3">
+
+        <item>7/9, Gdańska, Wrocław</item>
+        <item>51.116787</item>
+        <item>17.066957</item>
+
+    </string-array>
+
+    <string-array name="F_4">
+
+        <item>7/9, Gdańska, Wrocław</item>
+        <item>51.116569</item>
+        <item>17.066152</item>
+
+    </string-array>
+
+    <string-array name="H_3">
+
+        <item>41, Wybrzeże Stanisława Wyspiańskiego,Wrocław</item>
+        <item>51.107020</item>
+        <item>17.059691</item>
+
+    </string-array>
+
+    <string-array name="H_4">
+
+        <item>7_8, Wybrzeże Stanisława Wyspiańskiego,Wrocław</item>
+        <item>51.108560</item>
+        <item>17.054440</item>
+
+    </string-array>
+
+    <string-array name="H_5">
+
+        <item>41, Wybrzeże Stanisława Wyspiańskiego,Wrocław</item>
+        <item>51.106626</item>
+        <item>17.060169</item>
+
+    </string-array>
+
+    <string-array name="H_6">
+
+        <item>42, Wybrzeże Stanisława Wyspiańskiego,Wrocław</item>
+        <item>51.106991</item>
+        <item>17.059086</item>
+
+    </string-array>
+
+    <string-array name="H_7">
+
+        <item>39C, Wybrzeże Stanisława Wyspiańskiego, Wrocław</item>
+        <item>51.106067</item>
+        <item>17.063887</item>
+
+    </string-array>
+
+    <string-array name="H_8">
+
+        <item>39C, Wybrzeże Stanisława Wyspiańskiego, Wrocław</item>
+        <item>51.105753</item>
+        <item>17.064163</item>
+
+    </string-array>
+
+    <string-array name="H_9">
+
+        <item>39C, Wybrzeże Stanisława Wyspiańskiego, Wrocław</item>
+        <item>51.105765</item>
+        <item>17.064404</item>
+
+    </string-array>
+
+    <string-array name="H_10">
+
+        <item>39C, Wybrzeże Stanisława Wyspiańskiego, Wrocław</item>
+        <item>51.105964</item>
+        <item>17.064062</item>
+
+    </string-array>
+
+    <string-array name="H_12">
+
+        <item>39C, Wybrzeże Stanisława Wyspiańskiego, Wrocław</item>
+        <item>51.105860</item>
+        <item>17.063906</item>
+
+    </string-array>
+
+    <string-array name="H_13">
+
+        <item>39C, Wybrzeże Stanisława Wyspiańskiego, Wrocław</item>
+        <item>51.105798</item>
+        <item>17.063916</item>
+
+    </string-array>
+
+    <string-array name="H_14">
+
+        <item>40, Wybrzeże Stanisława Wyspiańskiego, Wrocław</item>
+        <item>51.108560</item>
+        <item>17.054440</item>
+
+    </string-array>
+
+    <string-array name="L_1">
+
+        <item>13/15, Na Grobli, Wrocław</item>
+        <item>51.104195</item>
+        <item>17.054140</item>
+
+    </string-array>
+
+    <string-array name="M_3">
+
+        <item>61_65, Długa, Wrocław</item>
+        <item>51.126243</item>
+        <item>17.013965</item>
+
+    </string-array>
+
+    <string-array name="M_4">
+
+        <item>61_65, Długa, Wrocław</item>
+        <item>51.127198</item>
+        <item>17.012391</item>
+
+    </string-array>
+
+    <string-array name="M_6BIS">
+
+        <item>61_65, Długa, Wrocław</item>
+        <item>51.127398</item>
+        <item>17.011896</item>
+
+    </string-array>
+
+    <string-array name="M_11">
+
+        <item>61_65, Długa, Wrocław</item>
+        <item>51.126775</item>
+        <item>17.012735</item>
+
+    </string-array>
+
+    <string-array name="P_2">
+
+        <item>16, Chełmońskiego, Wrocław</item>
+        <item>51.101031</item>
+        <item>17.090375</item>
+
+    </string-array>
+
+    <string-array name="P_4">
+
+        <item>16, Chełmońskiego, Wrocław</item>
+        <item>51.101031</item>
+        <item>17.090375</item>
+
+    </string-array>
+
+    <string-array name="P_14">
+
+        <item>164, Braci Gierymskich, Wrocław</item>
+        <item>51.101737</item>
+        <item>17,121233</item>
+
+    </string-array>
+
+    <string-array name="P_20">
+
+        <item>12, Chełmońskiego, Wrocław</item>
+        <item>51.101872</item>
+        <item>17.090539</item>
+
+    </string-array>
+
+    <string-array name="T_2">
+
+        <item>59, Grunwaldzka, Wrocław</item>
+        <item>51.113535</item>
+        <item>17.064045</item>
+
+    </string-array>
+
+    <string-array name="T_3">
+
+        <item>61, Grunwaldzka, Wrocław</item>
+        <item>51.113602</item>
+        <item>17.064338</item>
+
+    </string-array>
+
+    <string-array name="T_4">
+
+        <item>22, Łukasza Górnickiego, Wrocław</item>
+        <item>51.118605</item>
+        <item>17.056219</item>
+
+    </string-array>
+
+    <string-array name="T_6">
+
+        <item>54/56, Reja, Wrocław</item>
+        <item>51.118477</item>
+        <item>17.058354</item>
+
+    </string-array>
+
+    <string-array name="T_7">
+
+        <item>89, Curie_Skłodowskiej, Wrocław</item>
+        <item>51.108470</item>
+        <item>17.068072</item>
+
+    </string-array>
+
+    <string-array name="T_9">
+
+        <item>137, Powstańców Śląskich, Wrocław</item>
+        <item>51.087310</item>
+        <item>17.012627</item>
+
+    </string-array>
+
+    <string-array name="T_14">
+
+        <item>8, wybrzeże Ludwika Pasteura, Wrocław</item>
+        <item>51.112007</item>
+        <item>17.069830</item>
+
+    </string-array>
+
+    <string-array name="T_15">
+
+        <item>6, Edwarda Wittiga, Wrocław</item>
+        <item>51.103178</item>
+        <item>17.084470</item>
+
+    </string-array>
+
+    <string-array name="T_16">
+
+        <item>4, Edwarda Wittiga, Wrocław</item>
+        <item>51.103634</item>
+        <item>17.085210</item>
+
+    </string-array>
+
+    <string-array name="T_17">
+
+        <item>27, Wróblewskiego, Wrocław</item>
+        <item>51.103496</item>
+        <item>17.086222</item>
+
+    </string-array>
+
+    <string-array name="T_19">
+
+        <item>8, Edwarda Wittiga, Wrocław</item>
+        <item>51.103142</item>
+        <item>17.085880</item>
+
+    </string-array>
+
+    <string-array name="T_22">
+
+        <item>25, Wróblewskiego, Wrocław</item>
+        <item>51.103865</item>
+        <item>17.086105</item>
+
+    </string-array>
+
+
 </resources>

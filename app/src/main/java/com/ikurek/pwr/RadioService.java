@@ -1,7 +1,5 @@
 package com.ikurek.pwr;
 
-import android.app.IntentService;
-import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -10,16 +8,10 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.IBinder;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.io.IOException;
-
-import layout.RadioFragment;
-
-import static java.security.AccessController.getContext;
 
 public class RadioService extends Service implements MediaPlayer.OnPreparedListener {
 
@@ -53,8 +45,7 @@ public class RadioService extends Service implements MediaPlayer.OnPreparedListe
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.drawable.ic_play_arrow_black_24dp)
                         .setContentTitle("Radio LUZ")
-                        .setContentText("Radio LUZ jest odtwarzane w tle");
-
+                        .setContentText("Radio LUZ jest odtwarzane w tle...");
 
 
         Intent targetIntent = new Intent(this, MainActivity.class);
@@ -64,27 +55,22 @@ public class RadioService extends Service implements MediaPlayer.OnPreparedListe
         notificationManager.notify(NOTIFICATION_ID, builder.build());
 
 
-
-
-
-
         switch (action) {
 
             case "play":
-            radioPlayer = new MediaPlayer();
-            radioPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                radioPlayer = new MediaPlayer();
+                radioPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 
-            try {
-                radioPlayer.setDataSource(url);
-            } catch (IOException e) {
-                Log.e("setDataSource", e.toString());
-            }
+                try {
+                    radioPlayer.setDataSource(url);
+                } catch (IOException e) {
+                    Log.e("setDataSource", e.toString());
+                }
 
-            radioPlayer.prepareAsync();
-            radioPlayer.setOnPreparedListener(this);
+                radioPlayer.prepareAsync();
+                radioPlayer.setOnPreparedListener(this);
 
         }
-
 
 
         return START_STICKY;
@@ -107,12 +93,12 @@ public class RadioService extends Service implements MediaPlayer.OnPreparedListe
 
         Log.e("Service", "onDestroy");
 
-        if(notificationManager != null) {
+        if (notificationManager != null) {
             notificationManager.cancelAll();
         }
 
         //Zwolnij mediaplayer
-        if(radioPlayer != null && radioPlayer.isPlaying()) {
+        if (radioPlayer != null && radioPlayer.isPlaying()) {
             radioPlayer.stop();
             radioPlayer.reset();
             radioPlayer.release();

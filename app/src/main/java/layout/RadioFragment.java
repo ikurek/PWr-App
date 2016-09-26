@@ -1,8 +1,6 @@
 package layout;
 
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -18,12 +16,11 @@ import android.widget.Toast;
 import com.ikurek.pwr.R;
 import com.ikurek.pwr.RadioService;
 
-import java.io.IOException;
-
 
 public class RadioFragment extends Fragment {
 
     public MediaPlayer radioPlayer;
+    public boolean clicktoplay;
     int volumeSetByUser;
     AudioManager audioManager;
     String url = "http://radioluz.pwr.wroc.pl:8000/luzhifi.mp3";
@@ -58,12 +55,21 @@ public class RadioFragment extends Fragment {
 
         ImageButton imageButtonPlay = (ImageButton) view.findViewById(R.id.imageButtonPlayRadio);
 
+        clicktoplay = false;
+
         imageButtonPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                playRadioInService = new Intent(getActivity(), RadioService.class);
-                playRadioInService.setAction("play");
-                getActivity().startService(playRadioInService);
+
+                if (!clicktoplay) {
+                    Toast.makeText(getContext(), "Buforowanie", Toast.LENGTH_LONG).show();
+                    playRadioInService = new Intent(getActivity(), RadioService.class);
+                    playRadioInService.setAction("play");
+                    getActivity().startService(playRadioInService);
+                    clicktoplay = true;
+                }
+
+
             }
         });
 
@@ -74,11 +80,13 @@ public class RadioFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                getActivity().stopService(playRadioInService);
+                if (clicktoplay) {
+                    getActivity().stopService(playRadioInService);
+                    clicktoplay = false;
+                }
+
             }
         });
-
-
 
 
         return view;

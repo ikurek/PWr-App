@@ -10,77 +10,63 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal|bottom">
 
-        <TextView
-            android:id="@+id/TextViewBugReport"
-            android:layout_width="wrap_content"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout_title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal|top"
-            android:layout_margin="8dp"
-            android:text="@string/BugReport"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textIsSelectable="false" />
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/editTextBugTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tytuł wiadomości" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_input_layout_title"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/editTextBugDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Opis" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_layout_specs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_input_layout_desc"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/editTextBugPhoneSpecs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Informacje o urządzeniu" />
+
+
+        </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:id="@+id/SubmitViaGitHub"
+            android:id="@+id/buttonSendEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/TextViewBugReport"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Klik!" />
-
-        <TextView
-            android:id="@+id/TextViewReportBugViaGitHub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/SubmitViaGitHub"
-            android:layout_alignEnd="@+id/TextViewBugReport"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/TextViewBugReport"
-            android:layout_alignTop="@+id/SubmitViaGitHub"
             android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_toStartOf="@+id/SubmitViaEmailButton"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="@string/ReportBugViaGitHub"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <Button
-            android:id="@+id/SubmitViaEmailButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/SubmitViaGitHub"
-            android:layout_alignStart="@+id/SubmitViaGitHub"
-            android:layout_below="@+id/SubmitViaGitHub"
-            android:layout_marginBottom="8dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Klik!" />
-
-        <TextView
-            android:id="@+id/TextViewReportBugViaEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/SubmitViaEmailButton"
-            android:layout_alignEnd="@+id/TextViewBugReport"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/TextViewBugReport"
-            android:layout_alignTop="@+id/SubmitViaEmailButton"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_toStartOf="@+id/SubmitViaEmailButton"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="@string/ReportBugViaEmail"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:text="Wyślij wiadomość" />
 
     </RelativeLayout>
 </FrameLayout>

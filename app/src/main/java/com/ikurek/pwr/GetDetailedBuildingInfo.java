@@ -1,254 +1,235 @@
 package com.ikurek.pwr;
 
+import android.content.Context;
+
 /**
  * Created by Igor on 29.08.2016.
  */
 public class GetDetailedBuildingInfo {
 
+    public Context context;
+
     //TODO: wygląda głupio, jest głupie, ale działa
     //Osobna klasa, bo liczę na to że kiedyś zbiorę się w sobie i wykorzystam do tego bazę danych
     //Na razie mi się nie chce
 
+    public GetDetailedBuildingInfo(Context current) {
+        this.context = current;
+    }
+
     //Funkcje zwracaja stringa zawierającego adres, informacje itd, na bazie nazwy budynku
-    public String getBuildingAdress(String buildingName) {
-        String buildingAdress = null;
+    public String[] getBuildingData(String buildingName) {
+
+
+        String[] buildingdata = null;
 
         if (buildingName == "A-1") {
 
-            buildingAdress = "Wybrzeże Stanisława Wyspiańskiego 27, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.A_1);
 
         } else if (buildingName == "A-2") {
 
-            buildingAdress = "Ul. Ignacego Łukasiewicza 2, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.A_2);
 
         } else if (buildingName == "A-3") {
 
-            buildingAdress = "Ul. Mariana Smoluchowskiego 23, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.A_3);
 
         } else if (buildingName == "A-4") {
 
-            buildingAdress = "Ul. Mariana Smoluchowskiego 21, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.A_4);
 
         } else if (buildingName == "A-5") {
 
-            buildingAdress = "Ul. Mariana Smoluchowskiego 19, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.A_5);
 
         } else if (buildingName == "A-6") {
 
-            buildingAdress = "Ul. Cypriana Kamila Norwida 1, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.A_6);
 
         } else if (buildingName == "A-7") {
 
-            buildingAdress = "Ul. Cypriana Kamila Norwida 2, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.A_7);
 
         } else if (buildingName == "A-8") {
 
-            buildingAdress = "Ul. Mariana Smoluchowskiego 20, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.A_8);
 
         } else if (buildingName == "A-9") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.A_9);
 
         } else if (buildingName == "A-10") {
 
-            buildingAdress = "Cypriana Kamila Norwida 3, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.A_10);
 
         } else if (buildingName == "B-1") {
 
-            buildingAdress = "Ul. Mariana Smoluchowskiego 25, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.B_1);
 
         } else if (buildingName == "B-2") {
 
-            buildingAdress = "Ul. Ignacego Łukasiewicza 1, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.B_2);
 
         } else if (buildingName == "B-4") {
 
-            buildingAdress = "ul. Ignacego Łukasiewicza 3/5, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.B_4);
 
         } else if (buildingName == "B-5") {
 
-            buildingAdress = "ul. Ignacego Łukasiewicza 7/9, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.B_5);
 
         } else if (buildingName == "C-1") {
 
-            buildingAdress = "Ul. Zygmunta Janiszewskiego 11/17, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.C_1);
 
         } else if (buildingName == "C-2") {
 
-            buildingAdress = "Ul. Zygmunta Janiszewskiego 11/17, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.C_2);
 
         } else if (buildingName == "C-3") {
 
-            buildingAdress = "Ul. Zygmunta Janiszewskiego 11/17, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.C_3);
 
         } else if (buildingName == "C-4") {
 
-            buildingAdress = "Ul. Zygmunta Janiszewskiego 7/9, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.C_4);
 
         } else if (buildingName == "C-5") {
 
-            buildingAdress = "Ul. Zygmunta Janiszewskiego 7/9, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.C_5);
 
         } else if (buildingName == "C-6") {
 
-            buildingAdress = "Ul. Cypriana Kamila Norwida 4/6, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.C_6);
 
         } else if (buildingName == "C-7") {
 
-            buildingAdress = "Plac Grunwaldzki 11, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.C_7);
 
         } else if (buildingName == "C-8") {
 
-            buildingAdress = "Plac Grunwaldzki 14, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.C_8);
 
         } else if (buildingName == "D-1") {
 
-            buildingAdress = "Plac Grunwaldzki 13, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.D_1);
 
         } else if (buildingName == "D-2") {
 
-            buildingAdress = "Plac Grunwaldzki 9, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.D_2);
 
         } else if (buildingName == "D-3") {
 
-            buildingAdress = "Plac Grunwaldzki 9a, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.D_3);
 
         } else if (buildingName == "D-20") {
 
-            buildingAdress = "Ul. Zygmunta Janiszewskiego 8, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.D_20);
 
         } else if (buildingName == "D-21") {
 
-            buildingAdress = "Plac Grunwaldzki 11, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.D_21);
 
         } else if (buildingName == "E-1") {
 
-            buildingAdress = "Ul. Bolesława Prusa 53/55, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.E_1);
 
         } else if (buildingName == "E-3") {
 
-            buildingAdress = "Ul. Chemiczna 4, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.E_3);
 
         } else if (buildingName == "E-5") {
 
-            buildingAdress = "Ul. Rozbrat 7, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.E_5);
 
         } else if (buildingName == "F-1") {
 
-            buildingAdress = "Ul. Gdańska 7/9, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.F_1);
 
         } else if (buildingName == "F-2") {
 
-            buildingAdress = "Ul. Gdańska 7/9, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.F_2);
 
         } else if (buildingName == "F-3") {
 
-            buildingAdress = "Ul. Gdańska 7/9, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.F_3);
 
         } else if (buildingName == "F-4") {
 
-            buildingAdress = "Ul. Gdańska 7/9, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.F_4);
 
         } else if (buildingName == "H-3") {
 
-            buildingAdress = "Wybrzeże Stanisława Wyspiańskiego 41, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.H_3);
 
         } else if (buildingName == "H-4") {
 
-            buildingAdress = "Wybrzeże Stanisława Wyspiańskiego 7, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.H_4);
 
         } else if (buildingName == "H-5") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.H_5);
 
         } else if (buildingName == "H-6") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.H_6);
 
         } else if (buildingName == "H-7") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.H_7);
 
         } else if (buildingName == "H-8") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.H_8);
 
         } else if (buildingName == "H-9") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.H_9);
 
         } else if (buildingName == "H-10") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.H_10);
 
         } else if (buildingName == "H-14") {
 
-            buildingAdress = "Wybrzeże Stanisława Wyspiańskiego 40, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.H_14);
 
         } else if (buildingName == "L-1") {
 
-            buildingAdress = "Ul. Na Grobli 13/15, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.L_1);
 
         } else if (buildingName == "M-3") {
 
-            buildingAdress = "Ul. Długa 61, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.M_3);
 
         } else if (buildingName == "M-4") {
 
-            buildingAdress = "???";
-
-        } else if (buildingName == "M-6") {
-
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.M_4);
 
         } else if (buildingName == "M-11") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.M_11);
 
         } else if (buildingName == "P-2") {
 
-            buildingAdress = "Ul. Józefa Chełmońskiego 16, Wrocław";
+            buildingdata = context.getResources().getStringArray(R.array.P_2);
 
         } else if (buildingName == "P-4") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.P_4);
 
         } else if (buildingName == "P-14") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.P_14);
 
         } else if (buildingName == "P-20") {
 
-            buildingAdress = "???";
+            buildingdata = context.getResources().getStringArray(R.array.P_20);
 
         }
 
-        return buildingAdress;
+        return buildingdata;
     }
 
-    public String getBuildingInfo(String buildingName) {
-        String buildingInfo = null;
-
-        if (buildingName == "A-1") {
-
-            buildingInfo = "Gabinet Rektora\n" +
-                    "Gabinety Pełnomocników Rektora\n" +
-                    "Gabinety Prorektorów\n" +
-                    "Sekretariat Uczelni\n" +
-                    "Sekretariat Wydziału Inżynierii Środowiska\n" +
-                    "Sekretariat Wydziału Mechaniczno-Energetycznego\n" +
-                    "Sekretariat Wydziału Podstawowych Problemów Techniki\n" +
-                    "Instytut Fizyki\n" +
-                    "Instytut Inżynierii Lądowej";
-
-        } else if (buildingName == "A-2") {
-
-            buildingInfo = "Instytut Chemii Organicznej, Biochemii i Biotechnologii\n" +
-                    "Instytut Technologii Organicznej i Tworzyw Sztucznych\n" +
-                    "Instytut Chemii Fizycznej i Teoretycznej\n" +
-                    "Zakład Chemii Kwantowej";
-        }
-
-        return buildingInfo;
-    }
 }

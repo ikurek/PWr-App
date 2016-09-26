@@ -10,10 +10,10 @@ import java.util.List;
 public class ExpandableListDataPump {
     public static LinkedHashMap<String, List<String>> getData() {
 
-        LinkedHashMap<String, List<String>> expandableListDetail = new LinkedHashMap<String, List<String>>();
+        LinkedHashMap<String, List<String>> expandableListDetail = new LinkedHashMap<>();
 
 
-        List<String> abuildings = new ArrayList<String>();
+        List<String> abuildings = new ArrayList<>();
         abuildings.add("A-1");
         abuildings.add("A-2");
         abuildings.add("A-3");
@@ -26,7 +26,7 @@ public class ExpandableListDataPump {
         abuildings.add("A-10");
         expandableListDetail.put("A", abuildings);
 
-        List<String> bbuildings = new ArrayList<String>();
+        List<String> bbuildings = new ArrayList<>();
         bbuildings.add("B-1");
         bbuildings.add("B-2");
         bbuildings.add("B-4");
@@ -38,7 +38,7 @@ public class ExpandableListDataPump {
         bbuildings.add("B-11");
         expandableListDetail.put("B", bbuildings);
 
-        List<String> cbuildings = new ArrayList<String>();
+        List<String> cbuildings = new ArrayList<>();
         cbuildings.add("C-1");
         cbuildings.add("C-2");
         cbuildings.add("C-3");
@@ -54,7 +54,7 @@ public class ExpandableListDataPump {
         cbuildings.add("C-18");
         expandableListDetail.put("C", cbuildings);
 
-        List<String> dbuildings = new ArrayList<String>();
+        List<String> dbuildings = new ArrayList<>();
         dbuildings.add("D-1");
         dbuildings.add("D-2");
         dbuildings.add("D-3");
@@ -62,20 +62,20 @@ public class ExpandableListDataPump {
         dbuildings.add("D-21");
         expandableListDetail.put("D", dbuildings);
 
-        List<String> ebuildings = new ArrayList<String>();
+        List<String> ebuildings = new ArrayList<>();
         ebuildings.add("E-1");
         ebuildings.add("E-3");
         ebuildings.add("E-5");
         expandableListDetail.put("E", ebuildings);
 
-        List<String> fbuildings = new ArrayList<String>();
+        List<String> fbuildings = new ArrayList<>();
         fbuildings.add("F-1");
         fbuildings.add("F-2");
         fbuildings.add("F-3");
         fbuildings.add("F-4");
         expandableListDetail.put("F", fbuildings);
 
-        List<String> hbuildings = new ArrayList<String>();
+        List<String> hbuildings = new ArrayList<>();
         hbuildings.add("H-3");
         hbuildings.add("H-4");
         hbuildings.add("H-5");
@@ -87,18 +87,18 @@ public class ExpandableListDataPump {
         hbuildings.add("H-14");
         expandableListDetail.put("H", hbuildings);
 
-        List<String> lbuildings = new ArrayList<String>();
+        List<String> lbuildings = new ArrayList<>();
         lbuildings.add("L-1");
         expandableListDetail.put("L", lbuildings);
 
-        List<String> mbuildings = new ArrayList<String>();
+        List<String> mbuildings = new ArrayList<>();
         mbuildings.add("M-3");
         mbuildings.add("M-4");
         mbuildings.add("M-6");
         mbuildings.add("M-11");
         expandableListDetail.put("M", mbuildings);
 
-        List<String> pbuildings = new ArrayList<String>();
+        List<String> pbuildings = new ArrayList<>();
         pbuildings.add("P-2");
         pbuildings.add("P-4");
         pbuildings.add("P-14");

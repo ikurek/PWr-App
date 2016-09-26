@@ -1,6 +1,8 @@
 package layout;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,7 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.EditText;
 
 import com.ikurek.pwr.R;
 
@@ -40,17 +42,12 @@ public class ContactFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
-        Button gitButton = (Button) view.findViewById(R.id.SubmitViaGitHub);
-        gitButton.setOnClickListener(new View.OnClickListener() {
+        final EditText editTextTitle = (EditText) view.findViewById(R.id.editTextBugTitle);
+        final EditText editTextDescription = (EditText) view.findViewById(R.id.editTextBugDescription);
+        final EditText editTextSpecs = (EditText) view.findViewById(R.id.editTextBugPhoneSpecs);
 
-            @Override
-            public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ikurek/PWr-App/issues/new"));
-                startActivity(browserIntent);
-            }
-        });
 
-        Button emailButton = (Button) view.findViewById(R.id.SubmitViaEmailButton);
+        Button emailButton = (Button) view.findViewById(R.id.buttonSendEmail);
         emailButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -59,15 +56,24 @@ public class ContactFragment extends Fragment {
 
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "igorkurek96@gmail.com", null));
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, address);
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "[PWr APP] ");
-                emailIntent.putExtra(Intent.EXTRA_TEXT, "[BUG REPORT]\n\n\n\n[FEATURE REQUEST]\n\n\n\n");
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "[PWr APP] " + editTextTitle.getText());
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "[BUG REPORT / FEATURE REQUEST]\n" + editTextDescription.getText() + "\n\n[DEVICE]\n" + editTextSpecs.getText());
 
                 try {
                     startActivity(Intent.createChooser(emailIntent, "Wysyłanie raportu..."));
                 } catch (android.content.ActivityNotFoundException ex) {
 
-                    Toast noEmailAppFound = Toast.makeText(getContext(), "Wygląda na to, że nie masz żadnej aplikacji do wysyłania wiadomości email :-(", Toast.LENGTH_LONG);
-                    noEmailAppFound.show();
+                    AlertDialog alertDialogNoEmailApp = new AlertDialog.Builder(getActivity()).create();
+                    alertDialogNoEmailApp.setTitle(getString(R.string.something_is_broken));
+                    alertDialogNoEmailApp.setMessage(getString(R.string.alertDialog_noEmailAppInstalled));
+
+
+                    alertDialogNoEmailApp.setButton(AlertDialog.BUTTON_NEUTRAL, getString(R.string.ok_sad),
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            });
 
                 }
             }

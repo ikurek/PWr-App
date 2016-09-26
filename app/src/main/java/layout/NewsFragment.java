@@ -26,7 +26,7 @@ import java.util.ArrayList;
 
 public class NewsFragment extends Fragment {
 
-    public static ArrayList<ParsedWebData> list = new ArrayList<ParsedWebData>();
+    public static ArrayList<ParsedWebData> list = new ArrayList<>();
     ProgressBar progressBar;
     AsyncXMLParser parser;
     ListView listView;

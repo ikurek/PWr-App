@@ -150,9 +150,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
                 }
                 eventTypeMain = xpp.next();
             }
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (XmlPullParserException | IOException e) {
             e.printStackTrace();
         }
 

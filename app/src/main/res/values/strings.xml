@@ -23,9 +23,13 @@
     <string name="CatImageDescription">Welcome to the internet!</string>
     <string name="title_activity_settings">Ustawienia</string>
     <string name="something_is_broken">Coś... Coś się popsuło...</string>
-    <string name="alertDialog_noInternetConnection">Wygląda na to, że nie masz połączenia z internetem... Niektóre funkcje aplikacji mogą nie działać.</string>
+    <string name="alertDialog_noInternetConnection">Wygląda na to, że nie masz połączenia z internetem... Niektóre funkcje aplikacji mogą nie działać :-/</string>
+    <string name="alertDialog_noGoogleMapsInstalled">Wygląda na to, że nie masz zainstalowanych Map Google... Ciężko się nawigować bez map :-/</string>
     <string name="exit">Wyjdź</string>
     <string name="offlineMode">Tryb offline</string>
+    <string name="adress">Adres:</string>
+    <string name="ok_sad">OK :-(</string>
+    <string name="alertDialog_noEmailAppInstalled">Wygląda na to, że nie masz zainstalowanego żadnego klienta poczty email :-/</string>
 
 
     <!-- Stringi ustawień -->
@@ -76,6 +80,16 @@
     <string name="pref_title_w13">Wydział Matematyki</string>
     <string name="title_short_w13">WM</string>
 
+    <!-- Stringi dla ustawień layoutu -->
+    <string name="pref_header_layout">Interfejs</string>
+
+    <string name="pref_title_use_ctt">Technologia kart Chrome</string>
+    <string name="pref_desc_use_ctt">Jeżeli zainstalowana jest przeglądarka Chrome, linki otwierane będa przy użyciu kart Chrome</string>
+    <string name="pref_title_animations">Animacje aktualności</string>
+    <string name="pref_desc_animations">Wybierz animację, która będzie używana podczas ładowania kolejnych elementów ekranu aktualności</string>
+    <string name="pref_title_news_layout">Widok kart</string>
+    <string name="pref_desc_news_layout">Używaj widoku kart na liście aktualności, zastępując tradycyjny widok listy</string>
+
 
     <!-- Stringi dla ustawień pozostałe -->
     <string name="pref_header_notifications">Pozostałe</string>
@@ -84,10 +98,6 @@
     <string name="pref_desc_use_old_parser">Zamiast używać nowej wersji parsera (XPP) użyj klasycznej (Jsoup). Zaznacz, jeżeli występuja problemy z kanałem aktualności.</string>
     <string name="pref_title_offline_mode_prompt">Wyłacz powiadomienie o braku sieci</string>
     <string name="pref_desc_offline_mode_prompt">Po aktywowaniu aplikacja nie będzie monitorować połączenia z siecią</string>
-    <string name="pref_title_use_ctt">Technologia kart Chrome</string>
-    <string name="pref_desc_use_ctt">Jeżeli zainstalowana jest przeglądarka Chrome, linki otwierane będa przy użyciu kart Chrome</string>
-    <string name="pref_title_animations">Animacje aktualności</string>
-    <string name="pref_title_news_layout">Widok kart</string>
-    <string name="pref_desc_news_layout">Używaj widoku kart na liście aktualności</string>
+
 
 </resources>

@@ -7,6 +7,11 @@
         android:title="@string/pref_header_newsfeed" />
 
     <header
+        android:fragment="com.ikurek.pwr.SettingsActivity$LayoutPreferenceFragment"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/pref_header_layout" />
+
+    <header
         android:fragment="com.ikurek.pwr.SettingsActivity$OtherPreferenceFragment"
         android:icon="@drawable/ic_more_horiz_black_24dp"
         android:title="@string/pref_header_notifications" />

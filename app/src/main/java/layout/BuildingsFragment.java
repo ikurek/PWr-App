@@ -52,7 +52,7 @@ public class BuildingsFragment extends Fragment {
         //Jak nie to nie
         final ExpandableListView expandableListView = (ExpandableListView) view.findViewById(R.id.expandableListViewBuildings);
         LinkedHashMap<String, List<String>> expandableListDetail = ExpandableListDataPump.getData();
-        List<String> expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
+        List<String> expandableListTitle = new ArrayList<>(expandableListDetail.keySet());
         final ExpandableListAdapter expandableListAdapter = new CustomExpandableListAdapter(getContext(), expandableListTitle, expandableListDetail);
         expandableListView.setAdapter(expandableListAdapter);
 

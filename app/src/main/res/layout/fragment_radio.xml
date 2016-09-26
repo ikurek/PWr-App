@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:contentDescription="Logo Radia Luz"
             app:srcCompat="@drawable/luz_radio_logo_nobackground" />
 
         <LinearLayout
@@ -23,8 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/imageViewLuzRadio"
             android:layout_gravity="center"
-            android:weightSum="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <ImageButton
                 android:id="@+id/imageButtonPlayRadio"
@@ -41,7 +42,6 @@
                 android:src="@drawable/ic_stop_black_24dp" />
 
         </LinearLayout>
-
 
 
     </RelativeLayout>

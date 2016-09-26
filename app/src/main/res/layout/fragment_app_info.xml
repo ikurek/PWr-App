@@ -12,37 +12,12 @@
         android:layout_gravity="center">
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/Hi"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView3"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/AppInfo"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView4"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="8dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:text="@string/WhatIUsed"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -60,6 +35,32 @@
             android:layout_marginTop="8dp"
             android:text="@string/WhatIUsedContent"
             android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView6"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:text="Trochę więcej o projekcie można dowiedziec się w serwisie GitHub" />
+
+            <ImageButton
+                android:id="@+id/imageButtonVisitGitHub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_github_box" />
+
+
+        </LinearLayout>
 
     </RelativeLayout>
 </FrameLayout>
