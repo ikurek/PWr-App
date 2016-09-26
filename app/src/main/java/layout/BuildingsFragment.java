@@ -1,7 +1,6 @@
 package layout;
 
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -28,10 +27,9 @@ public class BuildingsFragment extends Fragment {
     }
 
 
-    public static BuildingsFragment newInstance(Context context) {
-        BuildingsFragment fragment = new BuildingsFragment();
+    public static BuildingsFragment newInstance() {
 
-        return fragment;
+        return new BuildingsFragment();
     }
 
 

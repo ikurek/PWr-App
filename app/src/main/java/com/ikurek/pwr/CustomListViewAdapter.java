@@ -16,11 +16,11 @@ import java.util.ArrayList;
 /**
  * Created by Igor on 03.09.2016.
  */
-public class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
+class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
 
 
-    boolean[] animationStates;
-    private ArrayList<ParsedWebData> dataSet;
+    private final boolean[] animationStates;
+    private final ArrayList<ParsedWebData> dataSet;
 
 
     public CustomListViewAdapter(Context context, int textViewResourceId, ArrayList<ParsedWebData> objects) {

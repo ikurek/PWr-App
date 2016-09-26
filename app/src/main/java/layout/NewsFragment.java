@@ -1,7 +1,6 @@
 package layout;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -27,10 +26,10 @@ import java.util.ArrayList;
 public class NewsFragment extends Fragment {
 
     public static ArrayList<ParsedWebData> list = new ArrayList<>();
-    ProgressBar progressBar;
-    AsyncXMLParser parser;
-    ListView listView;
-    SharedPreferences preferences;
+    private ProgressBar progressBar;
+    private AsyncXMLParser parser;
+    private ListView listView;
+    private SharedPreferences preferences;
 
 
     public NewsFragment() {
@@ -38,10 +37,9 @@ public class NewsFragment extends Fragment {
     }
 
 
-    public static NewsFragment newInstance(Context context) {
-        NewsFragment fragment = new NewsFragment();
+    public static NewsFragment newInstance() {
 
-        return fragment;
+        return new NewsFragment();
     }
 
     @Override
@@ -56,7 +54,7 @@ public class NewsFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-        View view = null;
+        View view;
         // Inflate the layout for this fragment
         if (preferences.getBoolean("news_layout", true)) {
             view = inflater.inflate(R.layout.fragment_news_cards, container, false);

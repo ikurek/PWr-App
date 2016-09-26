@@ -25,9 +25,8 @@ public class ContactFragment extends Fragment {
 
 
     public static ContactFragment newInstance() {
-        ContactFragment fragment = new ContactFragment();
 
-        return fragment;
+        return new ContactFragment();
     }
 
     @Override

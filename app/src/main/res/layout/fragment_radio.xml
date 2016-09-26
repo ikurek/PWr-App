@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:contentDescription="Logo Radia Luz"
+            android:contentDescription="@string/Radio_Luz_logo"
             app:srcCompat="@drawable/luz_radio_logo_nobackground" />
 
         <LinearLayout

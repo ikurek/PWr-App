@@ -19,7 +19,7 @@ import com.ikurek.pwr.R;
 
 public class AppInfoFragment extends Fragment {
 
-    SharedPreferences preferences;
+    private SharedPreferences preferences;
 
     public AppInfoFragment() {
         // Required empty public constructor
@@ -27,9 +27,8 @@ public class AppInfoFragment extends Fragment {
 
 
     public static AppInfoFragment newInstance() {
-        AppInfoFragment fragment = new AppInfoFragment();
 
-        return fragment;
+        return new AppInfoFragment();
     }
 
     @Override

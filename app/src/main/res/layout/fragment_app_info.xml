@@ -49,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="9"
-                android:text="Trochę więcej o projekcie można dowiedziec się w serwisie GitHub" />
+                android:text="@string/check_github_for_more" />
 
             <ImageButton
                 android:id="@+id/imageButtonVisitGitHub"
@@ -57,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/githublogomaterial"
                 android:src="@drawable/ic_github_box" />
 
 

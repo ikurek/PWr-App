@@ -20,13 +20,13 @@ import com.ikurek.pwr.RadioService;
 public class RadioFragment extends Fragment {
 
     public MediaPlayer radioPlayer;
-    public boolean clicktoplay;
     int volumeSetByUser;
     AudioManager audioManager;
     String url = "http://radioluz.pwr.wroc.pl:8000/luzhifi.mp3";
     Snackbar snackbar;
     AudioManager.OnAudioFocusChangeListener afChangeListener;
-    Intent playRadioInService;
+    private boolean clicktoplay;
+    private Intent playRadioInService;
 
 
     public RadioFragment() {
@@ -35,9 +35,8 @@ public class RadioFragment extends Fragment {
 
 
     public static RadioFragment newInstance() {
-        RadioFragment fragment = new RadioFragment();
 
-        return fragment;
+        return new RadioFragment();
     }
 
     @Override

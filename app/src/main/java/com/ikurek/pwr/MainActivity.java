@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity
 
         //Ustawia ftagment widoczny po odpaleniu aplikacji
         Fragment fragment = null;
-        Class fragmentClass = null;
+        Class fragmentClass;
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         fragmentClass = NewsFragment.class;

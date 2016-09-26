@@ -15,11 +15,11 @@ import java.io.IOException;
 
 public class RadioService extends Service implements MediaPlayer.OnPreparedListener {
 
-    MediaPlayer radioPlayer;
-    String url = "http://radioluz.pwr.wroc.pl:8000/luzhifi.mp3";
-    String action;
-    NotificationManager notificationManager;
-    int NOTIFICATION_ID = 80085;
+    private final String url = "http://radioluz.pwr.wroc.pl:8000/luzhifi.mp3";
+    private final int NOTIFICATION_ID = 80085;
+    private MediaPlayer radioPlayer;
+    private String action;
+    private NotificationManager notificationManager;
 
 
     public RadioService() {

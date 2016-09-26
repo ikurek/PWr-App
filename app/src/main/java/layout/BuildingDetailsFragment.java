@@ -28,8 +28,7 @@ public class BuildingDetailsFragment extends Fragment {
 
 
     public static BuildingDetailsFragment newInstance() {
-        BuildingDetailsFragment fragment = new BuildingDetailsFragment();
-        return fragment;
+        return new BuildingDetailsFragment();
     }
 
     @Override
