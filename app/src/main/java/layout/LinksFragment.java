@@ -17,7 +17,7 @@ import com.ikurek.pwr.R;
 import com.ikurek.pwr.RadioService;
 
 
-public class RadioFragment extends Fragment {
+public class LinksFragment extends Fragment {
 
     public MediaPlayer radioPlayer;
     public boolean clicktoplay;
@@ -29,13 +29,13 @@ public class RadioFragment extends Fragment {
     Intent playRadioInService;
 
 
-    public RadioFragment() {
+    public LinksFragment() {
         // Required empty public constructor
     }
 
 
-    public static RadioFragment newInstance() {
-        RadioFragment fragment = new RadioFragment();
+    public static LinksFragment newInstance() {
+        LinksFragment fragment = new LinksFragment();
 
         return fragment;
     }
