@@ -22,8 +22,8 @@ import layout.AppInfoFragment;
 import layout.BuildingsFragment;
 import layout.CatFragment;
 import layout.ContactFragment;
-import layout.NewsFragment;
 import layout.LinksFragment;
+import layout.NewsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -112,31 +112,31 @@ public class MainActivity extends AppCompatActivity
 
             super.onBackPressed();
 
-        }else {
+        } else {
 
-                AlertDialog alertDialogExit = new AlertDialog.Builder(MainActivity.this).create();
-                alertDialogExit.setTitle(getString(R.string.exit));
-                alertDialogExit.setMessage(getString(R.string.alertDialog_areYouSureYouWantToExit));
+            AlertDialog alertDialogExit = new AlertDialog.Builder(MainActivity.this).create();
+            alertDialogExit.setTitle(getString(R.string.exit));
+            alertDialogExit.setMessage(getString(R.string.alertDialog_areYouSureYouWantToExit));
 
 
-                alertDialogExit.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.cancel),
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        });
+            alertDialogExit.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.cancel),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
 
-                alertDialogExit.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.exit),
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                                System.exit(0);
-                            }
-                        });
-                alertDialogExit.show();
+            alertDialogExit.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.exit),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            System.exit(0);
+                        }
+                    });
+            alertDialogExit.show();
 
-            }
         }
+    }
 
 
     @Override

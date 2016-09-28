@@ -13,8 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.ikurek.pwr.GetDetailedBuildingInfo;
-import com.ikurek.pwr.R;
+import com.kapss.pwr.GetDetailedBuildingInfo;
+import com.kapss.pwr.R;
 
 import java.util.Locale;
 
@@ -26,11 +26,6 @@ public class BuildingDetailsFragment extends Fragment {
         // Required empty public constructor
     }
 
-
-    public static BuildingDetailsFragment newInstance() {
-        BuildingDetailsFragment fragment = new BuildingDetailsFragment();
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

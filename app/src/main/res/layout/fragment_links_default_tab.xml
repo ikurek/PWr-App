@@ -1,35 +1,35 @@
- <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize">
 
 
-    <TextView
-        android:id="@+id/pwr_adress_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Adres:"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#000000" />
+        <TextView
+            android:id="@+id/pwr_adress_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Adres:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
 
-    <TextView
-        android:id="@+id/pwr_adress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pwr_adress_title"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Wybrzeże Wyspiańskiego 27\n50-370 Wrocław"/>
+        <TextView
+            android:id="@+id/pwr_adress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_adress_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Wybrzeże Wyspiańskiego 27\n50-370 Wrocław"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
             android:id="@+id/pwr_phone_title"
@@ -51,8 +51,9 @@
             android:layout_below="@id/pwr_phone_title"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="71 320 26 00"/>
+            android:inputType="phone"
+            android:text="71 320 26 00"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
             android:id="@+id/pwr_website_title"
@@ -74,32 +75,33 @@
             android:layout_below="@id/pwr_website_title"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:inputType="textUri"
             android:text="http://pwr.edu.pl"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
 
-    <TextView
-        android:id="@+id/pwr_nip_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pwr_website"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="16dp"
-        android:text="NIP:"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#000000" />
+        <TextView
+            android:id="@+id/pwr_nip_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_website"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:text="NIP:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
 
-    <TextView
-        android:id="@+id/pwr_nip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pwr_nip_title"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="896-000-58-51"/>
+        <TextView
+            android:id="@+id/pwr_nip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_nip_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="896-000-58-51"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
             android:id="@+id/pwr_regon_title"
@@ -115,18 +117,13 @@
             android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/pwr_regon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/pwr_regon_title"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="000001614"/>
-
-
-
-
+            android:text="000001614"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
 
     </RelativeLayout>

@@ -1,11 +1,11 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="?attr/actionBarSize">
 
         <LinearLayout
@@ -22,9 +22,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
+                android:text="Facebook"
                 android:textAlignment="viewStart"
-                android:textColor="#000000"
-                android:text="Facebook" />
+                android:textColor="#000000" />
 
             <ImageButton
                 android:id="@+id/imageButtonVisitFacebook"
@@ -38,9 +38,9 @@
 
         <LinearLayout
             android:id="@+id/GooglePlus"
-            android:layout_below="@+id/Facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/Facebook"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
@@ -51,9 +51,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
+                android:text="Google Plus"
                 android:textAlignment="viewStart"
-                android:textColor="#000000"
-                android:text="Google Plus" />
+                android:textColor="#000000" />
 
             <ImageButton
                 android:id="@+id/imageButtonVisitGooglePlus"
@@ -68,9 +68,9 @@
 
         <LinearLayout
             android:id="@+id/Instagram"
-            android:layout_below="@+id/GooglePlus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/GooglePlus"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
@@ -81,9 +81,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
+                android:text="Instagram"
                 android:textAlignment="viewStart"
-                android:textColor="#000000"
-                android:text="Instagram" />
+                android:textColor="#000000" />
 
             <ImageButton
                 android:id="@+id/imageButtonVisitInstagram"
@@ -98,9 +98,9 @@
 
         <LinearLayout
             android:id="@+id/LinkedIn"
-            android:layout_below="@+id/Instagram"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/Instagram"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
@@ -111,9 +111,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
+                android:text="LinkedIn"
                 android:textAlignment="viewStart"
-                android:textColor="#000000"
-                android:text="LinkedIn" />
+                android:textColor="#000000" />
 
             <ImageButton
                 android:id="@+id/imageButtonVisitLinkedIn"
@@ -127,9 +127,9 @@
 
         <LinearLayout
             android:id="@+id/Snapchat"
-            android:layout_below="@+id/LinkedIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/LinkedIn"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
@@ -140,9 +140,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
+                android:text="Snapchat"
                 android:textAlignment="viewStart"
-                android:textColor="#000000"
-                android:text="Snapchat" />
+                android:textColor="#000000" />
 
             <ImageButton
                 android:id="@+id/imageButtonVisitSnapchat"
@@ -156,9 +156,9 @@
 
         <LinearLayout
             android:id="@+id/Twitter"
-            android:layout_below="@+id/Snapchat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/Snapchat"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
@@ -169,9 +169,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
+                android:text="Twitter"
                 android:textAlignment="viewStart"
-                android:textColor="#000000"
-                android:text="Twitter" />
+                android:textColor="#000000" />
 
             <ImageButton
                 android:id="@+id/imageButtonVisitTwitter"
@@ -186,10 +186,9 @@
 
 
         <LinearLayout
-            android:id="@+id/YouTube"
-            android:layout_below="@+id/Twitter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/Twitter"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
@@ -200,9 +199,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
+                android:text="YouTube"
                 android:textAlignment="viewStart"
-                android:textColor="#000000"
-                android:text="YouTube" />
+                android:textColor="#000000" />
 
             <ImageButton
                 android:id="@+id/imageButtonVisitYouTube"
@@ -218,4 +217,4 @@
 
     </RelativeLayout>
 
-    </ScrollView>
+</ScrollView>

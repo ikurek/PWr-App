@@ -1,7 +1,6 @@
 package layout;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -17,9 +16,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
-import com.ikurek.pwr.AsyncXMLParser;
-import com.ikurek.pwr.ParsedWebData;
-import com.ikurek.pwr.R;
+import com.kapss.pwr.AsyncXMLParser;
+import com.kapss.pwr.ParsedWebData;
+import com.kapss.pwr.R;
 
 import java.util.ArrayList;
 
@@ -27,22 +26,16 @@ import java.util.ArrayList;
 public class NewsFragment extends Fragment {
 
     public static ArrayList<ParsedWebData> list = new ArrayList<>();
-    ProgressBar progressBar;
-    AsyncXMLParser parser;
-    ListView listView;
-    SharedPreferences preferences;
+    private ProgressBar progressBar;
+    private AsyncXMLParser parser;
+    private ListView listView;
+    private SharedPreferences preferences;
 
 
     public NewsFragment() {
         // Required empty public constructor
     }
 
-
-    public static NewsFragment newInstance(Context context) {
-        NewsFragment fragment = new NewsFragment();
-
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

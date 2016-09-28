@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.ikurek.pwr.R;
+import com.kapss.pwr.R;
 
 
 public class ContactFragment extends Fragment {
@@ -23,12 +23,6 @@ public class ContactFragment extends Fragment {
         // Required empty public constructor
     }
 
-
-    public static ContactFragment newInstance() {
-        ContactFragment fragment = new ContactFragment();
-
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

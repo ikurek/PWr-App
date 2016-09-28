@@ -2,7 +2,6 @@ package layout;
 
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.ikurek.pwr.R;
+import com.kapss.pwr.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -40,12 +39,12 @@ public class LinksSocialTabFragment extends Fragment {
 
         imageButtonVisitFacebook.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                try{
+                try {
 
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://page/181882145193660"));
                     startActivity(intent);
 
-                }catch(Exception e){
+                } catch (Exception e) {
 
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.facebook.com/politechnika")));
 
@@ -75,12 +74,12 @@ public class LinksSocialTabFragment extends Fragment {
         imageButtonVisitLinkedIn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                try{
+                try {
 
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("linkedin://15981"));
                     startActivity(intent);
 
-                }catch(Exception e){
+                } catch (Exception e) {
 
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/edu/school?id=15981")));
 
@@ -96,7 +95,7 @@ public class LinksSocialTabFragment extends Fragment {
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?screen_name=PWr_Wroclaw"));
                     startActivity(intent);
 
-                }catch (Exception e) {
+                } catch (Exception e) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
                             Uri.parse("https://twitter.com/PWr_Wroclaw")));
                 }

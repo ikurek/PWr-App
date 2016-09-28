@@ -24,15 +24,6 @@ public class ParsedWebData {
 
     }
 
-    public ParsedWebData(String title, String url, String description, String source, Date date, String dateString) {
-        this.title = title;
-        this.url = url;
-        this.description = description;
-        this.source = source;
-        this.date = date;
-        this.dateString = dateString;
-    }
-
     public String getTitle() {
         return title;
     }

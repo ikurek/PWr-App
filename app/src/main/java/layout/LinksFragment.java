@@ -1,37 +1,25 @@
 package layout;
 
 
-import android.content.Intent;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ikurek.pwr.PagerAdapterLinks;
-import com.ikurek.pwr.R;
+import com.kapss.pwr.PagerAdapterLinks;
+import com.kapss.pwr.R;
 
 
 public class LinksFragment extends Fragment {
-
 
 
     public LinksFragment() {
         // Required empty public constructor
     }
 
-
-    public static LinksFragment newInstance() {
-        LinksFragment fragment = new LinksFragment();
-
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -51,7 +39,6 @@ public class LinksFragment extends Fragment {
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
 
 
         //Konfiguracja zmiany fragmentów

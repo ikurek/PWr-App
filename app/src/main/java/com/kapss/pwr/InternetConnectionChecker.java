@@ -7,14 +7,12 @@ import android.net.NetworkInfo;
 /**
  * Created by Igor on 17.09.2016.
  */
-public class InternetConnectionChecker {
+class InternetConnectionChecker {
 
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
 
-        boolean isConnected = (activeNetworkInfo != null && activeNetworkInfo.isConnected());
-
-        return isConnected;
+        return (activeNetworkInfo != null && activeNetworkInfo.isConnected());
     }
 }

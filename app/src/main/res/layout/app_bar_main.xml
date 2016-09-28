@@ -2,11 +2,10 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main.appbar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.ikurek.pwr.MainActivity">
+    tools:context="com.kapss.pwr.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

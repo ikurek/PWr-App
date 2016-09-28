@@ -14,23 +14,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.ikurek.pwr.R;
+import com.kapss.pwr.R;
 
 
 public class AppInfoFragment extends Fragment {
 
-    SharedPreferences preferences;
+    private SharedPreferences preferences;
 
     public AppInfoFragment() {
         // Required empty public constructor
     }
 
-
-    public static AppInfoFragment newInstance() {
-        AppInfoFragment fragment = new AppInfoFragment();
-
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,10 +52,10 @@ public class AppInfoFragment extends Fragment {
                     CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
                     builder.setToolbarColor(Color.parseColor("#B22315"));
                     CustomTabsIntent customTabsIntent = builder.build();
-                    customTabsIntent.launchUrl(getActivity(), Uri.parse("https://github.com/ikurek/PWr-App/"));
+                    customTabsIntent.launchUrl(getActivity(), Uri.parse("https://github.com/kapss/PWr-App/"));
 
                 } else {
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ikurek/PWr-App/"));
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/kapss/PWr-App/"));
                     startActivity(browserIntent);
                 }
 

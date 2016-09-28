@@ -7,7 +7,7 @@ import android.content.Context;
  */
 public class GetDetailedBuildingInfo {
 
-    public Context context;
+    private final Context context;
 
     //TODO: wygląda głupio, jest głupie, ale działa
     //Osobna klasa, bo liczę na to że kiedyś zbiorę się w sobie i wykorzystam do tego bazę danych
@@ -63,6 +63,10 @@ public class GetDetailedBuildingInfo {
 
             buildingdata = context.getResources().getStringArray(R.array.A_10);
 
+        } else if (buildingName == "A-11") {
+
+            buildingdata = context.getResources().getStringArray(R.array.A_11);
+
         } else if (buildingName == "B-1") {
 
             buildingdata = context.getResources().getStringArray(R.array.B_1);
@@ -78,6 +82,26 @@ public class GetDetailedBuildingInfo {
         } else if (buildingName == "B-5") {
 
             buildingdata = context.getResources().getStringArray(R.array.B_5);
+
+        } else if (buildingName == "B-6") {
+
+            buildingdata = context.getResources().getStringArray(R.array.B_6);
+
+        } else if (buildingName == "B-7") {
+
+            buildingdata = context.getResources().getStringArray(R.array.B_7);
+
+        } else if (buildingName == "B-8") {
+
+            buildingdata = context.getResources().getStringArray(R.array.B_8);
+
+        } else if (buildingName == "B-9") {
+
+            buildingdata = context.getResources().getStringArray(R.array.B_9);
+
+        } else if (buildingName == "B-11") {
+
+            buildingdata = context.getResources().getStringArray(R.array.B_11);
 
         } else if (buildingName == "C-1") {
 
@@ -110,6 +134,30 @@ public class GetDetailedBuildingInfo {
         } else if (buildingName == "C-8") {
 
             buildingdata = context.getResources().getStringArray(R.array.C_8);
+
+        } else if (buildingName == "C-11") {
+
+            buildingdata = context.getResources().getStringArray(R.array.C_11);
+
+        } else if (buildingName == "C-13") {
+
+            buildingdata = context.getResources().getStringArray(R.array.C_13);
+
+        } else if (buildingName == "C-14") {
+
+            buildingdata = context.getResources().getStringArray(R.array.C_14);
+
+        } else if (buildingName == "C-15") {
+
+            buildingdata = context.getResources().getStringArray(R.array.C_15);
+
+        } else if (buildingName == "C-16") {
+
+            buildingdata = context.getResources().getStringArray(R.array.C_16);
+
+        } else if (buildingName == "C-18") {
+
+            buildingdata = context.getResources().getStringArray(R.array.C_18);
 
         } else if (buildingName == "D-1") {
 
@@ -191,6 +239,14 @@ public class GetDetailedBuildingInfo {
 
             buildingdata = context.getResources().getStringArray(R.array.H_10);
 
+        } else if (buildingName == "H-12") {
+
+            buildingdata = context.getResources().getStringArray(R.array.H_12);
+
+        } else if (buildingName == "H-13") {
+
+            buildingdata = context.getResources().getStringArray(R.array.H_13);
+
         } else if (buildingName == "H-14") {
 
             buildingdata = context.getResources().getStringArray(R.array.H_14);
@@ -207,7 +263,7 @@ public class GetDetailedBuildingInfo {
 
             buildingdata = context.getResources().getStringArray(R.array.M_4);
 
-        } else if (buildingName == "M_6") {
+        } else if (buildingName == "M-6") {
 
             buildingdata = context.getResources().getStringArray(R.array.M_6);
 

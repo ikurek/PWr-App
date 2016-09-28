@@ -16,7 +16,7 @@ import layout.LinksSocialTabFragment;
 
 public class PagerAdapterLinks extends FragmentStatePagerAdapter {
 
-    int numberOfTabs;
+    private final int numberOfTabs;
 
     public PagerAdapterLinks(FragmentManager fragmentManager, int NumOfTabs) {
         super(fragmentManager);
@@ -28,11 +28,9 @@ public class PagerAdapterLinks extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                LinksDefaultTabFragment tabDefault = new LinksDefaultTabFragment();
-                return tabDefault;
+                return new LinksDefaultTabFragment();
             case 1:
-                LinksSocialTabFragment tabSocial = new LinksSocialTabFragment();
-                return tabSocial;
+                return new LinksSocialTabFragment();
             default:
                 return null;
         }

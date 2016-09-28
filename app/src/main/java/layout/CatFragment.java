@@ -1,7 +1,6 @@
 package layout;
 
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -12,7 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.ikurek.pwr.R;
+import com.kapss.pwr.R;
 import com.squareup.picasso.Picasso;
 
 
@@ -20,21 +19,16 @@ import com.squareup.picasso.Picasso;
 //Dużo kotów
 //Guzik do wyświetlania kotów też
 public class CatFragment extends Fragment {
-    ImageView cats;
-    Picasso picasso;
-    Button moarcats;
-    ProgressBar catDownloadProgress;
+    private ImageView cats;
+    private Picasso picasso;
+    private Button moarcats;
+    private ProgressBar catDownloadProgress;
 
 
     public CatFragment() {
         // Required empty public constructor
     }
 
-
-    public static CatFragment newInstance(Context context) {
-        CatFragment fragment = new CatFragment();
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

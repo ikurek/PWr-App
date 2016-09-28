@@ -34,11 +34,11 @@ import layout.NewsFragment;
 public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWebData>> {
 
 
-    Context context;
-    ListView listView;
-    ProgressBar progressBar;
-    ArrayList<ParsedWebData> list = new ArrayList<>();
-    SharedPreferences preferences;
+    private final Context context;
+    private final ListView listView;
+    private final ProgressBar progressBar;
+    private final ArrayList<ParsedWebData> list = new ArrayList<>();
+    private SharedPreferences preferences;
 
 
     //Przekazywane z BuildingsFragment
@@ -52,7 +52,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
     //Funkcja zawiea parser zdejmujący dane z jednego linku xml
     //Przekazuje do niej link i nazwę linku jako źródło
     //Tym co jest zczytane z linku wypełnia ArrayList
-    public Void singleLinkParser(String link, String source) {
+    private Void singleLinkParser(String link, String source) {
 
         ParsedWebData data = new ParsedWebData();
         String text = null;
@@ -86,17 +86,17 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
                         break;
 
                     case XmlPullParser.END_TAG:
-                        if (tagname.equalsIgnoreCase("item") && data.title != "Kanał RSS" && data.title.startsWith("The Freescale Cup 2014") != true && data.title != null && data.description != null && data.description != "Aktualności" && data.date != null) {
+                        if (tagname.equalsIgnoreCase("item") && data.title != "Kanał RSS" && !data.title.startsWith("The Freescale Cup 2014") && data.title != null && data.description != null && data.description != "Aktualności" && data.date != null) {
                             data.source = source;
                             list.add(data);
 
                             //Zczytanie tytułu
                         } else if (tagname.equalsIgnoreCase("title")) {
-                            data.title = text.trim().replaceAll(" +", " ");
+                            data.title = text != null ? text.trim().replaceAll(" +", " ") : null;
 
                             //Zczytanie linku
                         } else if (tagname.equalsIgnoreCase("link")) {
-                            data.url = text.trim();
+                            data.url = text != null ? text.trim() : null;
 
                             //Zczytanie opisu
                         } else if (tagname.equalsIgnoreCase("description")) {
@@ -109,9 +109,9 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
                             //Przycina niepotrzebne części daty
                             //Dla PWr osobno bo ma inny format...
                             if (source == "PWr") {
-                                text = text.substring(0, text.length() - 14);
+                                text = text.substring(0, (text != null ? text.length() : 0) - 14);
                             } else {
-                                text = text.substring(0, text.length() - 15);
+                                text = text.substring(0, (text != null ? text.length() : 0) - 15);
                             }
 
                             //Jakby przypadkiem wczytało link do daty (zdarza sie)
