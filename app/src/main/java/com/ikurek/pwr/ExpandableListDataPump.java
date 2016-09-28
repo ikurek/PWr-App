@@ -24,6 +24,7 @@ public class ExpandableListDataPump {
         abuildings.add("A-8");
         abuildings.add("A-9");
         abuildings.add("A-10");
+        abuildings.add("A-11");
         expandableListDetail.put("A", abuildings);
 
         List<String> bbuildings = new ArrayList<>();
@@ -51,6 +52,7 @@ public class ExpandableListDataPump {
         cbuildings.add("C-13");
         cbuildings.add("C-14");
         cbuildings.add("C-15");
+        cbuildings.add("C-16");
         cbuildings.add("C-18");
         expandableListDetail.put("C", cbuildings);
 
@@ -84,6 +86,8 @@ public class ExpandableListDataPump {
         hbuildings.add("H-8");
         hbuildings.add("H-9");
         hbuildings.add("H-10");
+        hbuildings.add("H-12");
+        hbuildings.add("H-13");
         hbuildings.add("H-14");
         expandableListDetail.put("H", hbuildings);
 
@@ -104,6 +108,21 @@ public class ExpandableListDataPump {
         pbuildings.add("P-14");
         pbuildings.add("P-20");
         expandableListDetail.put("P", pbuildings);
+
+        List<String> tbuildings = new ArrayList<>();
+        tbuildings.add("T-2");
+        tbuildings.add("T-3");
+        tbuildings.add("T-4");
+        tbuildings.add("T-6");
+        tbuildings.add("T-7");
+        tbuildings.add("T-9");
+        tbuildings.add("T-14");
+        tbuildings.add("T-15");
+        tbuildings.add("T-16");
+        tbuildings.add("T-17");
+        tbuildings.add("T-19");
+        tbuildings.add("T-22");
+        expandableListDetail.put("T", tbuildings);
 
         return expandableListDetail;
     }

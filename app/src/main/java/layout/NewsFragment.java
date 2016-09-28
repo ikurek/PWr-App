@@ -46,6 +46,8 @@ public class NewsFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+        getActivity().setTitle(getString(R.string.news));
         super.onCreate(savedInstanceState);
 
 

@@ -34,6 +34,7 @@ public class BuildingDetailsFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
 
@@ -56,6 +57,7 @@ public class BuildingDetailsFragment extends Fragment {
         //Przypisanie do TextView
         TextView textViewBuildingName = (TextView) view.findViewById(R.id.building_details_name);
         textViewBuildingName.setText(buildingName);
+        getActivity().setTitle(buildingName);
         TextView textViewBuildingAdress = (TextView) view.findViewById(R.id.building_details_adress);
         textViewBuildingAdress.setText(buildingData[0]);
         TextView textViewBuildingLatLong = (TextView) view.findViewById(R.id.building_details_latlong);

@@ -7,26 +7,27 @@
         <item
             android:id="@+id/nav_news"
             android:icon="@drawable/ic_web_asset_black_24dp"
-            android:title="Aktualności" />
+            android:title="@string/news" />
         <item
             android:id="@+id/nav_buildings"
             android:icon="@drawable/ic_business_black_24dp"
-            android:title="Budynki" />
-
-        <item
-            android:id="@+id/nav_radio"
-            android:icon="@drawable/ic_radio_black_24dp"
-            android:title="Radio Luz" />
+            android:title="@string/buildings" />
 
         <item
             android:id="@+id/nav_cats"
             android:icon="@drawable/ic_cat_face"
-            android:title="Koty" />
+            android:title="@string/cats" />
+
+        <item
+            android:id="@+id/nav_links"
+            android:icon="@drawable/ic_assistant_photo_black_24dp"
+            android:title="@string/links" />
+
 
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_settings_black_24dp"
-            android:title="Ustawienia" />
+            android:title="@string/settings" />
 
     </group>
 
@@ -37,11 +38,11 @@
         <item
             android:id="@+id/nav_bugreport"
             android:icon="@drawable/ic_bug_report_black_24dp"
-            android:title="Kontakt/Zgłoszenie błędu" />
+            android:title="@string/contact" />
         <item
             android:id="@+id/nav_info"
             android:icon="@drawable/ic_info_black_24dp"
-            android:title="O Aplikacji" />
+            android:title="@string/about" />
 
 
     </group>

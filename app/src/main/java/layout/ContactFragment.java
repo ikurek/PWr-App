@@ -32,6 +32,8 @@ public class ContactFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+        getActivity().setTitle(getString(R.string.contact));
         super.onCreate(savedInstanceState);
 
     }

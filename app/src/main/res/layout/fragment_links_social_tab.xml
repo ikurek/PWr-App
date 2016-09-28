@@ -1,13 +1,221 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="layout.LinksSocialTabFragment">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="?attr/actionBarSize">
 
-</FrameLayout>
+        <LinearLayout
+            android:id="@+id/Facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:text="Facebook" />
+
+            <ImageButton
+                android:id="@+id/imageButtonVisitFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_facebook" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/GooglePlus"
+            android:layout_below="@+id/Facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:text="Google Plus" />
+
+            <ImageButton
+                android:id="@+id/imageButtonVisitGooglePlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_google_plus" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Instagram"
+            android:layout_below="@+id/GooglePlus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:text="Instagram" />
+
+            <ImageButton
+                android:id="@+id/imageButtonVisitInstagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_instagram" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinkedIn"
+            android:layout_below="@+id/Instagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:text="LinkedIn" />
+
+            <ImageButton
+                android:id="@+id/imageButtonVisitLinkedIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_linkedin" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Snapchat"
+            android:layout_below="@+id/LinkedIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:text="Snapchat" />
+
+            <ImageButton
+                android:id="@+id/imageButtonVisitSnapchat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_snapchat" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Twitter"
+            android:layout_below="@+id/Snapchat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:text="Twitter" />
+
+            <ImageButton
+                android:id="@+id/imageButtonVisitTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_twitter" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/YouTube"
+            android:layout_below="@+id/Twitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="9"
+                android:gravity="center"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:text="YouTube" />
+
+            <ImageButton
+                android:id="@+id/imageButtonVisitYouTube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_youtube_play" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    </ScrollView>

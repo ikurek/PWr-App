@@ -38,6 +38,8 @@ public class CatFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+        getActivity().setTitle(getString(R.string.cats));
         super.onCreate(savedInstanceState);
     }
 

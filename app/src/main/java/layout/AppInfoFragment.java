@@ -34,6 +34,7 @@ public class AppInfoFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        getActivity().setTitle(getString(R.string.about));
         super.onCreate(savedInstanceState);
     }
 

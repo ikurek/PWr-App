@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     tools:context="layout.AppInfoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -46,8 +45,9 @@
             android:weightSum="10">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:layout_weight="9"
                 android:text="Trochę więcej o projekcie można dowiedziec się w serwisie GitHub" />
 

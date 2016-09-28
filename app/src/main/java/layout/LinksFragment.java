@@ -6,27 +6,20 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.Toast;
 
+import com.ikurek.pwr.PagerAdapterLinks;
 import com.ikurek.pwr.R;
-import com.ikurek.pwr.RadioService;
 
 
 public class LinksFragment extends Fragment {
 
-    public MediaPlayer radioPlayer;
-    public boolean clicktoplay;
-    int volumeSetByUser;
-    AudioManager audioManager;
-    String url = "http://radioluz.pwr.wroc.pl:8000/luzhifi.mp3";
-    Snackbar snackbar;
-    AudioManager.OnAudioFocusChangeListener afChangeListener;
-    Intent playRadioInService;
 
 
     public LinksFragment() {
@@ -43,7 +36,7 @@ public class LinksFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        getActivity().setTitle(getString(R.string.links));
 
     }
 
@@ -51,45 +44,27 @@ public class LinksFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_radio, container, false);
+        View view = inflater.inflate(R.layout.fragment_links, container, false);
 
-        ImageButton imageButtonPlay = (ImageButton) view.findViewById(R.id.imageButtonPlayRadio);
-
-        clicktoplay = false;
-
-        imageButtonPlay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (!clicktoplay) {
-                    Toast.makeText(getContext(), "Buforowanie", Toast.LENGTH_LONG).show();
-                    playRadioInService = new Intent(getActivity(), RadioService.class);
-                    playRadioInService.setAction("play");
-                    getActivity().startService(playRadioInService);
-                    clicktoplay = true;
-                }
+        //Konfiguracja paska z kartami
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout_info);
+        tabLayout.addTab(tabLayout.newTab());
+        tabLayout.addTab(tabLayout.newTab());
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
 
-            }
-        });
 
+        //Konfiguracja zmiany fragmentów
+        ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager_info);
+        PagerAdapterLinks adapter = new PagerAdapterLinks(getActivity().getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
-        ImageButton imageButtonStop = (ImageButton) view.findViewById(R.id.imageButtonStopRadio);
-
-        imageButtonStop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (clicktoplay) {
-                    getActivity().stopService(playRadioInService);
-                    clicktoplay = false;
-                }
-
-            }
-        });
+        tabLayout.setupWithViewPager(viewPager);
 
 
         return view;
     }
 
 }
+

@@ -5,45 +5,19 @@
     android:layout_height="match_parent"
     tools:context="layout.LinksFragment">
 
-
-    <RelativeLayout
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout_info"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center">
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-        <ImageView
-            android:id="@+id/imageViewLuzRadio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:contentDescription="Logo Radia Luz"
-            app:srcCompat="@drawable/luz_radio_logo_nobackground" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_info"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/imageViewLuzRadio"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-            <ImageButton
-                android:id="@+id/imageButtonPlayRadio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:src="@drawable/ic_play_arrow_black_24dp" />
-
-            <ImageButton
-                android:id="@+id/imageButtonStopRadio"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:src="@drawable/ic_stop_black_24dp" />
-
-        </LinearLayout>
-
-
-    </RelativeLayout>
 </FrameLayout>
 

@@ -37,6 +37,7 @@ public class BuildingsFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        getActivity().setTitle(getString(R.string.buildings));
         super.onCreate(savedInstanceState);
 
 

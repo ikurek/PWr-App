@@ -23,7 +23,7 @@ import layout.BuildingsFragment;
 import layout.CatFragment;
 import layout.ContactFragment;
 import layout.NewsFragment;
-import layout.RadioFragment;
+import layout.LinksFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -104,12 +104,39 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        int backStackEntryCount = getSupportFragmentManager().getBackStackEntryCount();
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        } else if (backStackEntryCount != 0) {
+
             super.onBackPressed();
+
+        }else {
+
+                AlertDialog alertDialogExit = new AlertDialog.Builder(MainActivity.this).create();
+                alertDialogExit.setTitle(getString(R.string.exit));
+                alertDialogExit.setMessage(getString(R.string.alertDialog_areYouSureYouWantToExit));
+
+
+                alertDialogExit.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.cancel),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                alertDialogExit.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.exit),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                System.exit(0);
+                            }
+                        });
+                alertDialogExit.show();
+
+            }
         }
-    }
 
 
     @Override
@@ -163,9 +190,9 @@ public class MainActivity extends AppCompatActivity
             Intent startSettings = new Intent(this, SettingsActivity.class);
             startActivity(startSettings);
 
-        } else if (id == R.id.nav_radio) {
-            fragmentClass = RadioFragment.class;
-            navigationView.setCheckedItem(R.id.nav_radio);
+        } else if (id == R.id.nav_links) {
+            fragmentClass = LinksFragment.class;
+            navigationView.setCheckedItem(R.id.nav_links);
 
 
         } else if (id == R.id.nav_info) {
@@ -190,7 +217,7 @@ public class MainActivity extends AppCompatActivity
         //Zamiana fragmentów
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.frameLayoutForFragments, fragment).addToBackStack(null).commit();
+            fragmentManager.beginTransaction().replace(R.id.frameLayoutForFragments, fragment).commit();
         }
 
         //Zamyka drawer do lewej strony ekranu

@@ -207,6 +207,10 @@ public class GetDetailedBuildingInfo {
 
             buildingdata = context.getResources().getStringArray(R.array.M_4);
 
+        } else if (buildingName == "M_6") {
+
+            buildingdata = context.getResources().getStringArray(R.array.M_6);
+
         } else if (buildingName == "M-11") {
 
             buildingdata = context.getResources().getStringArray(R.array.M_11);
@@ -226,6 +230,54 @@ public class GetDetailedBuildingInfo {
         } else if (buildingName == "P-20") {
 
             buildingdata = context.getResources().getStringArray(R.array.P_20);
+
+        } else if (buildingName == "T-2") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_2);
+
+        } else if (buildingName == "T-3") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_3);
+
+        } else if (buildingName == "T-4") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_4);
+
+        } else if (buildingName == "T-6") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_6);
+
+        } else if (buildingName == "T-7") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_7);
+
+        } else if (buildingName == "T-9") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_9);
+
+        } else if (buildingName == "T-14") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_14);
+
+        } else if (buildingName == "T-15") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_15);
+
+        } else if (buildingName == "T-16") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_16);
+
+        } else if (buildingName == "T-17") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_17);
+
+        } else if (buildingName == "T-19") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_19);
+
+        } else if (buildingName == "T-20") {
+
+            buildingdata = context.getResources().getStringArray(R.array.T_22);
 
         }
 

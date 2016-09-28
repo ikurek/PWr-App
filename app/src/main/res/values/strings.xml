@@ -1,9 +1,5 @@
 <resources>
     <string name="app_name">PWr</string>
-
-    <string name="navigation_drawer_open">Otwórz szufladę</string>
-    <string name="navigation_drawer_close">Zamknij szufladę</string>
-
     <string name="action_settings">Ustawienia</string>
 
     <!-- Ogólne Stringi użytkowe -->
@@ -22,67 +18,68 @@
     <string name="MOAR">Więcej!!!</string>
     <string name="CatImageDescription">Welcome to the internet!</string>
     <string name="title_activity_settings">Ustawienia</string>
-    <string name="something_is_broken">Coś... Coś się popsuło...</string>
-    <string name="alertDialog_noInternetConnection">Wygląda na to, że nie masz połączenia z internetem... Niektóre funkcje aplikacji mogą nie działać :-/</string>
-    <string name="alertDialog_noGoogleMapsInstalled">Wygląda na to, że nie masz zainstalowanych Map Google... Ciężko się nawigować bez map :-/</string>
     <string name="exit">Wyjdź</string>
     <string name="offlineMode">Tryb offline</string>
     <string name="adress">Adres:</string>
     <string name="ok_sad">OK :-(</string>
+    <string name="cancel">Anuluj</string>
+
+    <!-- Stringi dla AlertDialog -->
+
+    <string name="something_is_broken">Coś... Coś się popsuło...</string>
+    <string name="alertDialog_noInternetConnection">Wygląda na to, że nie masz połączenia z internetem... Niektóre funkcje aplikacji mogą nie działać :-/</string>
+    <string name="alertDialog_noGoogleMapsInstalled">Wygląda na to, że nie masz zainstalowanych Map Google... Ciężko się nawigować bez map :-/</string>
     <string name="alertDialog_noEmailAppInstalled">Wygląda na to, że nie masz zainstalowanego żadnego klienta poczty email :-/</string>
+    <string name="alertDialog_areYouSureYouWantToExit">Czy na pewno chcesz opuścić aplikację?</string>
+
+    <!-- Stringi dla szufaldy nawigacji -->
+    <string name="navigation_drawer_open">Otwórz szufladę</string>
+    <string name="navigation_drawer_close">Zamknij szufladę</string>
+    <string name="news">Aktualności</string>
+    <string name="buildings">Budynki</string>
+    <string name="cats">Koty</string>
+    <string name="about">O aplikacji</string>
+    <string name="links">Przydatne informacje</string>
+    <string name="contact">Kontakt</string>
+    <string name="settings">Ustawienia</string>
 
 
     <!-- Stringi ustawień -->
 
+
     <!-- Stringi dla ustawień newsfeed'u -->
     <string name="pref_header_newsfeed">Źródła aktualności</string>
-
     <string name="pref_title_pwr_all">Strona Główna Politechniki</string>
     <string name="title_short_pwr">PWr</string>
-
-
     <string name="pref_title_w1">Wydział Architektury</string>
     <string name="title_short_w1">WA</string>
-
     <string name="pref_title_w2">Wydział Budownictwa Lądowego i Wodnego</string>
     <string name="title_short_w2">WBLiW</string>
-
     <string name="pref_title_w3">Wydział Chemiczny</string>
     <string name="title_short_w3">WCH</string>
-
     <string name="pref_title_w4">Wydział Elektroniki</string>
     <string name="title_short_w4">WEKA</string>
-
     <string name="pref_title_w5">Wydział Elektryczny</string>
     <string name="title_short_w5">WELY</string>
-
     <string name="pref_title_w6">Wydział Geoinżynierii, Górnictwa i Geologii</string>
     <string name="title_short_w6">WGGG</string>
-
     <string name="pref_title_w7">Wydział Inżynierii Środowiska</string>
     <string name="title_short_w7">WIS</string>
-
     <string name="pref_title_w8">Wydział Informatyki i Zarządzania</string>
     <string name="title_short_w8">WIZ</string>
-
     <string name="pref_title_w9">Wydział Mechaniczno-Energetyczny</string>
     <string name="title_short_w9">WME</string>
-
     <string name="pref_title_w10">Wydział Mechaniczny</string>
     <string name="title_short_w10">WM</string>
-
     <string name="pref_title_w11">Wydział Podstawowych Problemów Techniki</string>
     <string name="title_short_w11">WPPT</string>
-
     <string name="pref_title_w12">Wydział Elektroniki Mikrosystemów i Fotoniki</string>
     <string name="title_short_w12">WEMiF</string>
-
     <string name="pref_title_w13">Wydział Matematyki</string>
     <string name="title_short_w13">WM</string>
 
     <!-- Stringi dla ustawień layoutu -->
     <string name="pref_header_layout">Interfejs</string>
-
     <string name="pref_title_use_ctt">Technologia kart Chrome</string>
     <string name="pref_desc_use_ctt">Jeżeli zainstalowana jest przeglądarka Chrome, linki otwierane będa przy użyciu kart Chrome</string>
     <string name="pref_title_animations">Animacje aktualności</string>
@@ -93,7 +90,6 @@
 
     <!-- Stringi dla ustawień pozostałe -->
     <string name="pref_header_notifications">Pozostałe</string>
-
     <string name="pref_title_use_old_parser">Zmiana parsera</string>
     <string name="pref_desc_use_old_parser">Zamiast używać nowej wersji parsera (XPP) użyj klasycznej (Jsoup). Zaznacz, jeżeli występuja problemy z kanałem aktualności.</string>
     <string name="pref_title_offline_mode_prompt">Wyłacz powiadomienie o braku sieci</string>
