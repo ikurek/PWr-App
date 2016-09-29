@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.kapss.pwr.R;
+import com.ikurek.pwr.R;
 
 
 public class ContactFragment extends Fragment {

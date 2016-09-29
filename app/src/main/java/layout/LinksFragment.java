@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kapss.pwr.PagerAdapterLinks;
-import com.kapss.pwr.R;
+import com.ikurek.pwr.PagerAdapterLinks;
+import com.ikurek.pwr.R;
 
 
 public class LinksFragment extends Fragment {

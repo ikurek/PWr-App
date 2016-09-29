@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.kapss.pwr.R;
+import com.ikurek.pwr.R;
 
 
 public class AppInfoFragment extends Fragment {

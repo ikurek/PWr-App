@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
-import com.kapss.pwr.R;
+import com.ikurek.pwr.R;
 import com.squareup.picasso.Picasso;
 
 

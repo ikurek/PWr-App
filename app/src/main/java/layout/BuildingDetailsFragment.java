@@ -13,8 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.kapss.pwr.GetDetailedBuildingInfo;
-import com.kapss.pwr.R;
+import com.ikurek.pwr.GetDetailedBuildingInfo;
+import com.ikurek.pwr.R;
 
 import java.util.Locale;
 

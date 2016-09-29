@@ -1,4 +1,4 @@
-package com.kapss.pwr;
+package com.ikurek.pwr;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

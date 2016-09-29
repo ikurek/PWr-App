@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kapss.pwr.R;
+import com.ikurek.pwr.R;
 
 /**
  * A simple {@link Fragment} subclass.
