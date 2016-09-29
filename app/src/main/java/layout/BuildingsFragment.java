@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
-import com.kapss.pwr.CustomExpandableListAdapter;
-import com.kapss.pwr.ExpandableListDataPump;
-import com.kapss.pwr.R;
+import com.ikurek.pwr.CustomExpandableListAdapter;
+import com.ikurek.pwr.ExpandableListDataPump;
+import com.ikurek.pwr.R;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

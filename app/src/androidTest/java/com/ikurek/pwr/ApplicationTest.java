@@ -1,4 +1,4 @@
-package com.kapss.pwr;
+package com.ikurek.pwr;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

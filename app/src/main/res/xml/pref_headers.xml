@@ -2,17 +2,17 @@
 
 
     <header
-        android:fragment="com.kapss.pwr.SettingsActivity$NewsPreferenceFragment"
+        android:fragment="com.ikurek.pwr.SettingsActivity$NewsPreferenceFragment"
         android:icon="@drawable/ic_web_asset_black_24dp"
         android:title="@string/pref_header_newsfeed" />
 
     <header
-        android:fragment="com.kapss.pwr.SettingsActivity$LayoutPreferenceFragment"
+        android:fragment="com.ikurek.pwr.SettingsActivity$LayoutPreferenceFragment"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/pref_header_layout" />
 
     <header
-        android:fragment="com.kapss.pwr.SettingsActivity$OtherPreferenceFragment"
+        android:fragment="com.ikurek.pwr.SettingsActivity$OtherPreferenceFragment"
         android:icon="@drawable/ic_more_horiz_black_24dp"
         android:title="@string/pref_header_notifications" />
 

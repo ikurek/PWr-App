@@ -16,9 +16,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
-import com.kapss.pwr.AsyncXMLParser;
-import com.kapss.pwr.ParsedWebData;
-import com.kapss.pwr.R;
+import com.ikurek.pwr.AsyncXMLParser;
+import com.ikurek.pwr.ParsedWebData;
+import com.ikurek.pwr.R;
 
 import java.util.ArrayList;
 
