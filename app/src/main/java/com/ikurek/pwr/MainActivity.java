@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 import layout.AppInfoFragment;
 import layout.BuildingsFragment;
 import layout.CatFragment;
@@ -36,6 +37,14 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         setSupportActionBar(toolbar);
+
+
+
+        if (preferences.getBoolean("show_intro", true)) {
+
+            Intent i = new Intent(MainActivity.this, StartIntroActivity.class);
+            startActivity(i);
+        }
 
 
         //Sprawdź czy dostępne jest połączenie internetowe

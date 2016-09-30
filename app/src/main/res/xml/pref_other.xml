@@ -7,6 +7,12 @@
         android:title="@string/pref_title_use_old_parser" />
 
     <SwitchPreference
+        android:defaultValue="true"
+        android:key="Show_intro"
+        android:summary="@string/pref_desc_show_intro"
+        android:title="@string/pref_title_show_intro" />
+
+    <SwitchPreference
         android:defaultValue="false"
         android:key="Offline_mode_prompt"
         android:summary="@string/pref_desc_offline_mode_prompt"
