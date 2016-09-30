@@ -1,4 +1,4 @@
-package com.kapss.pwr;
+package com.ikurek.pwr;
 
 import android.content.Context;
 
@@ -47,7 +47,7 @@ public class GetDetailedBuildingInfo {
 
             buildingdata = context.getResources().getStringArray(R.array.A_6);
 
-        } else if (buildingName == "A-7") {
+        } else if (buildingName == "A-7 (Zielony Domek)") {
 
             buildingdata = context.getResources().getStringArray(R.array.A_7);
 
@@ -135,11 +135,11 @@ public class GetDetailedBuildingInfo {
 
             buildingdata = context.getResources().getStringArray(R.array.C_8);
 
-        } else if (buildingName == "C-11") {
+        } else if (buildingName == "C-11 (Wieża Magów)") {
 
             buildingdata = context.getResources().getStringArray(R.array.C_11);
 
-        } else if (buildingName == "C-13") {
+        } else if (buildingName == "C-13 (Serowiec)") {
 
             buildingdata = context.getResources().getStringArray(R.array.C_13);
 
@@ -151,11 +151,11 @@ public class GetDetailedBuildingInfo {
 
             buildingdata = context.getResources().getStringArray(R.array.C_15);
 
-        } else if (buildingName == "C-16") {
+        } else if (buildingName == "C-16 (Technopolis)") {
 
             buildingdata = context.getResources().getStringArray(R.array.C_16);
 
-        } else if (buildingName == "C-18") {
+        } else if (buildingName == "C-18 (SKS)") {
 
             buildingdata = context.getResources().getStringArray(R.array.C_18);
 
@@ -179,7 +179,7 @@ public class GetDetailedBuildingInfo {
 
             buildingdata = context.getResources().getStringArray(R.array.D_21);
 
-        } else if (buildingName == "E-1") {
+        } else if (buildingName == "E-1 (Hogwart)") {
 
             buildingdata = context.getResources().getStringArray(R.array.E_1);
 
@@ -251,7 +251,7 @@ public class GetDetailedBuildingInfo {
 
             buildingdata = context.getResources().getStringArray(R.array.H_14);
 
-        } else if (buildingName == "L-1") {
+        } else if (buildingName == "L-1 (Geocentrum)") {
 
             buildingdata = context.getResources().getStringArray(R.array.L_1);
 
@@ -287,51 +287,51 @@ public class GetDetailedBuildingInfo {
 
             buildingdata = context.getResources().getStringArray(R.array.P_20);
 
-        } else if (buildingName == "T-2") {
+        } else if (buildingName == "T-2 (Telemik)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_2);
 
-        } else if (buildingName == "T-3") {
+        } else if (buildingName == "T-3 (Straszny Dwór)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_3);
 
-        } else if (buildingName == "T-4") {
+        } else if (buildingName == "T-4 (Czworak)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_4);
 
-        } else if (buildingName == "T-6") {
+        } else if (buildingName == "T-6 (Alcatraz)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_6);
 
-        } else if (buildingName == "T-7") {
+        } else if (buildingName == "T-7 (Dom Doktoranta)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_7);
 
-        } else if (buildingName == "T-9") {
+        } else if (buildingName == "T-9 (Atol)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_9);
 
-        } else if (buildingName == "T-14") {
+        } else if (buildingName == "T-14 (Azyl)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_14);
 
-        } else if (buildingName == "T-15") {
+        } else if (buildingName == "T-15 (Hades)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_15);
 
-        } else if (buildingName == "T-16") {
+        } else if (buildingName == "T-16 (Tower)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_16);
 
-        } else if (buildingName == "T-17") {
+        } else if (buildingName == "T-17 (Ikar)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_17);
 
-        } else if (buildingName == "T-19") {
+        } else if (buildingName == "T-19 (Piast)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_19);
 
-        } else if (buildingName == "T-20") {
+        } else if (buildingName == "T-22 (Hotel Asystenta)") {
 
             buildingdata = context.getResources().getStringArray(R.array.T_22);
 

@@ -49,7 +49,7 @@
 
 </string-array>
 
-<string-array name="A-7">
+<string-array name="A-7 (Zielony Domek)">
 
 <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
 <item>51.108003</item>
@@ -225,7 +225,7 @@
 
 </string-array>
 
-<string-array name="C-11">
+<string-array name="C-11 (Wieża Magów)">
 
 <item>14a, Zygmunta Janiszewskiego, Wrocław</item>
 <item>51.109390</item>
@@ -233,7 +233,7 @@
 
 </string-array>
 
-<string-array name="C-13">
+<string-array name="C-13 (Serowiec)">
 
 <item>23-25, Wybrzeże Wyspiańskiego, Wrocław</item>
 <item>51.107311</item>
@@ -257,7 +257,7 @@
 
 </string-array>
 
-<string-array name="C-16">
+<string-array name="C-16 (Technopolis)">
 
 <item>7, Zygmunta Janiszewskiego, Wrocław</item>
 <item>51.109590</item>
@@ -265,7 +265,7 @@
 
 </string-array>
 
-<string-array name="C-18">
+<string-array name="C-18 (SKS)">
 
 <item>10, Józefa Marii Hoene-Wrońskiego, Wrocław</item>
 <item>51.108804</item>
@@ -313,7 +313,7 @@
 
 </string-array>
 
-<string-array name="E-1">
+<string-array name="E-1 (Hogwart)">
 
 <item>53/55, Bolesława Prusa, Wrocław</item>
 <item>51.119103</item>
@@ -457,7 +457,7 @@
 
 </string-array>
 
-<string-array name="L-1">
+<string-array name="L-1 (Geocentrum)">
 
 <item>13/15, Na Grobli, Wrocław</item>
 <item>51.104195</item>
@@ -529,7 +529,7 @@
 
 </string-array>
 
-<string-array name="T-2">
+<string-array name="T-2 (Telemik)">
 
 <item>59, Grunwaldzka, Wrocław</item>
 <item>51.113535</item>
@@ -537,7 +537,7 @@
 
 </string-array>
 
-<string-array name="T-3">
+<string-array name="T-3 (Straszny Dwór)">
 
 <item>61, Grunwaldzka, Wrocław</item>
 <item>51.113602</item>
@@ -545,7 +545,7 @@
 
 </string-array>
 
-<string-array name="T-4">
+<string-array name="T-4 (Czworak)">
 
 <item>22, Łukasza Górnickiego, Wrocław</item>
 <item>51.118605</item>
@@ -553,7 +553,7 @@
 
 </string-array>
 
-<string-array name="T-6">
+<string-array name="T-6 (Alcatraz)">
 
 <item>54/56, Reja, Wrocław</item>
 <item>51.118477</item>
@@ -561,7 +561,7 @@
 
 </string-array>
 
-<string-array name="T-7">
+<string-array name="T-7 (Dom Doktoranta)">
 
 <item>89, Curie-Skłodowskiej, Wrocław</item>
 <item>51.108470</item>
@@ -569,7 +569,7 @@
 
 </string-array>
 
-<string-array name="T-9">
+<string-array name="T-9 (Atol)">
 
 <item>137, Powstańców Śląskich, Wrocław</item>
 <item>51.087310</item>
@@ -577,7 +577,7 @@
 
 </string-array>
 
-<string-array name="T-14">
+<string-array name="T-14 (Azyl)">
 
 <item>8, wybrzeże Ludwika Pasteura, Wrocław</item>
 <item>51.112007</item>
@@ -585,7 +585,7 @@
 
 </string-array>
 
-<string-array name="T-15">
+<string-array name="T-15 (Hades)">
 
 <item>6, Edwarda Wittiga, Wrocław</item>
 <item>51.103178</item>
@@ -593,7 +593,7 @@
 
 </string-array>
 
-<string-array name="T-16">
+<string-array name="T-16 (Tower)">
 
 <item>4, Edwarda Wittiga, Wrocław</item>
 <item>51.103634</item>
@@ -601,7 +601,7 @@
 
 </string-array>
 
-<string-array name="T-17">
+<string-array name="T-17 (Ikar)">
 
 <item>27, Wróblewskiego, Wrocław</item>
 <item>51.103496</item>
@@ -609,7 +609,7 @@
 
 </string-array>
 
-<string-array name="T-19">
+<string-array name="T-19 (Piast)">
 
 <item>8, Edwarda Wittiga, Wrocław</item>
 <item>51.103142</item>
@@ -617,7 +617,7 @@
 
 </string-array>
 
-<string-array name="T-22">
+<string-array name="T-22 (Hotel Asystenta)">
 
 <item>25, Wróblewskiego, Wrocław</item>
 <item>51.103865</item>

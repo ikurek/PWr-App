@@ -1,4 +1,4 @@
-package com.kapss.pwr;
+package com.ikurek.pwr;
 
 /**
  * Created by Igor on 29.08.2016.

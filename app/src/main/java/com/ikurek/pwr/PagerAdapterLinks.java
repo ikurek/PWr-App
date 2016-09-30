@@ -1,4 +1,4 @@
-package com.kapss.pwr;
+package com.ikurek.pwr;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
