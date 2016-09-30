@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,21 +36,20 @@ public class LinksFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_links, container, false);
 
         //Konfiguracja paska z kartami
-        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout_info);
+        final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout_info);
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
 
         //Konfiguracja zmiany fragmentów
-        ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager_info);
+        final ViewPager viewPager = (ViewPager) view.findViewById(R.id.pager_info);
         PagerAdapterLinks adapter = new PagerAdapterLinks(getActivity().getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
+
         tabLayout.setupWithViewPager(viewPager);
-
-
         return view;
     }
 

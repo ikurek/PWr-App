@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 
@@ -21,7 +22,7 @@ import com.squareup.picasso.Picasso;
 public class CatFragment extends Fragment {
     private ImageView cats;
     private Picasso picasso;
-    private Button moarcats;
+    private ImageButton moarcats;
     private ProgressBar catDownloadProgress;
 
 
@@ -44,7 +45,7 @@ public class CatFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_cat, container, false);
 
         cats = (ImageView) view.findViewById(R.id.imageViewCats);
-        moarcats = (Button) view.findViewById(R.id.buttonMoreCats);
+        moarcats = (ImageButton) view.findViewById(R.id.buttonMoreCats);
         catDownloadProgress = (ProgressBar) view.findViewById(R.id.progressBarCatDownload);
         picasso = Picasso.with(this.getContext());
 

@@ -20,7 +20,7 @@ public class ExpandableListDataPump {
         abuildings.add("A-4");
         abuildings.add("A-5");
         abuildings.add("A-6");
-        abuildings.add("A-7");
+        abuildings.add("A-7 (Zielony Domek)");
         abuildings.add("A-8");
         abuildings.add("A-9");
         abuildings.add("A-10");
@@ -48,12 +48,12 @@ public class ExpandableListDataPump {
         cbuildings.add("C-6");
         cbuildings.add("C-7");
         cbuildings.add("C-8");
-        cbuildings.add("C-11");
-        cbuildings.add("C-13");
+        cbuildings.add("C-11 (Wieża Magów)");
+        cbuildings.add("C-13 (Serowiec)");
         cbuildings.add("C-14");
         cbuildings.add("C-15");
-        cbuildings.add("C-16");
-        cbuildings.add("C-18");
+        cbuildings.add("C-16 (Technopolis)");
+        cbuildings.add("C-18 (SKS)");
         expandableListDetail.put("C", cbuildings);
 
         List<String> dbuildings = new ArrayList<>();
@@ -65,7 +65,7 @@ public class ExpandableListDataPump {
         expandableListDetail.put("D", dbuildings);
 
         List<String> ebuildings = new ArrayList<>();
-        ebuildings.add("E-1");
+        ebuildings.add("E-1 (Hogwart)");
         ebuildings.add("E-3");
         ebuildings.add("E-5");
         expandableListDetail.put("E", ebuildings);
@@ -92,7 +92,7 @@ public class ExpandableListDataPump {
         expandableListDetail.put("H", hbuildings);
 
         List<String> lbuildings = new ArrayList<>();
-        lbuildings.add("L-1");
+        lbuildings.add("L-1 (Geocentrum)");
         expandableListDetail.put("L", lbuildings);
 
         List<String> mbuildings = new ArrayList<>();
@@ -110,18 +110,18 @@ public class ExpandableListDataPump {
         expandableListDetail.put("P", pbuildings);
 
         List<String> tbuildings = new ArrayList<>();
-        tbuildings.add("T-2");
-        tbuildings.add("T-3");
-        tbuildings.add("T-4");
-        tbuildings.add("T-6");
-        tbuildings.add("T-7");
-        tbuildings.add("T-9");
-        tbuildings.add("T-14");
-        tbuildings.add("T-15");
-        tbuildings.add("T-16");
-        tbuildings.add("T-17");
-        tbuildings.add("T-19");
-        tbuildings.add("T-22");
+        tbuildings.add("T-2 (Telemik)");
+        tbuildings.add("T-3 (Straszny Dwór)");
+        tbuildings.add("T-4 (Czworak)");
+        tbuildings.add("T-6 (Alcatraz)");
+        tbuildings.add("T-7 (Dom Doktoranta)");
+        tbuildings.add("T-9 (Atol)");
+        tbuildings.add("T-14 (Azyl)");
+        tbuildings.add("T-15 (Hades)");
+        tbuildings.add("T-16 (Tower)");
+        tbuildings.add("T-17 (Ikar)");
+        tbuildings.add("T-19 (Piast)");
+        tbuildings.add("T-22 (Hotel Asystenta)");
         expandableListDetail.put("T", tbuildings);
 
         return expandableListDetail;

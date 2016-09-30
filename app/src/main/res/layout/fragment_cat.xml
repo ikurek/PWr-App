@@ -3,14 +3,15 @@
     android:layout_height="match_parent"
     android:layout_gravity="center">
 
-    <Button
+    <ImageButton
         android:id="@+id/buttonMoreCats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:text="@string/MOAR" />
+        android:background="@null"
+        android:src="@drawable/resizedcatapipng" />
 
     <ImageView
         android:id="@+id/imageViewCats"
@@ -23,8 +24,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_margin="8dp"
-        android:contentDescription="@string/CatImageDescription"
-        android:contextClickable="false" />
+        android:contentDescription="@string/CatImageDescription" />
 
     <ProgressBar
         android:id="@+id/progressBarCatDownload"

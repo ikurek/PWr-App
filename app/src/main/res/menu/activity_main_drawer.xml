@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single"
-        android:id="@+id/nav_top">
+    <group
+        android:id="@+id/nav_top"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_news"
             android:icon="@drawable/ic_web_asset_black_24dp"
@@ -30,8 +31,9 @@
 
     </group>
 
-    <group android:checkableBehavior="single"
-        android:id="@+id/nav_bottom">
+    <group
+        android:id="@+id/nav_bottom"
+        android:checkableBehavior="single">
 
         <item
             android:id="@+id/nav_bugreport"
