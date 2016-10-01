@@ -173,9 +173,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
     //Stąd te dziwne linijki w przetwarzaniu daty
     @Override
     protected ArrayList<ParsedWebData> doInBackground(Void... params) {
-        if (preferences.getBoolean("news_all", true)) {
-            singleLinkParser("http://pwr.edu.pl/rss/pl/24.xml", "PWr");
-        }
+
         if (preferences.getBoolean("news_w1", false)) {
             singleLinkParser("http://wa.pwr.edu.pl/rss,21.xml", "WA");
         }
@@ -185,7 +183,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
         if (preferences.getBoolean("news_w3", false)) {
             singleLinkParser("http://wch.pwr.edu.pl/rss,11.xml", "WCH");
         }
-        if (preferences.getBoolean("news_w4", true)) {
+        if (preferences.getBoolean("news_w4", false)) {
             singleLinkParser("http://weka.pwr.edu.pl/rss,41.xml", "WEKA");
         }
         if (preferences.getBoolean("news_w5", false)) {
@@ -215,6 +213,9 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
         if (preferences.getBoolean("news_w13", false)) {
             singleLinkParser("http://wmat.pwr.edu.pl/rss,231.xml", "WMAT");
         }
+        if (preferences.getBoolean("news_all", true)) {
+            singleLinkParser("http://pwr.edu.pl/rss/pl/24.xml", "PWr");
+        }
 
         return list;
     }
@@ -225,12 +226,24 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
         //Sortuje cały ten array po datach
         //Wykorzystuje daty UNIXa czyli list.data nie list.dataString
 
-        Collections.sort(result, new Comparator<ParsedWebData>() {
-            @Override
-            public int compare(ParsedWebData o1, ParsedWebData o2) {
-                return o2.getDate().compareTo(o1.getDate());
-            }
-        });
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
+        if (!prefs.getBoolean("news_no_sorting", false)) {
+            Collections.sort(result, new Comparator<ParsedWebData>() {
+                @Override
+                public int compare(ParsedWebData o1, ParsedWebData o2) {
+                    return o2.getDate().compareTo(o1.getDate());
+                }
+            });
+        } else {
+            Collections.sort(result, new Comparator<ParsedWebData>() {
+                @Override
+                public int compare(ParsedWebData o1, ParsedWebData o2) {
+                    return o2.getSource().compareTo(o1.getSource());
+                }
+            });
+        }
+
 
         CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(context, R.id.listViewNews, result);
         listView.setAdapter(customListViewAdapter);

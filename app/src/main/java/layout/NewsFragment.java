@@ -3,12 +3,12 @@ package layout;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,7 +74,7 @@ public class NewsFragment extends Fragment {
                 if (preferences.getBoolean("news_use_chrome", true)) {
 
                     CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-                    builder.setToolbarColor(Color.parseColor("#B22315"));
+                    builder.setToolbarColor(ContextCompat.getColor(getContext(), R.color.colorPrimaryPWr));
                     CustomTabsIntent customTabsIntent = builder.build();
                     customTabsIntent.launchUrl(getActivity(), Uri.parse(url));
 

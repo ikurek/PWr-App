@@ -1,29 +1,38 @@
 package com.ikurek.pwr;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.NavUtils;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.github.paolorotolo.appintro.AppIntro;
-import com.github.paolorotolo.appintro.AppIntroFragment;
 
-import layout.IntroBeginFragment;
+import layout.IntroBeforeWeStart;
+import layout.IntroHello;
+import layout.IntroThankYou;
 
+//Zaczyna intro
+//Zapisuje do SharedPreferences wybrany przez użytkownika wydział
 public class StartIntroActivity extends AppIntro {
+
+    //Zmienna wskazuje wydział wybrany przez użytkownika
+    //Modyfikowana przez IntroBeforeWeStart.java
+    public static int selectedDepartment = 0;
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 
-
         // Instead of fragments, you can also use our default slide
         // Just set a title, description, background and image. AppIntro will do the rest.
-        addSlide(AppIntroFragment.newInstance(getResources().getString(R.string.hi), getResources().getString(R.string.introSlide1), R.drawable.icon256, ContextCompat.getColor(getApplicationContext(), R.color.colorPrimaryPWr)));
-        addSlide(AppIntroFragment.newInstance("tytuł2", "opis2", R.drawable.ic_arrow_back_white, ContextCompat.getColor(getApplicationContext(), R.color.colorPrimaryPWr)));
-        addSlide(IntroBeginFragment.newInstance(R.layout.fragment_intro_begin));
+        addSlide(IntroHello.newInstance());
+        addSlide(IntroBeforeWeStart.newInstance());
+        addSlide(IntroThankYou.newInstance());
 
     }
 
@@ -40,12 +49,90 @@ public class StartIntroActivity extends AppIntro {
         super.onDonePressed(currentFragment);
         // Do something when users tap on Done button.
 
+        Intent returnIntent = new Intent();
+        setResult(Activity.RESULT_OK, returnIntent);
         this.finish();
     }
 
+    //Przy zmianie slajdu zapisuje wartość true do wybranego wydziału
+    //Na końcu zeruje żeby nie zapisywać przy każdej zmianie
     @Override
     public void onSlideChanged(@Nullable Fragment oldFragment, @Nullable Fragment newFragment) {
         super.onSlideChanged(oldFragment, newFragment);
-        // Do something when the slide changes.
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor edit = preferences.edit();
+
+
+        switch (selectedDepartment) {
+            case 0:
+                break;
+
+            case 1:
+                edit.putBoolean("news_w1", true);
+                edit.commit();
+                break;
+
+            case 2:
+                edit.putBoolean("news_w2", true);
+                edit.commit();
+                break;
+
+            case 3:
+                edit.putBoolean("news_w3", true);
+                edit.commit();
+                break;
+
+            case 4:
+                edit.putBoolean("news_w4", true);
+                edit.commit();
+                break;
+
+            case 5:
+                edit.putBoolean("news_w5", true);
+                edit.commit();
+                break;
+
+            case 6:
+                edit.putBoolean("news_w6", true);
+                edit.commit();
+                break;
+
+            case 7:
+                edit.putBoolean("news_w7", true);
+                edit.commit();
+                break;
+
+            case 8:
+                edit.putBoolean("news_w8", true);
+                edit.commit();
+                break;
+
+            case 9:
+                edit.putBoolean("news_w9", true);
+                edit.commit();
+                break;
+
+            case 10:
+                edit.putBoolean("news_w10", true);
+                edit.commit();
+                break;
+
+            case 11:
+                edit.putBoolean("news_w11", true);
+                edit.commit();
+                break;
+
+            case 12:
+                edit.putBoolean("news_w12", true);
+                edit.commit();
+                break;
+
+            case 13:
+                edit.putBoolean("news_w13", true);
+                edit.commit();
+                break;
+
+        }
+
     }
 }

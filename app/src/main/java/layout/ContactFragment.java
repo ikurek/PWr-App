@@ -48,9 +48,9 @@ public class ContactFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                String address[] = {"igorkurek96@gmail.com"};
+                String address[] = {"kapssoftware@gmail.com"};
 
-                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "igorkurek96@gmail.com", null));
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "kapssoftware@gmail.com", null));
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, address);
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, "[PWr APP] " + editTextTitle.getText());
                 emailIntent.putExtra(Intent.EXTRA_TEXT, "[BUG REPORT / FEATURE REQUEST]\n" + editTextDescription.getText() + "\n\n[DEVICE]\n" + editTextSpecs.getText());

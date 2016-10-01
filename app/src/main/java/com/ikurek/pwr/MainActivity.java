@@ -1,5 +1,6 @@
 package com.ikurek.pwr;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,7 +18,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
 
 import layout.AppInfoFragment;
 import layout.BuildingsFragment;
@@ -39,11 +39,14 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
+        //Odpala intro jeżeli to pierwsze uruchomienie
 
-        if (preferences.getBoolean("show_intro", true)) {
+        if (preferences.getBoolean("Show_intro", true)) {
 
             Intent i = new Intent(MainActivity.this, StartIntroActivity.class);
-            startActivity(i);
+            startActivityForResult(i, 1);
+
+
         }
 
 
@@ -93,7 +96,6 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayoutForFragments, fragment);
-
         fragmentTransaction.commit();
 
 
@@ -108,6 +110,28 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.getMenu().getItem(0).setChecked(true);
     }
+
+
+    //Potrzebne, aby zatrzymać MainActivity do czasu skończenia intra
+    //Po zakończeniu intra restartuje MainActivity, w celu przeładowania preferencji
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                SharedPreferences.Editor edit = preferences.edit();
+                edit.putBoolean("show_intro", false);
+                edit.apply();
+                this.recreate();
+
+            }
+        }
+        if (resultCode == Activity.RESULT_CANCELED) {
+        }
+    }
+
 
     //Handler do obsługi kliknięcia wstecz
     @Override
