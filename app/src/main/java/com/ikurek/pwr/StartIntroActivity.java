@@ -41,6 +41,8 @@ public class StartIntroActivity extends AppIntro {
         super.onSkipPressed(currentFragment);
         // Do something when users tap on Skip button.
 
+        Intent returnIntent = new Intent();
+        setResult(Activity.RESULT_OK, returnIntent);
         this.finish();
     }
 

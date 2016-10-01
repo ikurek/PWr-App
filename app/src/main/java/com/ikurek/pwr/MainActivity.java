@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity
 
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 SharedPreferences.Editor edit = preferences.edit();
-                edit.putBoolean("show_intro", false);
+                edit.putBoolean("Show_intro", false);
                 edit.apply();
                 this.recreate();
 
