@@ -1,26 +1,27 @@
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <SwitchPreference
+    <com.lb.material_preferences_library.custom_preferences.SwitchPreference
         android:defaultValue="true"
         android:key="news_layout"
         android:summary="@string/pref_desc_news_layout"
         android:title="@string/pref_title_news_layout" />
 
-    <ListPreference
+    <com.lb.material_preferences_library.custom_preferences.ListPreference
         android:defaultValue="slide"
-        android:entries="@array/array_animations"
-        android:entryValues="@array/array_animations_values"
+        app:entries="@array/array_animations"
+        app:entryValues="@array/array_animations_values"
         android:key="news_animation"
         android:summary="@string/pref_desc_animations"
         android:title="@string/pref_title_animations" />
 
-    <SwitchPreference
+    <com.lb.material_preferences_library.custom_preferences.SwitchPreference
         android:defaultValue="true"
         android:key="news_use_chrome"
         android:summary="@string/pref_desc_use_ctt"
         android:title="@string/pref_title_use_ctt" />
 
-    <SwitchPreference
+    <com.lb.material_preferences_library.custom_preferences.SwitchPreference
         android:defaultValue="false"
         android:key="news_no_sorting"
         android:summary="@string/pref_desc_no_sorting"

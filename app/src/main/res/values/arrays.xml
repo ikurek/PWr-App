@@ -20,6 +20,16 @@
     </string-array>
 
 
+    <string-array name="array_lines">
+
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+
+    </string-array>
+
+
     <!-- arraye dla wydziałów -->
 
     <string-array name="departments_names">

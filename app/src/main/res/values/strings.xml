@@ -74,7 +74,10 @@
     <string name="pref_desc_news_layout">Używaj widoku kart na liście aktualności, zastępując tradycyjny widok listy</string>
     <string name="pref_title_no_sorting">Priorytet wydziału</string>
     <string name="pref_desc_no_sorting">Zamiast sortować po dacie, wyświetlaj najpierw aktualności z wydziału, a potem z reszty źródeł. Przydatne, jeżeli aktualności nie posiadają daty</string>
-
+    <string name="pref_title_static_card_size">Stała długość opisu</string>
+    <string name="pref_desc_static_card_size">Po aktywowaniu, opisy w aktualnościach będą miały stałą długość</string>
+    <string name="pref_title_static_number_of_lines">Skróć opisy</string>
+    <string name="pref_desc_static_number_of_lines">Zdefiniuj maksymalną długość opisu w liniach</string>
 
     <!-- Stringi dla ustawień pozostałe -->
     <string name="pref_header_notifications">Pozostałe</string>

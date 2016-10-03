@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+
 import org.jsoup.Jsoup;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -36,17 +37,17 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
 
     private final Context context;
     private final ListView listView;
-    private final ProgressBar progressBar;
+    private final ProgressBar animatedCircleLoadingView;
     private final ArrayList<ParsedWebData> list = new ArrayList<>();
     private SharedPreferences preferences;
 
 
     //Przekazywane z BuildingsFragment
-    public AsyncXMLParser(Context context, ListView listView, ProgressBar progressBar) {
+    public AsyncXMLParser(Context context, ListView listView, ProgressBar animatedCircleLoadingView) {
 
         this.context = context;
         this.listView = listView;
-        this.progressBar = progressBar;
+        this.animatedCircleLoadingView = animatedCircleLoadingView;
     }
 
     //Funkcja zawiea parser zdejmujący dane z jednego linku xml
@@ -161,7 +162,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
 
     @Override
     protected void onPreExecute() {
-        progressBar.setVisibility(View.VISIBLE);
+        animatedCircleLoadingView.setVisibility(View.VISIBLE);
         preferences = PreferenceManager.getDefaultSharedPreferences(context);
 
 
@@ -244,12 +245,13 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
             });
         }
 
+        animatedCircleLoadingView.setVisibility(View.GONE);
 
         CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(context, R.id.listViewNews, result);
         listView.setAdapter(customListViewAdapter);
         NewsFragment.list = result;
 
-        progressBar.setVisibility(View.GONE);
+
 
 
     }
