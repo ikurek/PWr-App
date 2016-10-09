@@ -12,7 +12,6 @@
 ###Ficzery:
 * Pobieranie aktualności ze strony Politechniki i stron wydziałowych
 * Baza danych budynków Politechniki z adresami i podstawowymi danymi, plus nawigacja
-* Player dla radia LUZ
 * Wyświetlanie losowych zdjęć kotów z internetu. Bo mogę.
 
 
@@ -20,7 +19,7 @@
 ###Planowane ficzery:
 * Baza danych zawierająca podstawowe informacje o wydziałach
 * Cokolwiek mi jeszcze przyjdzie do głowy
-
+* Player dla radia LUZ (być może w dalszej przyszłości)
 
 
 ###Aplikacja wykorzystuje:
