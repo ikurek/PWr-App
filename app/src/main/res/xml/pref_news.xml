@@ -1,72 +1,72 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="true"
         android:key="news_all"
         android:title="@string/pref_title_pwr_all" />
 
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w1"
         android:title="@string/pref_title_w1" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w2"
         android:title="@string/pref_title_w2" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w3"
         android:title="@string/pref_title_w3" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w4"
         android:title="@string/pref_title_w4" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w5"
         android:title="@string/pref_title_w5" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w6"
         android:title="@string/pref_title_w6" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w7"
         android:title="@string/pref_title_w7" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w8"
         android:title="@string/pref_title_w8" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w9"
         android:title="@string/pref_title_w9" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w10"
         android:title="@string/pref_title_w10" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w11"
         android:title="@string/pref_title_w11" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w12"
         android:title="@string/pref_title_w12" />
 
-    <CheckBoxPreference
+    <com.lb.material_preferences_library.custom_preferences.CheckBoxPreference
         android:defaultValue="false"
         android:key="news_w13"
         android:title="@string/pref_title_w13" />

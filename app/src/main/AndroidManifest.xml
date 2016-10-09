@@ -34,7 +34,11 @@
         <activity
 
             android:name=".StartIntroActivity"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppFullScreenTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ikurek.pwr.MainActivity" />
 
         </activity>
     </application>

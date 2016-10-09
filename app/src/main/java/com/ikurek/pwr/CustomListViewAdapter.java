@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static java.lang.Integer.valueOf;
+
 /**
  * Created by Igor on 03.09.2016.
  */
@@ -103,6 +105,7 @@ class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
             if (source != null) {
                 source.setText(data.getSource());
             }
+
 
         }
 

@@ -16,8 +16,13 @@
     <!-- Stringi dla intra -->
     <string name="skip_button">Pomiń</string>
     <string name="done_button">Dalej</string>
-    <string name="hi">Cześć!</string>
-    <string name="introSlide1">Witaj w nieoficjalnej aplikacji Politechniki Wrocławskiej!</string>
+    <string name="introWelcomeTitle">Cześć!</string>
+    <string name="introWelcomeDesc">Witaj w nieoficjalnej aplikacji Politechniki Wrocławskiej!</string>
+    <string name="introBeforeWeStartTitle">Zanim zaczniemy</string>
+    <string name="introBeforeWeStartDesc">Przed rozpoczęciem użytkowania aplikacji, wybierz swój wydział, aby otrzymywać aktualności z jego strony. Wybór można zawsze zmienić oraz powiększyć o kolejne wydziały w ustawieniach.</string>
+    <string name="introYourDepartment">Twój wydział:</string>
+    <string name="introThankYouTitle">Podziękowania</string>
+    <string name="introThankYouDesc">W tym miejscu chciałem również podziękować wszystkim którzy pomogli mi podczas tworzenia projektu, dzielnie testowali kolejne wersje i zgłaszali błędy. Szczególne podziękowania należą się C. N. za tworzenie baz danych i grafik, oraz J. K. za wspieranie mnie odpowiednimi ilościami kawy. Dzięki!</string>
 
     <!-- Stringi dla AlertDialog -->
 
@@ -67,7 +72,12 @@
     <string name="pref_desc_animations">Wybierz animację, która będzie używana podczas ładowania kolejnych elementów ekranu aktualności</string>
     <string name="pref_title_news_layout">Widok kart</string>
     <string name="pref_desc_news_layout">Używaj widoku kart na liście aktualności, zastępując tradycyjny widok listy</string>
-
+    <string name="pref_title_no_sorting">Priorytet wydziału</string>
+    <string name="pref_desc_no_sorting">Zamiast sortować po dacie, wyświetlaj najpierw aktualności z wydziału, a potem z reszty źródeł. Przydatne, jeżeli aktualności nie posiadają daty</string>
+    <string name="pref_title_static_card_size">Stała długość opisu</string>
+    <string name="pref_desc_static_card_size">Po aktywowaniu, opisy w aktualnościach będą miały stałą długość</string>
+    <string name="pref_title_static_number_of_lines">Skróć opisy</string>
+    <string name="pref_desc_static_number_of_lines">Zdefiniuj maksymalną długość opisu w liniach</string>
 
     <!-- Stringi dla ustawień pozostałe -->
     <string name="pref_header_notifications">Pozostałe</string>

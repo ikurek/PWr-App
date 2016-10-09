@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryPWr"
+    tools:context="layout.IntroHello">
+
+    <TextView
+        android:id="@+id/introHello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/introWelcomeTitle"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FAFAFA"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageViewIntroPwrLettersOnly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/introHello"
+        android:src="@drawable/pwr256" />
+
+
+    <TextView
+        android:id="@+id/textViewHelloDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewIntroPwrLettersOnly"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="@string/introWelcomeDesc"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FAFAFA" />
+
+
+</RelativeLayout>

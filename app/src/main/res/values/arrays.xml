@@ -20,6 +20,42 @@
     </string-array>
 
 
+    <string-array name="array_lines">
+
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+
+    </string-array>
+
+
+    <!-- arraye dla wydziałów -->
+
+    <string-array name="departments_names">
+
+        <item>Brak wyboru/Nie chcę podawać</item>
+        <item>Architektury</item>
+        <item>Budownictwa Lądowego i Wodnego</item>
+        <item>Chemiczny</item>
+        <item>Elektroniki</item>
+        <item>Elektryczny</item>
+        <item>Geoinżynierii, Górnictwa i Geologii</item>
+        <item>Inżynierii Środowiska</item>
+        <item>Informatyki i Zarządzania</item>
+        <item>Mechaniczno-Energetyczny</item>
+        <item>Mechaniczny</item>
+        <item>Podstawowych problemów Techniki</item>
+        <item>Elektroniki Mikrosystemów i Fotoniki</item>
+        <item>Matematyki</item>
+
+
+    </string-array>
+
+
+    <!-- arraye dla budynków -->
+
+
     <string-array name="A_1">
 
         <item>27, Wybrzeże Wyspiańskiego, Wrocław</item>
