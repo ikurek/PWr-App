@@ -18,8 +18,8 @@
 
 ###Planowane ficzery:
 * Baza danych zawierająca podstawowe informacje o wydziałach
-* Cokolwiek mi jeszcze przyjdzie do głowy
 * Player dla radia LUZ (być może w dalszej przyszłości)
+* Cokolwiek mi jeszcze przyjdzie do głowy
 
 
 ###Aplikacja wykorzystuje:
