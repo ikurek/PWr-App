@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import static java.lang.Integer.valueOf;
-
 /**
  * Created by Igor on 03.09.2016.
  */

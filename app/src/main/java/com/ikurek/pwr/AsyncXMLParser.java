@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
-
 import org.jsoup.Jsoup;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -250,8 +249,6 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
         CustomListViewAdapter customListViewAdapter = new CustomListViewAdapter(context, R.id.listViewNews, result);
         listView.setAdapter(customListViewAdapter);
         NewsFragment.list = result;
-
-
 
 
     }

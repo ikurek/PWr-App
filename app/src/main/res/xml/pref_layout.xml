@@ -9,11 +9,11 @@
 
     <com.lb.material_preferences_library.custom_preferences.ListPreference
         android:defaultValue="slide"
-        app:entries="@array/array_animations"
-        app:entryValues="@array/array_animations_values"
         android:key="news_animation"
         android:summary="@string/pref_desc_animations"
-        android:title="@string/pref_title_animations" />
+        android:title="@string/pref_title_animations"
+        app:entries="@array/array_animations"
+        app:entryValues="@array/array_animations_values" />
 
     <com.lb.material_preferences_library.custom_preferences.SwitchPreference
         android:defaultValue="true"
