@@ -32,13 +32,14 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:textColor="#D8000000"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:paddingRight="8dp" />
 
         <TextView
             android:id="@+id/listViewNewsTitle"
