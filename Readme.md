@@ -2,8 +2,11 @@
 
 ##Nieoficjalna aplikacja Politechniki Wrocławskiej
 
+
+
 ###Informacje ogólne:
 Projekt powstał głównie z powodu mojego hobbystycznego podejścia do programowania i zabawy parserami. Kolejne funkcje i bazy danych pojawiły się z czasem, głównie jako feedback od użytkowników wersji testowej. Celem projektu jest stworzenie aplikacji, która pozwoli studentom PWr w łatwy sposób znaleźć informacje o uczelni, przejrzeć aktualne wydarzenia z nią związane i odnaleźć poszukiwane miejsca.
+
 
 
 ###Funkcje:
@@ -13,11 +16,11 @@ Projekt powstał głównie z powodu mojego hobbystycznego podejścia do programo
 * Nawigacja pod same drzwi budynku i odnajdywanie jego położenia na mapie
 * Wyświetlanie losowych zdjęć kotów z internetu. Bo mogę.
 
-
 ###Planowane funkcje:
 * Baza danych zawierająca podstawowe informacje o wydziałach (w trakcie tworzenia)
 * Player dla radia LUZ (być może w dalszej przyszłości)
 * Cokolwiek mi jeszcze podpowiecie. Ja tu tylko koduję.
+
 
 
 ###FAQ:
@@ -33,6 +36,7 @@ Tak długo na ile starczy mi sił, zapału i antydepresantów.
 
 ####Jak można pomóc w projekcie?
 Jeżeli chciałbyś przyczynić się w jakimś stopniu do rozwoju projektu skontaktuj się ze mną pod adresem email igorkurek96@gmail.com. Każdy może się przydać, niezależnie od tego co potrafisz.
+
 
 
 ###Wykorzystane biblioteki:
