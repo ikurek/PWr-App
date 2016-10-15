@@ -52,12 +52,30 @@ public class AppInfoFragment extends Fragment {
                     CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
                     builder.setToolbarColor(Color.parseColor("#B22315"));
                     CustomTabsIntent customTabsIntent = builder.build();
-                    customTabsIntent.launchUrl(getActivity(), Uri.parse("https://github.com/kapss/PWr-App/"));
+                    customTabsIntent.launchUrl(getActivity(), Uri.parse("https://github.com/ikurek/PWr-App/"));
 
                 } else {
-                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/kapss/PWr-App/"));
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/ikurek/PWr-App/"));
                     startActivity(browserIntent);
                 }
+            }
+        });
+
+
+        ImageButton betaLinkButton = (ImageButton) view.findViewById(R.id.imageButtonShareBetaLink);
+        betaLinkButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                Intent share = new Intent(android.content.Intent.ACTION_SEND);
+                share.setType("text/plain");
+
+                share.putExtra(Intent.EXTRA_SUBJECT, "Hej! Dołącz do testów wersji beta PWr-App");
+                share.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/apps/testing/com.ikurek.pwr");
+
+                startActivity(Intent.createChooser(share, "Zaproś do testów"));
+
 
             }
         });

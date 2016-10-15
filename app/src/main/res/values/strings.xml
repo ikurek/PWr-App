@@ -4,7 +4,11 @@
 
     <!-- Ogólne Stringi użytkowe -->
     <string name="WhatIUsed">Aplikacja wykorzystuje:</string>
-    <string name="WhatIUsedContent">Język programowania Java (niestety)\nParser Jsoup w wersji 1.9.2\nStronę główną PWr\nStrony wydziałowe PWr\nBibliotekę Picasso 2.5.2\nStworzoną przeze mnie bazę budynków\nChronione prawami autorskimi logo PWr\nTheCatAPI generujące losowe koty\nBibliotekę Appintro 4.0.1\nWiedzę ludzi ze StackOverflow</string>
+    <string name="WhatIUsedContent">Aplikacja napisana jest w języku programowania Java (wersja 8).
+        Cały projekt jest w stu procentach Open Source, a kod źródłowy i listę wykorzystanych bibliotek znaleźć można w serwisie GitHub.
+        Aplikacja powinna działać na każdym urządzeniu z systemem Android w wersji 4.1 lub wyższej.
+        Dopóki nie uznam projektu za gotowy do publikacji i nie dopnę kwestii prawnych, apka pozostanie  w Sklepie Play, jako wersja beta, dostępna jedynie po rejestracji przez specjalny link.
+        Więcej informacji znaleźć można na oficjalnym repozytorium projektu.</string>
     <string name="CatImageDescription">Welcome to the internet!</string>
     <string name="title_activity_settings">Ustawienia</string>
     <string name="exit">Wyjdź</string>
@@ -81,8 +85,6 @@
     <string name="pref_desc_offline_mode_prompt">Po aktywowaniu aplikacja nie będzie monitorować połączenia z siecią</string>
     <string name="pref_title_show_intro">Pokaż ekran powitalny</string>
     <string name="pref_desc_show_intro">Ponownie pokaż ekran powitalny przy nastepnym uruchomieniu aplikacji</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
 
 
 </resources>

@@ -38,6 +38,7 @@ public class LinksFragment extends Fragment {
         final TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tab_layout_info);
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());
+        tabLayout.addTab(tabLayout.newTab());
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
 

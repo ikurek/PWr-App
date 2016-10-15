@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import layout.LinksDefaultTabFragment;
+import layout.LinksInternetTabFragment;
 import layout.LinksSocialTabFragment;
 
 /**
@@ -31,6 +32,8 @@ public class PagerAdapterLinks extends FragmentStatePagerAdapter {
                 return new LinksDefaultTabFragment();
             case 1:
                 return new LinksSocialTabFragment();
+            case 2:
+                return new LinksInternetTabFragment();
             default:
                 return null;
         }
@@ -48,7 +51,9 @@ public class PagerAdapterLinks extends FragmentStatePagerAdapter {
             case 0:
                 return "Ogólne";
             case 1:
-                return "Społeczności";
+                return "Media";
+            case 2:
+                return "Linki";
             default:
                 return null;
         }

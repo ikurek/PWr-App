@@ -8,27 +8,100 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/pwr_adress_title"
+            android:id="@+id/pwr_mail_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="16dp"
-            android:text=""
+            android:text="Poczta studencka:"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000" />
 
         <TextView
-            android:id="@+id/pwr_adress"
+            android:id="@+id/pwr_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/pwr_adress_title"
+            android:layout_below="@id/pwr_mail_title"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:text="Wybrzeże Wyspiańskiego 27\n50-370 Wrocław"
+            android:autoLink="web"
+            android:text="https://smail.pwr.edu.pl"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
+        <TextView
+            android:id="@+id/pwr_cwint_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_mail"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:text="CWINT:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/pwr_cwint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_cwint_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:autoLink="web"
+            android:text="http://centrum.pwr.edu.pl/"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/pwr_oze_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_cwint"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Otwarte Zasoby Edukacyjne:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/pwr_oze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_oze_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:autoLink="web"
+            android:text="http://oze.pwr.edu.pl/"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+        <TextView
+            android:id="@+id/pwr_eportal_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_oze"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:text="e-Portal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/pwr_eportal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_eportal_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:autoLink="web"
+            android:text="http://eportal.pwr.edu.pl"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </RelativeLayout>
 

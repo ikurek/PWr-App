@@ -37,9 +37,9 @@
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:paddingRight="8dp"
             android:textColor="#D8000000"
-            android:textSize="12sp"
-            android:paddingRight="8dp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/listViewNewsTitle"
