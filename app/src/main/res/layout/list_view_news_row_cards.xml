@@ -65,6 +65,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:lines="4"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
             android:textColor="#D8000000"

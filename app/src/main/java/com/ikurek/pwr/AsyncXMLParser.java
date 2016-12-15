@@ -109,7 +109,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
                             //Przycina niepotrzebne części daty
                             //Dla PWr osobno bo ma inny format...
                             if (source == "PWr") {
-                                text = text.substring(0, (text != null ? text.length() : 0) - 14);
+                                text = text.substring(0, (text != null ? text.length() : 0) - 13);
                             } else {
                                 text = text.substring(0, (text != null ? text.length() : 0) - 15);
                             }

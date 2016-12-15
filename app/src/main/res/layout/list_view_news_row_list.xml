@@ -50,7 +50,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:ellipsize="marquee"
-        android:lines="5"
+        android:lines="4"
         android:marqueeRepeatLimit="marquee_forever"
         android:textColor="#D8000000"
         android:textSize="12sp" />
