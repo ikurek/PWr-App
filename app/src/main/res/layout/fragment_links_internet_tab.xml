@@ -15,7 +15,8 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="16dp"
-            android:text="Poczta studencka:"
+            android:text="@string/student_mail_with_colon"
+            android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000" />
 
@@ -27,7 +28,8 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:autoLink="web"
-            android:text="https://smail.pwr.edu.pl"
+            android:text="@string/pwr_data_strudent_mail"
+            android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
@@ -39,7 +41,8 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="16dp"
-            android:text="CWINT:"
+            android:text="@string/cwint_with_colon"
+            android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000" />
 
@@ -51,7 +54,8 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:autoLink="web"
-            android:text="http://centrum.pwr.edu.pl/"
+            android:text="@string/pwr_data_cwint"
+            android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
@@ -63,7 +67,8 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="16dp"
-            android:text="Otwarte Zasoby Edukacyjne:"
+            android:text="@string/otwarte_zasoby_edukacyjne_with_colon"
+            android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000" />
 
@@ -75,32 +80,61 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:autoLink="web"
-            android:text="http://oze.pwr.edu.pl/"
+            android:text="@string/pwr_data_oze"
+            android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
 
         <TextView
             android:id="@+id/pwr_eportal_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/pwr_oze"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="16dp"
-            android:text="e-Portal"
+            android:text="@string/e_portal_with_colon"
+            android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/pwr_eportal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/pwr_eportal_title"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:autoLink="web"
-            android:text="http://eportal.pwr.edu.pl"
+            android:text="@string/pwr_data_eportal"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/pwr_kariery_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_eportal"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/biuro_karier_with_colon"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/pwr_kariery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pwr_kariery_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:autoLink="web"
+            android:text="@string/pwr_data_biuro_karier"
+            android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </RelativeLayout>

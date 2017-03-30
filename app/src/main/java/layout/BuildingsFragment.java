@@ -73,6 +73,7 @@ public class BuildingsFragment extends Fragment {
                 //Przekazanie argumentu do kolejnego fragmentu
                 Bundle args = new Bundle();
                 args.putString("BUILDING_NAME", buildingName);
+                assert fragment != null;
                 fragment.setArguments(args);
 
                 //Zamiana fragmentu na nowy

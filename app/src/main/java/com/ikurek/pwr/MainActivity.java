@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity
 
         //Ustawia ftagment widoczny po odpaleniu aplikacji
         Fragment fragment = null;
-        Class fragmentClass = null;
+        Class fragmentClass;
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         fragmentClass = NewsFragment.class;
@@ -200,7 +201,7 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         //Wybory elementów w navigationdrawer
         Fragment fragment = null;
@@ -240,6 +241,7 @@ public class MainActivity extends AppCompatActivity
 
         //Obowiązkowe sprawdzenie błędów
         try {
+            assert fragmentClass != null;
             fragment = (Fragment) fragmentClass.newInstance();
         } catch (Exception e) {
             e.printStackTrace();

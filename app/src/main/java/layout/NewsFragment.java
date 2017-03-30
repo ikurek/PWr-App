@@ -33,9 +33,6 @@ import java.util.ArrayList;
 public class NewsFragment extends Fragment {
 
     public static ArrayList<ParsedWebData> list = new ArrayList<>();
-    private ProgressBar progressBar;
-    private AsyncXMLParser parser;
-    private ListView listView;
     private SharedPreferences preferences;
     private View viewForSnackbar;
 
@@ -59,16 +56,16 @@ public class NewsFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-        View view = null;
+        View view;
         // Inflate the layout for this fragment
         if (preferences.getBoolean("news_layout", true)) {
             view = inflater.inflate(R.layout.fragment_news_cards, container, false);
         } else {
             view = inflater.inflate(R.layout.fragment_news_list, container, false);
         }
-        listView = (ListView) view.findViewById(R.id.listViewNews);
-        progressBar = (ProgressBar) view.findViewById(R.id.progressBarNewsDownload);
-        parser = new AsyncXMLParser(this.getContext(), listView, progressBar);
+        ListView listView = (ListView) view.findViewById(R.id.listViewNews);
+        ProgressBar progressBar = (ProgressBar) view.findViewById(R.id.progressBarNewsDownload);
+        AsyncXMLParser parser = new AsyncXMLParser(this.getContext(), listView, progressBar);
         parser.execute();
 
         viewForSnackbar = view;

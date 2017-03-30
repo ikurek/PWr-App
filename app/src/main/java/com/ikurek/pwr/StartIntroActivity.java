@@ -71,67 +71,67 @@ public class StartIntroActivity extends AppIntro {
 
             case 1:
                 edit.putBoolean("news_w1", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 2:
                 edit.putBoolean("news_w2", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 3:
                 edit.putBoolean("news_w3", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 4:
                 edit.putBoolean("news_w4", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 5:
                 edit.putBoolean("news_w5", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 6:
                 edit.putBoolean("news_w6", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 7:
                 edit.putBoolean("news_w7", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 8:
                 edit.putBoolean("news_w8", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 9:
                 edit.putBoolean("news_w9", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 10:
                 edit.putBoolean("news_w10", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 11:
                 edit.putBoolean("news_w11", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 12:
                 edit.putBoolean("news_w12", true);
-                edit.commit();
+                edit.apply();
                 break;
 
             case 13:
                 edit.putBoolean("news_w13", true);
-                edit.commit();
+                edit.apply();
                 break;
 
         }

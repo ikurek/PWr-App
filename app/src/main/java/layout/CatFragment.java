@@ -21,7 +21,6 @@ import com.squareup.picasso.Picasso;
 public class CatFragment extends Fragment {
     private ImageView cats;
     private Picasso picasso;
-    private ImageButton moarcats;
     private ProgressBar catDownloadProgress;
 
 
@@ -44,7 +43,7 @@ public class CatFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_cat, container, false);
 
         cats = (ImageView) view.findViewById(R.id.imageViewCats);
-        moarcats = (ImageButton) view.findViewById(R.id.buttonMoreCats);
+        ImageButton moarcats = (ImageButton) view.findViewById(R.id.buttonMoreCats);
         catDownloadProgress = (ProgressBar) view.findViewById(R.id.progressBarCatDownload);
         picasso = Picasso.with(this.getContext());
 

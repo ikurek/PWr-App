@@ -11,6 +11,7 @@
         android:layout_height="fill_parent"
         android:paddingBottom="16dp"
         android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft"
+        android:paddingStart="?android:attr/expandableListPreferredItemPaddingLeft"
         android:paddingTop="16dp"
         android:textSize="16sp" />
 </LinearLayout>

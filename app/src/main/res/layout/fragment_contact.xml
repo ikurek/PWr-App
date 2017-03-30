@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal|bottom">
@@ -14,7 +15,7 @@
             android:id="@+id/editTextBugTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tytuł wiadomości" />
+            android:hint="@string/message_title" />
 
 
     </android.support.design.widget.TextInputLayout>
@@ -30,7 +31,7 @@
             android:id="@+id/editTextBugDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Opis" />
+            android:hint="@string/message_description" />
 
 
     </android.support.design.widget.TextInputLayout>
@@ -45,7 +46,8 @@
             android:id="@+id/editTextBugPhoneSpecs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Informacje o urządzeniu" />
+            android:hint="@string/device_info"
+            tools:ignore="TextFields" />
 
 
     </android.support.design.widget.TextInputLayout>
@@ -56,8 +58,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="8dp"
-        android:text="Wyślij wiadomość" />
+        android:text="@string/send_message" />
 
 </RelativeLayout>

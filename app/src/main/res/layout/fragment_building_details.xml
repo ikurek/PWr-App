@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_directions_white_24dp"
             fab:fab_colorNormal="@color/colorPrimaryDarkPWr"
-            fab:fab_label="Nawiguj"
+            fab:fab_label="@string/navigate"
             fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_pin_drop_white_24dp"
             fab:fab_colorNormal="@color/colorPrimaryDarkPWr"
-            fab:fab_label="Pokaż na mapie"
+            fab:fab_label="@string/show_on_map"
             fab:fab_size="mini" />
 
     </com.github.clans.fab.FloatingActionMenu>
@@ -53,7 +53,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="16dp"
-        android:text="Adres:"
+        android:text="@string/address_with_colon"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000" />
 
@@ -76,7 +76,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="16dp"
-        android:text="Parametry geograficzne wejścia:"
+        android:text="@string/geo_parameters_with_colon"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#000000" />
 

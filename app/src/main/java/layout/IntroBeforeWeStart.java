@@ -18,15 +18,8 @@ public class IntroBeforeWeStart extends Fragment {
 
 
     public static IntroBeforeWeStart newInstance() {
-        IntroBeforeWeStart slide = new IntroBeforeWeStart();
 
-        return slide;
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+        return new IntroBeforeWeStart();
     }
 
     @Override

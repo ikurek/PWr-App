@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Ustawienia</string>
+
+    <!-- Ogólne Stringi użytkowe -->
+    <string name="WhatIUsed">Aplikacja wykorzystuje:</string>
+    <string name="WhatIUsedContent">Aplikacja napisana jest w języku programowania Java (wersja 8).
+        Cały projekt jest w stu procentach Open Source, a kod źródłowy i listę wykorzystanych bibliotek znaleźć można w serwisie GitHub.
+        Aplikacja powinna działać na każdym urządzeniu z systemem Android w wersji 4.1 lub wyższej.
+        Więcej informacji znaleźć można na oficjalnym repozytorium projektu.</string>
+    <string name="title_activity_settings">Ustawienia</string>
+    <string name="exit">Wyjdź</string>
+    <string name="offlineMode">Tryb offline</string>
+    <string name="cancel">Anuluj</string>
+
+    <!-- Stringi dla intra -->
+    <string name="skip_button">Pomiń</string>
+    <string name="done_button">Dalej</string>
+    <string name="introWelcomeTitle">Cześć!</string>
+    <string name="introWelcomeDesc">Witaj w nieoficjalnej aplikacji Politechniki Wrocławskiej!</string>
+    <string name="introBeforeWeStartTitle">Zanim zaczniemy</string>
+    <string name="introBeforeWeStartDesc">Przed rozpoczęciem użytkowania aplikacji, wybierz swój wydział, aby otrzymywać aktualności z jego strony. Wybór można zawsze zmienić oraz powiększyć o kolejne wydziały w ustawieniach.</string>
+    <string name="introThankYouTitle">Podziękowania</string>
+    <string name="introThankYouDesc">W tym miejscu chciałem również podziękować wszystkim którzy pomogli mi podczas tworzenia projektu, dzielnie testowali kolejne wersje i zgłaszali błędy. Szczególne podziękowania należą się C. N. za tworzenie baz danych i grafik, oraz J. K. za wspieranie mnie odpowiednimi ilościami kawy. Dzięki!</string>
+
+    <!-- Stringi dla AlertDialog -->
+
+    <string name="something_is_broken">Coś… Coś się popsuło…</string>
+    <string name="alertDialog_noInternetConnection">Wygląda na to, że nie masz połączenia z internetem… Niektóre funkcje aplikacji mogą nie działać :-/</string>
+    <string name="alertDialog_noGoogleMapsInstalled">Wygląda na to, że nie masz zainstalowanych Map Google… Ciężko się nawigować bez map :-/</string>
+    <string name="alertDialog_noEmailAppInstalled">Wygląda na to, że nie masz zainstalowanego żadnego klienta poczty email :-/</string>
+    <string name="alertDialog_areYouSureYouWantToExit">Czy na pewno chcesz opuścić aplikację?</string>
+
+    <!-- Stringi dla szufaldy nawigacji -->
+    <string name="navigation_drawer_open">Otwórz szufladę</string>
+    <string name="navigation_drawer_close">Zamknij szufladę</string>
+    <string name="news">Aktualności</string>
+    <string name="buildings">Budynki</string>
+    <string name="cats">Koty</string>
+    <string name="about">O aplikacji</string>
+    <string name="links">Przydatne informacje</string>
+    <string name="contact">Kontakt</string>
+    <string name="settings">Ustawienia</string>
+
+
+    <!-- Stringi ustawień -->
+
+
+    <!-- Stringi dla ustawień newsfeed'u -->
+    <string name="pref_header_newsfeed">Źródła aktualności</string>
+    <string name="pref_title_pwr_all">Strona Główna Politechniki</string>
+    <string name="pref_title_w1">Wydział Architektury</string>
+    <string name="pref_title_w2">Wydział Budownictwa Lądowego i Wodnego</string>
+    <string name="pref_title_w3">Wydział Chemiczny</string>
+    <string name="pref_title_w4">Wydział Elektroniki</string>
+    <string name="pref_title_w5">Wydział Elektryczny</string>
+    <string name="pref_title_w6">Wydział Geoinżynierii, Górnictwa i Geologii</string>
+    <string name="pref_title_w7">Wydział Inżynierii Środowiska</string>
+    <string name="pref_title_w8">Wydział Informatyki i Zarządzania</string>
+    <string name="pref_title_w9">Wydział Mechaniczno-Energetyczny</string>
+    <string name="pref_title_w10">Wydział Mechaniczny</string>
+    <string name="pref_title_w11">Wydział Podstawowych Problemów Techniki</string>
+    <string name="pref_title_w12">Wydział Elektroniki Mikrosystemów i Fotoniki</string>
+    <string name="pref_title_w13">Wydział Matematyki</string>
+
+    <!-- Stringi dla ustawień layoutu -->
+    <string name="pref_header_layout">Interfejs</string>
+    <string name="pref_title_use_ctt">Technologia kart Chrome</string>
+    <string name="pref_desc_use_ctt">Jeżeli zainstalowana jest przeglądarka Chrome, linki otwierane będa przy użyciu kart Chrome</string>
+    <string name="pref_title_animations">Animacje aktualności</string>
+    <string name="pref_desc_animations">Wybierz animację, która będzie używana podczas ładowania kolejnych elementów ekranu aktualności</string>
+    <string name="pref_title_news_layout">Widok kart</string>
+    <string name="pref_desc_news_layout">Używaj widoku kart na liście aktualności, zastępując tradycyjny widok listy</string>
+    <string name="pref_title_no_sorting">Priorytet wydziału</string>
+    <string name="pref_desc_no_sorting">Zamiast sortować po dacie, wyświetlaj najpierw aktualności z wydziału, a potem z reszty źródeł. Przydatne, jeżeli aktualności nie posiadają daty</string>
+
+    <!-- Stringi dla ustawień i  pozostałe -->
+    <string name="pref_header_notifications">Pozostałe</string>
+    <string name="pref_title_use_old_parser">Używaj starego parsera</string>
+    <string name="pref_desc_use_old_parser">Zamiast używać nowej wersji parsera (XPP) użyj klasycznej (Jsoup). Zaznacz, jeżeli występuja problemy z kanałem aktualności.</string>
+    <string name="pref_title_offline_mode_prompt">Wyłacz test sieci</string>
+    <string name="pref_desc_offline_mode_prompt">Po aktywowaniu aplikacja nie będzie monitorować połączenia z siecią</string>
+    <string name="pref_title_show_intro">Pokaż ekran powitalny</string>
+    <string name="pref_desc_show_intro">Ponownie pokaż ekran powitalny przy nastepnym uruchomieniu aplikacji</string>
+    <string name="invite_to_beta">Zaproś znajomych do testowania wersji beta</string>
+    <string name="more_info_on_github">Trochę więcej o projekcie można dowiedziec się na jego stronie w serwisie GitHub</string>
+    <string name="address_with_colon">Adres:</string>
+    <string name="geo_parameters_with_colon">Parametry geograficzne wejścia:</string>
+    <string name="message_title">Tytuł wiadomości</string>
+    <string name="message_description">Opis</string>
+    <string name="device_info">Informacje o urządzeniu</string>
+    <string name="send_message">Wyślij</string>
+
+    <!-- Useful links -->
+    <string name="phone_number_with_colon">Numer Telefonu:</string>
+    <string name="website_with_colon">Strona WWW:</string>
+    <string name="nip_with_colon">NIP:</string>
+    <string name="regon_with_colon">REGON:</string>
+    <string name="student_mail_with_colon">Poczta Studencka:</string>
+    <string name="cwint_with_colon">CWINT:</string>
+    <string name="otwarte_zasoby_edukacyjne_with_colon">Otwarte Zasoby Edukacyjne:</string>
+    <string name="e_portal_with_colon">e-Portal:</string>
+    <string name="biuro_karier_with_colon">Biuro Karier:</string>
+
+    <!-- University data -->
+    <string name="pwr_data_address">Wybrzeże Wyspiańskiego 27 50–370 Wrocław</string>
+    <string name="pwr_data_phone">71 320 26 00</string>
+    <string name="pwr_data_main_site">http://pwr.edu.pl</string>
+    <string name="pwr_data_nip">896–000-58-51</string>
+    <string name="pwr_data_regon">000001614</string>
+    <string name="pwr_data_strudent_mail">https://smail.pwr.edu.pl</string>
+    <string name="pwr_data_cwint">http://centrum.pwr.edu.pl/</string>
+    <string name="pwr_data_biuro_karier">http://biurokarier.pwr.edu.pl</string>
+    <string name="pwr_data_oze">http://oze.pwr.edu.pl/</string>
+    <string name="facebook">Facebook</string>
+    <string name="google_plus">Google Plus</string>
+    <string name="instagram">Instagram</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="snapchat">Snapchat</string>
+    <string name="twitter">Twitter</string>
+    <string name="youtube">YouTube</string>
+    <string name="always_beta">Nieśmiertelnie w wersji beta!</string>
+    <string name="kopiuj_adres">Kopiuj adres</string>
+    <string name="open_in_browser">Otwórz w przeglądarce</string>
+    <string name="share">Udostępnij</string>
+    <string name="show_on_map">Pokaż na mapie</string>
+    <string name="navigate">Nawiguj</string>
+    <string name="pwr_data_eportal">http://eportal.pwr.edu.pl</string>
+
+</resources>

@@ -20,9 +20,8 @@ public class IntroHello extends Fragment {
     }
 
     public static IntroHello newInstance() {
-        IntroHello slide = new IntroHello();
 
-        return slide;
+        return new IntroHello();
     }
 
 

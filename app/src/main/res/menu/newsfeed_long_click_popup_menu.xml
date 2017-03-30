@@ -4,17 +4,17 @@
     <item
         android:id="@+id/menu_copy"
         android:icon="@drawable/ic_content_copy_black_24dp"
-        android:title="Kopiuj adres" />
+        android:title="@string/kopiuj_adres" />
 
     <item
         android:id="@+id/menu_open_in_browser"
         android:icon="@drawable/ic_web_asset_black_24dp"
-        android:title="Otwórz w przeglądarce" />
+        android:title="@string/open_in_browser" />
 
     <item
         android:id="@+id/menu_share"
         android:icon="@drawable/ic_share_black_24dp"
-        android:title="Udostępnij" />
+        android:title="@string/share" />
 
 
 </menu>

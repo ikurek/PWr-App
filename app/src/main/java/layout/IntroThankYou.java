@@ -20,9 +20,8 @@ public class IntroThankYou extends Fragment {
     }
 
     public static IntroThankYou newInstance() {
-        IntroThankYou slide = new IntroThankYou();
 
-        return slide;
+        return new IntroThankYou();
     }
 
 

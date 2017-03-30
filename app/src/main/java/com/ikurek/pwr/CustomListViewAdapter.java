@@ -3,6 +3,7 @@ package com.ikurek.pwr;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,8 @@ class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
     }
 
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    @NonNull
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
 
         View v = convertView;
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
@@ -54,7 +56,7 @@ class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
                 Animation animation = null;
 
                 if (usedAnimation.equals("slide")) {
-                    animation = AnimationUtils.loadAnimation(getContext(), R.anim.slide_in_right);
+                    animation = AnimationUtils.makeInAnimation(getContext(), true);
 
                 }
 
@@ -70,7 +72,14 @@ class CustomListViewAdapter extends ArrayAdapter<ParsedWebData> {
 
                 if (!usedAnimation.equals("none")) {
                     assert animation != null;
-                    animation.setStartOffset(position * 500);
+
+                    //Animacje tylko dla elementów widocznych na ekranie startowym
+                    if (position < 5) {
+                        animation.setStartOffset(position * 100);
+                    } else {
+                        animation.setStartOffset(position);
+                    }
+
                     v.startAnimation(animation);
                 }
 

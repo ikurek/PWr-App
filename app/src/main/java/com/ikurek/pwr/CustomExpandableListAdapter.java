@@ -1,7 +1,7 @@
 package com.ikurek.pwr;
 
-/**
- * Created by Igor on 29.08.2016.
+/*
+  Created by Igor on 29.08.2016.
  */
 
 import android.content.Context;

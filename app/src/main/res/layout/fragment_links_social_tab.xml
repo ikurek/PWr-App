@@ -1,4 +1,5 @@
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -21,8 +22,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="Facebook"
-                android:textAlignment="viewStart"
+                android:text="@string/facebook"
+                android:textAlignment="center"
                 android:textColor="#000000" />
 
             <ImageButton
@@ -30,8 +31,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_facebook" />
+                android:src="@drawable/ic_facebook"
+                tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
@@ -50,8 +53,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="Google Plus"
-                android:textAlignment="viewStart"
+                android:text="@string/google_plus"
+                android:textAlignment="center"
                 android:textColor="#000000" />
 
             <ImageButton
@@ -59,8 +62,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_google_plus" />
+                android:src="@drawable/ic_google_plus"
+                tools:ignore="ContentDescription" />
 
 
         </LinearLayout>
@@ -80,8 +85,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="Instagram"
-                android:textAlignment="viewStart"
+                android:text="@string/instagram"
+                android:textAlignment="center"
                 android:textColor="#000000" />
 
             <ImageButton
@@ -89,8 +94,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_instagram" />
+                android:src="@drawable/ic_instagram"
+                tools:ignore="ContentDescription" />
 
 
         </LinearLayout>
@@ -110,8 +117,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="LinkedIn"
-                android:textAlignment="viewStart"
+                android:text="@string/linkedin"
+                android:textAlignment="center"
                 android:textColor="#000000" />
 
             <ImageButton
@@ -119,8 +126,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_linkedin" />
+                android:src="@drawable/ic_linkedin"
+                tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
@@ -139,8 +148,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="Snapchat"
-                android:textAlignment="viewStart"
+                android:text="@string/snapchat"
+                android:textAlignment="center"
                 android:textColor="#000000" />
 
             <ImageButton
@@ -148,8 +157,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_snapchat" />
+                android:src="@drawable/ic_snapchat"
+                tools:ignore="ContentDescription" />
 
         </LinearLayout>
 
@@ -168,8 +179,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="Twitter"
-                android:textAlignment="viewStart"
+                android:text="@string/twitter"
+                android:textAlignment="center"
                 android:textColor="#000000" />
 
             <ImageButton
@@ -177,8 +188,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_twitter" />
+                android:src="@drawable/ic_twitter"
+                tools:ignore="ContentDescription" />
 
 
         </LinearLayout>
@@ -198,8 +211,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="9"
                 android:gravity="center"
-                android:text="YouTube"
-                android:textAlignment="viewStart"
+                android:text="@string/youtube"
+                android:textAlignment="center"
                 android:textColor="#000000" />
 
             <ImageButton
@@ -207,8 +220,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_youtube_play" />
+                android:src="@drawable/ic_youtube_play"
+                tools:ignore="ContentDescription" />
 
 
         </LinearLayout>

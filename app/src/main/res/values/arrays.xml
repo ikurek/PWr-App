@@ -3,10 +3,10 @@
 
     <string-array name="array_animations">
 
-        <item>Wlot od dołu</item>
-        <item>Zanikanie</item>
-        <item>Wślizg</item>
-        <item>Brak</item>
+        <item>Slide from bottom</item>
+        <item>Fade In</item>
+        <item>Slide In</item>
+        <item>None</item>
 
     </string-array>
 
@@ -24,20 +24,20 @@
 
     <string-array name="departments_names">
 
-        <item>Brak wyboru/Nie chcę podawać</item>
-        <item>Architektury</item>
-        <item>Budownictwa Lądowego i Wodnego</item>
-        <item>Chemiczny</item>
-        <item>Elektroniki</item>
-        <item>Elektryczny</item>
-        <item>Geoinżynierii, Górnictwa i Geologii</item>
-        <item>Inżynierii Środowiska</item>
-        <item>Informatyki i Zarządzania</item>
-        <item>Mechaniczno-Energetyczny</item>
-        <item>Mechaniczny</item>
-        <item>Podstawowych problemów Techniki</item>
-        <item>Elektroniki Mikrosystemów i Fotoniki</item>
-        <item>Matematyki</item>
+        <item>None</item>
+        <item>Architecture</item>
+        <item>Civil Engineering</item>
+        <item>Chemistry</item>
+        <item>Electronics</item>
+        <item>Electrical Engineering</item>
+        <item>Geoengineering, Mining and Geology</item>
+        <item>Environmental Engineering</item>
+        <item>Computer Science and Management</item>
+        <item>Mechanical and Power Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Fundamental Problems Of Technology</item>
+        <item>Microsystem Electronics and Fotonics</item>
+        <item>Pure and Applied Mathematics</item>
 
 
     </string-array>
@@ -88,7 +88,7 @@
 
     <string-array name="A_6">
 
-        <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
+        <item><![CDATA[&#8531;, Cypriana Kamila Norwida, Wrocław]]></item>
         <item>51.108136</item>
         <item> 17.061379</item>
 
@@ -96,7 +96,7 @@
 
     <string-array name="A_7">
 
-        <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
+        <item><![CDATA[&#8531;, Cypriana Kamila Norwida, Wrocław]]></item>
         <item>51.108003</item>
         <item> 17.062207</item>
 
@@ -104,7 +104,7 @@
 
     <string-array name="A_8">
 
-        <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
+        <item><![CDATA[&#8531;, Cypriana Kamila Norwida, Wrocław]]></item>
         <item>51.108277</item>
         <item> 17.062234</item>
 
@@ -112,7 +112,7 @@
 
     <string-array name="A_9">
 
-        <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
+        <item><![CDATA[&#8531;, Cypriana Kamila Norwida, Wrocław]]></item>
         <item>51.107765</item>
         <item> 17.063583</item>
 
@@ -128,7 +128,7 @@
 
     <string-array name="A_11">
 
-        <item>1/3, Cypriana Kamila Norwida, Wrocław</item>
+        <item><![CDATA[&#8531;, Cypriana Kamila Norwida, Wrocław]]></item>
         <item>51.107676</item>
         <item> 17.063111</item>
 

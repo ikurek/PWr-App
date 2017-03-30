@@ -22,6 +22,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Objects;
 
 import layout.NewsFragment;
 
@@ -86,7 +87,7 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
                         break;
 
                     case XmlPullParser.END_TAG:
-                        if (tagname.equalsIgnoreCase("item") && data.title != "Kanał RSS" && !data.title.startsWith("The Freescale Cup 2014") && data.title != null && data.description != null && data.description != "Aktualności" && data.date != null) {
+                        if (tagname.equalsIgnoreCase("item") && !Objects.equals(data.title, "Kanał RSS") && !data.title.startsWith("The Freescale Cup 2014") && data.title != null && data.description != null && !Objects.equals(data.description, "Aktualności") && data.date != null) {
                             data.source = source;
                             list.add(data);
 
@@ -108,9 +109,11 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
 
                             //Przycina niepotrzebne części daty
                             //Dla PWr osobno bo ma inny format...
-                            if (source == "PWr") {
+                            if (Objects.equals(source, "PWr")) {
+                                assert text != null;
                                 text = text.substring(0, (text != null ? text.length() : 0) - 13);
                             } else {
+                                assert text != null;
                                 text = text.substring(0, (text != null ? text.length() : 0) - 15);
                             }
 
@@ -135,7 +138,8 @@ public class AsyncXMLParser extends AsyncTask<Void, Integer, ArrayList<ParsedWeb
                                 e.printStackTrace();
                             }
 
-                            if (text == "Mon, 01 Jan 1111") newDateString = "Brak daty";
+                            if (Objects.equals(text, "Mon, 01 Jan 1111"))
+                                newDateString = "Brak daty";
 
 
                             //Dwie daty na wyjściu jedna w formacie dla użytkownika

@@ -22,9 +22,9 @@ import java.util.Locale;
 
 public class BuildingDetailsFragment extends Fragment {
 
-    public String[] buildingData;
-    public String latLongJoined;
-    public String buildingName;
+    private String[] buildingData;
+    private String latLongJoined;
+    private String buildingName;
     //Handler do clicków elementów menu
     //Zbiera id klikniętego elementu i wykonuje akcje
     //Pokazuje dialog jezeli nie ma google maps
@@ -90,14 +90,6 @@ public class BuildingDetailsFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-
-        super.onCreate(savedInstanceState);
-
-
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -134,7 +126,7 @@ public class BuildingDetailsFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        getActivity().setTitle("Budynki");
+        getActivity().setTitle(getResources().getString(R.string.buildings));
     }
 
 }
