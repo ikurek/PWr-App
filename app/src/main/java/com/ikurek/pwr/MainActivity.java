@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.DatabaseUtils;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
@@ -17,9 +18,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import database.DataBaseSupport;
 import layout.AppInfoFragment;
 import layout.BuildingsFragment;
 import layout.CatFragment;
@@ -30,6 +33,7 @@ import layout.NewsFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +47,18 @@ public class MainActivity extends AppCompatActivity
         //Odpala intro jeżeli to pierwsze uruchomienie
 
         if (preferences.getBoolean("Show_intro", true)) {
-
+            Log.e(TAG, "Showing intro");
             Intent i = new Intent(MainActivity.this, StartIntroActivity.class);
             startActivityForResult(i, 1);
+        }
 
-
+        //Weryfikuje i uzupełnia DB
+        Log.e(TAG, "Checking database");
+        DataBaseSupport dataBaseSupport = new DataBaseSupport(getApplicationContext());
+        if(dataBaseSupport.areTablesEmpty() || dataBaseSupport.isOverwriteRequired) {
+            Log.e(TAG, "Database needs update, starting overwrite...");
+            dataBaseSupport.overwriteDatabase();
+            Log.e(TAG, "Database overwrite finished!");
         }
 
 
@@ -81,7 +92,7 @@ public class MainActivity extends AppCompatActivity
             }
         }
 
-        //Ustawia ftagment widoczny po odpaleniu aplikacji
+        //Ustawia fragment widoczny po odpaleniu aplikacji
         Fragment fragment = null;
         Class fragmentClass;
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
