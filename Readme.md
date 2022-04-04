@@ -21,24 +21,6 @@ Projekt powstał głównie z powodu mojego hobbystycznego podejścia do programo
 * Player dla radia LUZ (być może w dalszej przyszłości)
 * Cokolwiek mi jeszcze podpowiecie. Ja tu tylko koduję.
 
-
-
-###FAQ:
-
-####Czy będzie wersja na iOS?
-Ja jej nie zrobię, ale mogę udostępnić to co mam (bazy danych, parsery, niektóre metody) jakiemuś programiście Swifta/Objective-C
-
-###Kiedy aplikacja wyjdzie z bety?
-Ciężko mi określić konkretną datę. Kiedy uznam że jest gotowa na publikację, po prostu przeniosę ją w Google Play z kanału testowego do kanału produkcyjnego.
-
-####Jak długo aplikacja będzie aktualizowana?
-Tak długo na ile starczy mi sił, zapału i antydepresantów.
-
-####Jak można pomóc w projekcie?
-Jeżeli chciałbyś przyczynić się w jakimś stopniu do rozwoju projektu skontaktuj się ze mną pod adresem email igorkurek96@gmail.com. Każdy może się przydać, niezależnie od tego co potrafisz.
-
-
-
 ###Wykorzystane biblioteki:
 
 ####Biblioteki zewnętrzne:
