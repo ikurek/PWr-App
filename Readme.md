@@ -1,29 +1,25 @@
-#PWr-App
+# PWr-App
 
-##Nieoficjalna aplikacja Politechniki Wrocławskiej
+## Nieoficjalna aplikacja Politechniki Wrocławskiej
 
-
-
-###Informacje ogólne:
+### Informacje ogólne:
 Projekt powstał głównie z powodu mojego hobbystycznego podejścia do programowania i zabawy parserami. Kolejne funkcje i bazy danych pojawiły się z czasem, głównie jako feedback od użytkowników wersji testowej. Celem projektu jest stworzenie aplikacji, która pozwoli studentom PWr w łatwy sposób znaleźć informacje o uczelni, przejrzeć aktualne wydarzenia z nią związane i odnaleźć poszukiwane miejsca.
 
-
-
-###Funkcje:
+### Funkcje:
 * Pobieranie aktualności ze strony Politechniki i stron wydziałowych
 * Baza danych budynków Politechniki z adresami (adresy kompletne, ale brakuje dodatkowych informacji)
 * Zbiór przydatnych linków i informacji o uczelni
 * Nawigacja pod same drzwi budynku i odnajdywanie jego położenia na mapie
 * Wyświetlanie losowych zdjęć kotów z internetu. Bo mogę.
 
-###Planowane funkcje:
+### Planowane funkcje:
 * Baza danych zawierająca podstawowe informacje o wydziałach (w trakcie tworzenia)
 * Player dla radia LUZ (być może w dalszej przyszłości)
 * Cokolwiek mi jeszcze podpowiecie. Ja tu tylko koduję.
 
-###Wykorzystane biblioteki:
+### Wykorzystane biblioteki:
 
-####Biblioteki zewnętrzne:
+#### Biblioteki zewnętrzne:
 * [Appintro](https://github.com/PaoloRotolo/AppIntro) - Wykorzystana przy tworzeniu intra aplikacji
 * [MaterialPreferenceLibrary](https://github.com/AndroidDeveloperLB/MaterialPreferenceLibrary) - Pozwala na wykorzystanie stylistyki Material Design na ekranie ustawień
 * [FloatingActionButton](https://github.com/Clans/FloatingActionButton) - Bardziej rozbudowana biblioteka dynamicznych przycisków FAB
@@ -31,7 +27,7 @@ Projekt powstał głównie z powodu mojego hobbystycznego podejścia do programo
 * [Picasso](https://github.com/square/picasso) - Biblioteka ułatwiająca pracę z ImageView
 * [Jsoup](https://github.com/jhy/jsoup/) - Parser języka HTML i nie tylko
 
-####Biblioteki Google:
+#### Biblioteki Google:
 * [AppCompat-v7](https://github.com/android/platform_frameworks_support/tree/master/v7/appcompat)
 * [Design](https://github.com/googlecodelabs/android-design-library)
 * [CardView](https://github.com/googlesamples/android-CardView)
